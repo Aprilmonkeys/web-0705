@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数</title>
+    <script>
+        //语句块
+        {
+            var num = 0;
+            var sum = ++num;
+            console.log(sum);//1
+        }
+        //如果要将上边的语句块执行多遍的话,借用函数会更方便
+        function fn() {
+            var num = 0;
+            var sum = ++num;
+            console.log(sum);
+        }
+        //实现了调用函数3次;
+        fn();//1
+        fn();//1
+        fn();//1
+        //函数的定义
+        //1.声明式
+        console.log('我是测试用的');//这个会输出'我是测试用的'
+        function fn1() {
+            console.log('this is function');
+            //不会输出
+        }
+        //2字面量方式
+        var fn2 = function () {
+            console.log('this is another function');//不会输出
+        };
+        //函数的调用方式 函数名()
+        fn1();//输出:this is function
+        fn2();//输出:this is another function
+        //当把函数名fn1和fn2当做是变量来调用时,函数的不同声明方式显示的结果不一样
+        //1函数声明方式fn1来定义函数当做变量的时候会输出定义的所有代码
+        //function fn1(){console.log('this is function')}
+        //2字面量方式fn2定义的函数当做变量来输出的时候会输出赋值运算符后边的所有代码
+        //function(){console.log('this is function')
+        console.log(fn1);//输出的是function之后
+        console.log(fn2);//输出的是function之后
+        console.log(fn1());//undefined
+        console.log(fn2());//undefined
+        console.log(typeof fn1());//undefined
+        // 当不同定义方式下的函数名和变量名 相同的时候,
+        //先定义一个变量fn,并且初始化
+        var fun = 100;
+        console.log(fun);//输出100
+        //第一种.定义一个函数,使用函数声明方式
+        function fun() {
+            console.log('this is function');
+        }
+        console.log(fun);//输出的是变量fun :100
+       fun();//调用函数fun(); 会报错,因为在调用函数的时候计算机会混淆fun()的意思
+              //不能把fun()识别成函数
+        //第二种,定义一个函数,使用字面量方式,会瘦位置的影响
+        var fun1=100;
+        console.log(fun1);//100
+        var fun1 =function(){
+            console.log('this is function');
+        };
+
+        console.log(fun1);//function(){ console.log('this is function '}
+        fun1();//this is function
+        //函数的参数:1形参 (a,b)2实参(1,2)
+        //形参表示接受函数调用时传递的实参的值,允许在函数体中直接使用,相当于在函数体
+        //中定义变量一样
+        function add(a,b){
+            console.log(a,b);
+        }
+        add(1,2);
+        //形参的个数可以比实参的个数多,多出来的形参个数值为undefined
+        //实参的个数可以比形参多,多出来的实参不会传递到函数体中去
+    </script>
+</head>
+<body>
+
+</body>
+</html>

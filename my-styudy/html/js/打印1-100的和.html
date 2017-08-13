@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打印1-100的和</title>
+    <script>
+        打印1-100的和
+             var sum=0;
+                for(i=0;i<=100;i++){
+                    sum=sum +i;
+                }
+                console.log('1-100的和是:'+sum);
+        1-100的奇数的和
+        var sum = 0;
+        for (i = 0; i <= 100; i++) {
+            //需要判断奇数的和,先判断什么是奇数
+            if (i % 2 != 0) {
+                sum = sum + i;
+            }
+        }
+        console.log('奇数的和' + sum);
+        //1-100所有偶数的和
+        var sum = 0;
+        for(var i=0;i<=100;i++){
+            //先判断什么是偶数
+            if(i%2==0){
+                sum=sum+i
+            }
+        }
+        // 这里需要注意要把console.log,拿到循环语句的外边,要不然就要进行循环
+        console.log('偶数的和'+sum)
+//        num=prompt('请输入1-7的数字');
+//        if(num==1){
+//            console.log('Monday');
+//        }else if (num==2){
+//            console.log('Tuesday');
+//        }else if(num==3){
+//            console.log('wednesday');
+//        }else if(num==4){
+//            console.log('Thursday');
+//        }else if (num==5){
+//            console.log('Friday');
+//        }else if (num==6){
+//            console.log('Saturday');
+//        }else{
+//            console.log('Sunday');
+//        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

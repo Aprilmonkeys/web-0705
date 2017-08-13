@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quanxuan</title>
+    <script>
+        //实现勾选功能
+        window.onload = function () {
+            //全选
+            var orxuan = document.getElementById('orxuan');
+            var Allsel = document.getElementById('Allsel');
+            var sports = document.getElementsByName('sports');
+            Allsel.onclick = function () {
+                for (var i = 0; i < sports.length; i++) {
+                    sports[i].checked = true;
+                }
+                //这里有个问题,写死了
+                orxuan.checked = true;
+            };
+            //全不选
+            var Nosel = document.getElementById('Nosel');
+            Nosel.onclick = function () {
+                for (var i = 0; i < sports.length; i++) {
+                    sports[i].checked = false;
+                }
+                orxuan.checked = false;
+            };
+            //反选
+            var fansel = document.getElementById('fansel');
+            fansel.onclick = function () {
+                for (var i = 0; i < sports.length; i++) {
+                    sports[i].checked = !sports[i].checked;
+                }
+                orxuan.checked = true;
+                for (var j = 0; j < sports.length; j++) {
+                    if (!sports[j].checked) {
+                        orxuan.checked = false;
+                        break;
+                    }
+                }
+            };
+            //提交
+            var submit = document.getElementById('submit');
+            submit.onclick = function () {
+                for (var i = 0; i < sports.length; i++) {
+                    if (sports[i].checked) {
+                        alert(sports[i].value);
+                    }
+                }
+            };
+            //当不是全选状态的时候 全选/不全选的按钮不选中
+            for (var i = 0; i < sports.length; i++) {
+                sports[i].onclick = function () {
+                    orxuan.checked = true;
+                    for (var j = 0; j < sports.length; j++) {
+                        if (!sports[j].checked) {
+                            orxuan.checked = false;
+                            break;
+                        }
+                    }
+                }
+
+            };
+
+        }
+    </script>
+</head>
+<body>
+你爱好运动吗?
+<input type="checkbox" id="orxuan">全选/全不选
+<br>
+<input type="checkbox" name="sports" value="足球">足球
+<input type="checkbox" name="sports" value="篮球">蓝球
+<input type="checkbox" name="sports" value="羽毛球">羽毛球
+<input type="checkbox" name="sports" value="乒乓球">乒乓球
+<br>
+<input type="button" id="Allsel" value="全选">
+<input type="button" id="Nosel" value="全不选">
+<input type="button" id="fansel" value="反选">
+<input type="button" id="submit" value="提交">
+</body>
+</html>

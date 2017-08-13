@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用对象</title>
+    <script>
+        var hero = {
+            name: 'zhangwuji',
+            age: 18,
+            //定义的复杂属性名和方法必须使用字符串类型
+            'content-type': 'text/html',
+            sayMe: function () {
+                console.log('this is zhangwuji');
+            }
+        }
+        //调用对象  属性和方法的调用
+        //调用方法 是对象名.属性名
+        console.log(hero.name);
+        console.log(hero.age);
+        //调用方法 对象名.方法名()
+        hero.sayMe();
+        //比较通用的调用方式
+
+        console.log(hero['name']);
+        hero['sayMe']();
+        //这种命名比较复杂的必须使用下边的方法调用
+        console.log(hero['content-type']);
+        //普通的定义变量的方法还有字面量函数都可以用对象的方式调用
+        //window对象是BOM对象表示当前浏览器的窗口,是浏览器的全局对象
+        //定义的全局变量和全局函数为window对象添加的属性和方法
+        var name = 'zhangwuji';
+        var sayMe = function(){
+            console.log('this is zhangwuji');
+        }
+        //一般输出方法
+        console.log(name);
+        //一般调用方式
+        sayMe();
+        //当用window对象调用属性和方法的时候
+        console.log(window.name);
+        window.sayMe();
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

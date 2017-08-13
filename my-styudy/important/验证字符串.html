@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>验证字符串</title>
+    <script>
+        //        //语法
+        //        //先定义一个需要验证的字符串,或者从页面中获取
+        //        var str = 'abxdemk';
+        //        //定义一个正则表达式的规则 : 要字符a
+        //        var reg = /a/;
+        //        //,最后验证字符串是否符合正则表达式的规则
+        //        var result = reg.test(str);
+        //        //输出结果
+        //        console.log(result);//true
+        //        //加入判断  应用结果
+        //        if (result){
+        //            //如果是true,怎样
+        //        }else{
+        //            //如果false 怎样
+        //        }
+        //        //    字符类的规则
+        //        //先定义一个需要验证的字符串,
+        //        var str = '12344d1d2fr2kc';
+        //        //定义一个正则表达式的规则
+        //        /*
+        //        1.[]这个中括号是定义字符集和,匹配当前集合中的任意字符,只要匹配1个字符就会true
+        //        2.包含数字的写法是[0-9]
+        //        3.包含字母的写法[a-zA-Z]
+        //        4.{n,m}-表示最少出现 n 次,最多出现 m 次
+        //        5.出现次数为 0 次时候,表示什么都不匹配 ,都是 true
+        //        *
+        //        * */
+        //        var reg = /[0-9]{2,5}/;
+        //        //验证字符串是否符合正则表达式的规则
+        //        var result = reg.test(str);
+        //        //输出验证的结果
+        //        console.log(result);//true
+        //  位置规则
+        //1.定义一个需要验证的字符串
+        var str = '12345adfuiop8900';
+        //2,定义一个正则表达式的规则
+        var reg = /^[0-9a-z]{2,20}$/;
+        //3验证字符串是否符合规则
+        var result = reg.test(str);
+        //输出结果
+        console.log(result);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

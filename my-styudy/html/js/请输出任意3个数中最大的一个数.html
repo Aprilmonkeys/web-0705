@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>请输出3个数中最大的一个</title>
+    <script>
+        var a = +prompt('请任意输入一个数字');
+        var b = +prompt('请任意输入一个数字');
+        var c = +prompt('请任意输入一个数字');
+        //之前错误的写法是:a>b?(a>c?a:c):b,没有判断b和吃的大小所以老出错
+        console.log(a >= b ? (a >= c ? a : c) : b >= c ? b : c)
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型</title>
+    <style type="text/css">
+        /* 要实现盒子的嵌套效果要使用padding
+        边框的使用,再设置边框的时候,必须同时设置border的颜色,样式,宽度
+        如果设置border的颜色和样式浏览器会自动生成一个默认的样式
+        */
+        /* 盒子的margin 是指距离页面的距离
+        如果有嵌套,则margin是指距离外层div的距离
+        */
+        .big {
+            width: 300px;
+            height: 200px;
+            background-color: #ff4400;
+            border: 5px solid #0000ff;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .inner {
+            width: 100px;
+            height: 50px;
+            background-color: #fff;
+            border: 1px dotted #003344;
+            margin-top: 10px;
+        }
+
+        .outer {
+            width: 260px;
+            height: 160px;
+            background-color: #ffff00;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="big">
+    <div class="outer">
+        <div class="inner">
+            <p>我是内容</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

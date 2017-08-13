@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>匹配方法</title>
+    <script>
+        //需求是找到1个字符串 a
+        //match()方法 返回值是查找的结果 (数组),当参数是字符串返回一个值
+        //第一步,定义一个字符串
+        var str = 'string';
+        //定义一个正则表达式
+        var reg = /r/;
+       // console.log(reg.test(str));//返回的是true 看里边是否有
+        //使用match()方法返回值是一个数组,所以要想得到字符串需要转换
+        var result = str.match(reg);
+        //在接受result 结果的时候转换成字符串
+        console.log(result.toString());
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

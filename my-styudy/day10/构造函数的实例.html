@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>构造函数的实例</title>
+    <script>
+        function Hero(){
+            //函数  在里边放一个局部变量和内部函数
+            var name = 'zhangwuji';
+            return function n(){
+                 console.log('this is zhangwuji');
+                 return name;
+            }
+//            //构造函数 里边放属性和方法
+//            this.name = 'zhouzhiruo';
+//            this.sayMe= function(){
+//                console.log('this is zhuzhiruo');
+//            }
+        }
+        //解析为函数使用
+        console.log(Hero());
+        //解析为构造函数使用=创建对象
+        var hero = new Hero();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

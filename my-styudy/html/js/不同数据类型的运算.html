@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>不同数据类型的运算</title>
+    <script>
+        var str1 = '100';
+        var str2 = 'string';
+        var boo = true;
+        var num = 200;
+        //string + number 是先将number类型转换成string类型
+        //就变成了string+string 这里的+加号就是表示字符串的拼接
+        var res1 = str1 + num;
+        var res2 = str2 + num;
+        console.log(res1);//100200
+        console.log(res2);//string200
+        //boolean + num 是将布尔值先转换为数据型之后再相加
+        //变成number+number
+        var res3 = boo + num;
+        console.log(res3);//201;
+        var res4 = boo + str1;
+        //字符串string型的加上布尔型,也是先把布尔型转化成字符型
+        //之后是字符型拼串
+        console.log(res4);//true100
+        //检测数据类型
+        console.log(Object.prototype.toString.call('string'));//[object String]
+        console.log(Object.prototype.toString.call(100));//[object Number]
+        console.log(Object.prototype.toString.call(true));//[object Boolean]
+        console.log(Object.prototype.toString.call(undefined));//[object undefined]
+        console.log(Object.prototype.toString.call(null));//[object null]
+        console.log(Object.prototype.toString.call([]));//[object Array]
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

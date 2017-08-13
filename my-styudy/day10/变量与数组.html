@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量与数组</title>
+    <script>
+        /*1,一个变量只能存储一个数据
+         /2,这里在每一次声明新的变量的时候,都会在电脑内存里新占用一个位置,即使2次声明的值是一样的
+         这时候在更改第一个变量的值不会赢下下一个以这个相同值为值得变量,所以str的值改变不会影响newstr
+         */
+        var str = 'string';
+        var newstr = str;
+        console.log('newstr:' + newstr);//string
+        //当变量的值进行更改的时候
+        str = 'number';
+        console.log(str);//number
+        console.log('newstr:' + newstr);
+        //一个数组里可以存储多个值
+        /*1因为一个数组里是可以存放多个数据的,在新建数组的时候会把数据存在内存里固定的位置,数组里边存放去取
+         数据的地址.所以在更改数据内容后,去取数据的地址不变,如果定义新的数组,复制当前的地址,当数据发生变化的话
+         新的数组的数据也会变化
+         ** */
+        //定义1个数组
+        var arry = ['string', 'number', 18];
+        //第一种情况 深复制 复制了数据 这时候再改变原来数据的内容不会影响到新的数组
+        //定义一个空数组
+        var newarry1 = [];
+        for (var i in arry) {
+            //这里定义的时候是把后边arry[i]里的数据赋值给newarry1[i],不能写反了
+            newarry1[i] = arry[i];
+        }
+        console.log(newarry1);//['string', 'number', 18];
+         arry[0] = 'boolean';
+         console.log(arry);//['boolean', 'number', 18];
+        //这里是因为 已经通过数组遍历把原数组的所有元素获取到新数组,原数组数据变化不会影响到新的数组
+        console.log(newarry1);//['string', 'number', 18];
+        //第二种情况  浅复制 只复制了数据存储的地址 当地址里边的内容发生改变就会跟着改变
+        var newarry2 = arry;
+        arry[1] = true;
+        console.log(arry);//["boolean", true, 18]
+        console.log(newarry2)//["boolean", true, 18]
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分隔字符串</title>
+    <script>
+        //用split()方法将一个使用分隔符分隔的字符串转换为一个数组
+        //split()方法的  参数 是分隔符  返回值 是一个数组
+        //这里的分隔符 可以是 ',' ';'' ' 空格 空字符串
+        var str ='s,t,r,i,n,g';
+        var newStr = str.split(',');
+        console.log(newStr);//得到1个长度为6的数组
+       //将一个字符串反向返回 案例
+        var str1 = 'you love i';
+        var newStr1 = str1.split(' ');
+        //使用分隔符 空格 得到一个 3个元素的数组
+        console.log(newStr1);
+        //把数组反转
+        var arr = newStr1.reverse();
+        //得到反转的数组
+        console.log(arr);
+        //把数组转换成字符串
+        var str2 = arr.toString();
+        console.log(str2);//得到 反转的字符串
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

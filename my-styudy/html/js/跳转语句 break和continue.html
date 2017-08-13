@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跳转语句break和continue</title>
+    <script>//用for循环可以理解break和continue
+//        for(var i =0;i<10;i++){
+//            if (i===5){
+//                //break 表示中断当前的循环
+//                break;
+//            }//当把console.log()放在循环语句里就会输出for循环的打印效果0,1,2,3,4;
+//            console.log(i);
+//        }//当把console放在外边就只输出一个结果5
+
+        var flag = true;
+
+        var age = 18;
+
+        for(var i=0;i<10;i++){
+            if(i==5){
+                //continue 表示的是只结束本次的循环,其他的继续,跳过当前的,不执行,其他都执行
+                // continue 跳出本次循环, 不中断循环
+                // break 跳出所有循环, 中断循环
+                console.log(i);
+                continue;
+            }
+            console.log(i);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

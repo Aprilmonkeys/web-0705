@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>return语句</title>
+    <script>
+        //函数调用的时候是不会直接显示出结果的,需要console
+        //return语句 语句结束函数执行,返回调用函数,而且把表达式的值作为函数的结果
+function fn(){
+    return'this is function';
+}
+var fun =fn();
+//这里如果没有return语句的话,以下2个输出都是undefined
+console.log(fun);//this is function
+console.log(fn());//this is function
+    </script>
+</head>
+<body>
+
+</body>
+</html>

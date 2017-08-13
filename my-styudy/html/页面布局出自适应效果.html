@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简单页面布局体验自适应布局</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            height: 2000px;
+        }
+
+        /*要实现的效果是1.当nav导航条始终保持在页面顶端
+        当页面的高度很高得时候,出现了导航条,这时候要想nav不随着滚动条移动,就要使用固定定位
+        */
+        .nav, .main, .footer {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        /*在使用固定定位的时候,nav导航条要想固定不动,需要设置3个偏移量  上 左 右分别为0*/
+        .nav {
+            height: 50px;
+            background-color: #ff4400;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+
+        }
+
+        /*问题是在浏览器窗口缩小的时候,右边的盒子会掉下来
+        解决问题的方法是 1.给浮动盒子的父元素就是main加一个固定的宽度
+        2子绝父相,这里加不加都不影响效果
+        3要实现的效果是左边的left的和值宽度固定,右边的盒子的宽度是自适应的效果
+        做法是将固定的盒子设置浮动,将自适应的盒子设置margin-left是固定盒子的宽度
+        4
+
+        */
+        .main {
+
+            height: 600px;
+            background-color: #ffff00;
+            margin-top: 60px;
+
+        }
+
+        .left {
+            width: 150px;
+            height: 100%;
+            background-color: #3333ff;
+            float: left;
+        }
+
+        /* 这里有个问题,页面显示的时候并没有出现自适应的效果
+        我之前作出的页面在浏览器宽度变化的时候,中间的盒子的缩小速度和上下的不一样
+        这里是问题本身很简单但是复杂化了
+        我出现的问题有:
+        1,左边浮动右边不用浮动的,不应该设置右浮动
+        2并没有需要子绝父相的方法
+        3也是最主要的,自适应的结构是不需要社会宽度的,我设置了宽度
+        */
+
+        /*
+       解决左边固定,右边自适应的方法
+        */
+        .right {
+            /*实现自适应,要去掉宽度,子元素不设置宽度会继承父元素
+            width:80%;去掉
+           */
+            width:100%;
+            height: 100%;
+            background-color: #0d4;
+            padding-left: 150px;
+            box-sizing: border-box;
+            /*这里要实现自适应宽度,有2种方法,1是设置margin-left:150px
+            或者
+            2设置overflow:hidden;
+            */
+            /*margin-left: 150px;*/
+            /*overflow: hidden;*/
+
+        }
+
+        .footer {
+            height: 40px;
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+<div class="nav"></div>
+<div class="main">
+    <div class="left"></div>
+    <div class="right"></div>
+</div>
+<div class="footer"></div>
+</body>
+</html>

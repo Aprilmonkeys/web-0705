@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用数组制作五角星</title>
+    <!--要实现的效果是:to do 按照第一行显示1个五角星,第二行显示2个五角星,显示10行,后5行显示#,按顺序依次显示10行
+    *
+    **
+    ***
+    ...
+    #########
+    ##########
+    -->
+    <script>
+       for(var i=0;i<10;i++){
+           var star ="*";
+           for(var j=0;j<=i;j++){
+               if(i>4){
+                   star="#"
+               } document.write(star);
+
+           }
+           document.write("<br>");
+
+       }
+
+    </script>
+</head>
+<body>
+</body>
+</html>

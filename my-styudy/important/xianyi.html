@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mianshiti</title>
+    <script>
+        //        console.log(!NaN);//true
+        //        console.log(!'');//true
+        //        console.log(!'qq');//false
+        //        console.log(!null);//true
+        //        console.log(!undefined);//true
+        //        console.log('' && 0);//''
+        //        console.log(NaN && '');//NaN
+        //        console.log(NaN || '');//''
+        //        var a = 5;
+        //        console.log(++a + a++ + ++a + --a + a-- + a);
+        //        // console.log(0 =false);//报错
+        //        console.log('1' === true);//false
+        //        console.log(!!'0');//true
+        //        console.log(!'0' == true);//false
+        //        console.log(5 + '2' - 2);
+        //        var f1 = 'f';
+        //        (function (f) {
+        //            console.log(f1);//undefined
+        //        var f1 = f || 'f1';
+        //        console.log(f);//
+        //        })(f1);
+        //        console.log(f1);//f
+        //        console.log(a);
+        //        var a =12;
+        //        function fn(){
+        //            console.log(a);
+        //            var a =13;
+        //        }
+        //        fn();
+        //        console.log(a);
+        var n = 0;
+        function a() {
+            var n = 10;
+
+            function b() {
+                n++;
+                alert(n);
+            }
+
+            b();
+            return b;
+        }
+        var c = a();
+        c();
+        alert(n);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

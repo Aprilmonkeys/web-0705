@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显式类型转换</title>
+    <script>
+        /*构造函数的方式
+         * Number()转换成数字型
+         * String()
+         * Boolean()
+         */
+        var str1 = '100';
+        var str2 = 'string';
+        var boo = true;
+        var num = 200;
+        var res1 = Number(str1);
+        var res2 = Number(str2);
+        var res3 = Number(boo);
+        console.log(res1);//100
+        console.log(res2);//nan
+        console.log(res3);//1
+        console.log(typeof res1);//数据类型
+        console.log(typeof res2);//数据乐行
+        console.log(typeof res3);//number
+        //String()
+        var res4 = String(num);
+        var res5 = String(boo);
+        console.log(res4);//'200' 正常console.log里显示的数字是蓝色的  true显示红色 当显示是黑色字体说明是字符串类型
+        console.log(res5);//'true'
+        console.log(typeof res4);//string
+        console.log(typeof res5);//string
+        //Boolean()
+        var num = 1;
+        var str = ""
+        var result1 = Boolean(num);
+        var result2 = Boolean(str);
+        console.log(result1);//true
+        console.log(result1);//false
+        console.log(typeof result1);//boolean
+        console.log(typeof result2);//boolean
+        //toString()方法
+        var num = 100;
+        var boo = true;
+        var result3 = num.toString();
+        var result4 = boo.toString();
+        console.log(result3);//'100'
+        console.log(result4);//'true'
+        console.log(typeof result3);//string
+        console.log(typeof result4);//string
+        //parseInt()方法 转换为数字的整数
+        var str1 = '100';
+        var str2 = '10.32';
+        var str3 = 'string';
+        var boo = true;
+        var resl1 = parseInt(str1);
+        var resl2 = parseInt(str2);
+        var resl3 = parseInt(str3);
+        var resl4 = parseInt(boo);
+        console.log(resl1);//100
+        console.log(resl2);//10
+        console.log(resl3);//NAN
+        console.log(resl4);//NAN
+        console.log(typeof resl1);//num
+        console.log(typeof resl2);//num
+        console.log(typeof resl3);//num
+        console.log(typeof resl4);//num
+        //parseFloat() -转换为带数字的浮点数
+        var str1='100';
+        var str2=10.32;
+        var str3='string'
+        var boo=true;
+        var result1=parseFloat(str1);
+        var result2=parseFloat(str2);
+        var result3=parseFloat(str3);
+        var result4=parseFloat(boo);
+        console.log(result1);//100
+        console.log(result2);//10.32
+        console.log(result3);//NAN
+        console.log(result4);//NAN
+        /*
+        parseInt()或者parseFloat()方法在转换带有数字的字符串拼接组合的字符串
+        要将字符串中的字符去掉直接显示数字部分,最后转换成number数据类型
+        * */
+        var str = '10string';
+        var result1 = parseInt(str);
+        var result2 = parseFloat(str);
+        console.log(result1);//10
+        console.log(result2);//10
+        console.log(typeof result1);//num
+        console.log(typeof result2);//num
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

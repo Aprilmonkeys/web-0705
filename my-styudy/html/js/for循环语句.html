@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for循环</title>
+    <script>
+        /*
+         * 理解for循环 可以从while上理解
+         * var num=0;
+         * while(num<10){
+         * console.log('这是while语句')
+         * num++
+         * }
+         * */
+        //for 循环的3个表达式:
+        /*1.初始化表达式 :在第一次执行for循环语句时候执行,只执行一次
+        2.条件判断表达式  第一次是在初始化表达式执行之后执行,之后是在循环控制表达式之后执行,所以要执行很多次
+        3 .循环控制表达式 是在语句块执行之后 要执行很多次
+        *
+        * */
+        var a = {};
+        a.key = 'liuzm';
+        a.age = '30';
+        console.log('liuzm is info ', a);
+        console.log('liuzm is info ' + a);
+
+        for (var num = 0; num < 10; num++) {
+            console.log('这是for语句', );
+        }
+        //双重for循环
+        for (var i = 0; i < 10; i++) {
+            for (var j = 0; j < 10; j++) {
+                console.log('i=' + i, 'j=' + j);
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>重复练习</title>
+    <script>
+        //考试题 定义一个Person类,要求类中要有三个属性name,age,gender
+        //并在类的原型中添加一个toString()方法,使其可以输出对象的信息
+        function Person(name,age,gender) {
+            this.name=name;
+            this.age=age;
+            this.gender=gender;
+        }
+        Person.prototype.toString=function(){
+            alert(this.name+this.age+this.gender);
+        }
+        var per1 = new Person('zhangwuji',18,'nan');
+        var per2 = new Person('zhaomin',18,'nv');
+        per1.toString();
+        per2.toString();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+</head>
+<body>
+<!-- form表单元素:默认情况下没有任何的效果,作用是将表单里边的元素提交到服务器-->
+<!--  form表单元素的属性值主要有:1.action 设置当前表单提交的地址(服务端地址)-->
+<!--  2method 设置当前表单的提交方式 一般主要用post-->
+<!-- form表单元素提交成功必须满足以下条件-->
+<!--  1.必须定义name属性-->
+     <!-- 2.必须和提交按钮一起使用 -->
+<!--  3.enctype="multipart/form-data"-->
+<form action="table.html" enctype="multipart/form-data" method="post">
+    用户名:<input type="text"><br>
+    <!-- readonly 表示这个用户名是只读形式 不能书写-->
+    用户名:<input type="text" readonly><br>
+    密 码:<input type="password"><br>
+    点击登录: <input type="submit" value="登录" ><br>
+    <br>
+    <hr>
+    <!--  这里需要注意的是 单选框和多选框 必须使用name属性来组成一个组 之后才能做出选择-->
+    我是单选框
+    <br>
+    性别 <br>
+    <!-- 这里可以默认一个用 checked-->
+    <!--  再次强调要想表单元素生效,必须使用name-->
+    <input type="radio" checked name="sex">男
+    <input type="radio" name="sex">女
+    <br>
+    <hr>
+    我是多选框
+    <!-- 注意不要忘记写name -->
+    <br>
+    我热爱的运动
+    <input type="checkbox" name="sports">篮球
+    <input type="checkbox" name="sports" checked>足球
+    <input type="checkbox" name="sports">羽毛球
+    <input type="checkbox" name="sports">乒乓球
+    <input type="checkbox" name="sports">击剑
+    <br>
+    <hr>
+    我是下拉列表
+    <!-- 注意正常默认只显示第一个 multiple 可以显示最多4个下拉列表项 size 可以设置需要显示的数量-->
+    <br>
+    第一种情况
+    <br>
+    <select name="phone" >
+        <option value="">苹果</option>
+        <option value="">小米</option>
+        <option value="" selected >华为</option>
+        <option value="">诺基亚</option>
+        <option value="">步步高</option>
+    </select>
+    <br>
+    第二种情况
+    <br>
+    <select name="phone"  multiple>
+        <option value="">苹果</option>
+        <option value="">小米</option>
+        <option value="">华为</option>
+        <option value="">诺基亚</option>
+        <option value="">步步高</option>
+    </select>
+    <br>
+    第三种情况
+    <br>
+    <select name="phone" id="" multiple size="5">
+        <option value="">苹果</option>
+        <option value="">小米</option>
+        <option value="">华为</option>
+        <option value="">诺基亚</option>
+        <option value="">步步高</option>
+    </select>
+    <br>
+    <hr>
+3个按钮
+    <!-- value 是设置当前按钮的名称-->
+    <br>
+    普通按钮: <input type="button" value="普通按钮">
+    <!-- 普通按钮的另一种写法-->
+    <button>我也是普通按钮</button>
+    提交按钮: <input type="submit" value="提交">
+    重置按钮: <input type="reset" value="重置">
+    <br>
+    <hr>
+    文本域file
+    <!-- file文本域的作用:选择本地文件-->
+    <!-- 一般默认只能选择一个文件 -->
+    <!--  注意要传多个文件需要用 multiple 属性-->
+    <!-- ,用于实际开发中上传本地文件的话需要使用-->
+    <!-- <form enctype ="multipart/form-data>-->
+    <br>
+    只能选择一个文件的写法
+    <br>
+    <input type="file">
+    <br>
+    能选择多个文件的写法
+    <!-- 注意此时选择多个文件的时候需要按住鼠标左键和shift键-->
+    <input type="file" multiple>
+    <br>
+    隐藏域
+    <br>
+    <!-- 不会显示在浏览器页面中  id 设置当前元素的唯一标识 value 设置当前元素的值-->
+    <!-- 隐藏域的作用: 存储一些不希望被用户看到的内容(数据)-->
+    <input type="hidden" id="username" value="张无忌">
+    <br>
+    图片元素
+    <!-- 有2种引入图片的方法 1.img  2.input type="image"-->
+    <!-- 主要区别:<img>是和表单无关的-->
+    <!-- input type = "image" 是表单内元素-->
+    <br>
+    第一种引入图片的方法
+    <br>
+    <img src="../images/1.jpg" alt="">
+    <br>
+    第二种引入图片发法
+    <br>
+    <input type="image" src="../images/1.jpg" >
+    <hr>
+</form>
+</body>
+</html>

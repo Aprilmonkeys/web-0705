@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>遍历数组</title>
+    <script>
+        //新建一个数组
+        var arr = new Array(1,2,3,4,5,4,3,2,1);
+        //for循环遍历数组里的元素
+        for(var i = 0;i<arr.length;i++){
+            //遍历数组里边的 i 得到
+         console.log(arr[i]);
+         //遍历整个数组
+         console.log(arr)
+        }
+        //在for循环外边直接打印数组
+        console.log(arr);
+
+        //for 循环还可以改写成while
+        var i = 0;
+        while(i<arr.length){
+            console.log(arr[i]);
+            i++;
+        }
+
+        //用for..in  这里直接写不用 设置i = 0 等
+        for(i in arr){
+            console.log(arr[i]);
+        }
+        //for 与for...in 的区别
+        //for循环语句控制数组可以控制开始和结束
+        //for in 只能遍历从开始到结束
+    </script>
+</head>
+<body>
+
+</body>
+</html>

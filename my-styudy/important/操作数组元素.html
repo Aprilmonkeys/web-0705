@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作数组元素</title>
+    <script>
+        var arr = [1, 2, 3, 4, 5];
+        //读取数组中的某一个元素:读取的是索引为3的元素
+        console.log(arr[3]);//索引是3的元素时4
+        //修改数组元素,把数组中索引是2的值改成8
+        arr[2] = 8;
+        console.log(arr);//数组变成[1,2,8,4,5]
+        //删除数组中的某一个索引 删除索引1的值
+        //删除对应位置的数据,但是位置还在,值变成undefined
+        delete arr[1];//[1,undefined,8,4,5]
+        console.log(arr);
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>进出栈的方法</title>
+    <script>
+        //向数组添加一个元素
+
+        //element- 表示向数组添加元素的内容,添加多个元素用逗号分隔
+        //返回值是添加之后的数组长度
+        var arr = ['red','green','blue'];
+        //push(element)方法
+        //f添加元素之后会返回新的数组长度
+        var result = arr.push('black');
+        console.log(arr,result);//["red", "green", "blue", "black"] 4
+        //pop()方法是从数组中删除最后一个元素.返回值是 那个删除的元素
+        var result1 = arr.pop();
+        console.log(arr);//["red", "green", "blue"]
+        console.log(result1);//black
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

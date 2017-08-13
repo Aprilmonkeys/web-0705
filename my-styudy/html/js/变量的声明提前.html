@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量的声明提前</title>
+    <script>
+        //变量的声明提前
+        console.log(a);//undefined
+        var a = 'a';
+        //这里函数体内部的局部变量会优先执行
+        function fn() {
+            console.log(a);//undefined
+            var a = 'a';
+        }
+        fn();
+        console.log(a);//a
+        var a = 'a';
+        console.log(a);//a
+        function fn() {
+            console.log(a);//undefined
+            var a = 'b';
+            console.log(a);//b
+        }
+        fn();
+        console.log(a);//a
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

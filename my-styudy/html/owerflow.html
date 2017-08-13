@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>overflow属性的使用</title>
+    <style type="text/css">
+        div{
+            width: 200px;
+            height: 100px;
+            border:1px dashed #ababab;
+            overflow:auto;
+        }
+    </style>
+</head>
+<body>
+<div>
+    我是一大段文字,为了来显示文字溢出效果,然后使用overflow的属性生成的一大段文字
+    overflow的属性是为了解决内容溢出的问题的,overflow:visible是默认值表示不处理
+    overflow:hidden;表示溢出的部分隐藏,但是缺点是溢出的部分将不能再查看,overflow
+    scroll是提供了滚动条,但是滚动条始终显示,当文本不溢出的时候也会显示,有点不合理
+    overflow:auto;当内容溢出的时候会自动生成滚动条,当没有溢出的时候就不会生成
+
+</div>
+</body>
+</html>

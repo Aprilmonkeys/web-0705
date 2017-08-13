@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>考查构造函数</title>
+    <script>
+        //构造函数
+        function Person(name, age, gender) {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+        }
+        //向原型中添加toString()方法
+        Person.prototype.toString = function () {
+            //alert只能输出一句话不能加逗号
+            //alert('我的名字是:' + this.name);
+            //alert('我的年纪是:' + this.age);
+            //alert('我的性别是:' + this.gender);
+            alert('我的名字是:' + this.name+'我的年纪是:' + this.age+'我的性别是:' + this.gender)
+            console.log('我的名字是:' + this.name,'我的年纪是:' + this.age,'我的性别是:' + this.gender)
+        };
+        //创建一个Person的实例,相当于给创建的函数传参数
+        var per1 = new Person('sunwulong', 18, 'nan');
+        var per2 = new Person('zhubajie', 20, 'nv');
+        //调用函数
+        per1.toString();
+        per2.toString();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

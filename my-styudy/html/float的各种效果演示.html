@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float的效果</title>
+    <style type="text/css">
+        /*浮动的第一个基本属性
+        设置浮动之后,元素会脱离文档流,将原来垂直排列的盒子变成水平横向排列,
+        而且如果浮动的元素的宽度相加大于页面显示的宽的时候会自动换行.6
+        */
+        .class1 {
+            width: 200px;
+            height: 100px;
+            background-color: #ff4400;
+            float: left;
+        }
+
+        .class2 {
+            width: 200px;
+            height: 100px;
+            background-color: #ffaa00;
+            float: left;
+        }
+
+        .class3 {
+            width: 200px;
+            height: 100px;
+            background-color: #44ff00;
+            float: left;
+        }
+/*浮动的第二个属性.当嵌套盒子设置浮动的时候,子元素的浮动只能在父元素的范围区域内浮动\
+是不会超出父元素的范围的*/
+        .father {
+            width: 700px;
+            height: 300px;
+            background-color: #cccccc;
+            float: left;
+        }
+
+        .son {
+            width: 50px;
+            height: 50px;
+            background-color: #00ffff;
+            float: right;
+        }
+        /*浮动的第三种属性
+        兄弟关系的相邻元素设置浮动的时候如果前边的兄弟不设置浮动,后边元素设置的浮动是不会超过前边盒子的位置的
+        只会在自己盒子的水平方向上进行移动,意思浮动的盒子不会占文档流的位置
+        */
+
+        #d1 {
+            width: 400px;
+            height: 200px;
+            background-color: #ff8800;
+            float: right;
+        }
+        #d2 {
+            width: 400px;
+            height: 200px;
+            background-color: #008800;
+        }
+        #d3 {
+            width: 400px;
+            height: 200px;
+            background-color: #ff88ff;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<!--第一种浮动现象-->
+<div class="class1"></div>
+<div class="class2"></div>
+<div class="class3"></div>
+<hr>
+<!--第二种浮动现象-->
+<div class="father">
+    <div class="son"></div>
+</div>
+<!--第三种浮动现象-->
+<div id="d1"></div>
+<div id="d2"></div>
+<div id="d3"></div>
+</body>
+</html>

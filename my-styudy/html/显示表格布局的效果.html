@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实现表格布局的效果</title>
+    <style type="text/css">
+        h2 {
+            text-align: center;
+        }
+        .tr {
+            width: 80%;
+            height: 50px;
+            margin:0 auto;
+            border-bottom:0;
+
+        }
+        /*这里有个问题
+        当用表框制作表格的时候,中间的线会多1px变粗,
+        解决办法是左右用margin-right:-1px;
+        上下用border-bottom:0;
+        这里的border-bottom:0;可以设置在单元格里也可以设置在行里的div里
+        之后再单独设置
+        */
+        .td {
+            width: 25%;
+            height: 100%;
+            border: 1px solid #000;
+            float: left;
+            box-sizing: border-box;
+            margin-right: -1px;
+            border-bottom:0;
+
+        }
+        #last {
+            border-bottom:1px solid #000;
+        }
+
+    </style>
+</head>
+<body>
+<h2>用div做表格</h2>
+<div class="tr">
+    <div class="td"></div>
+    <div class="td"></div>
+    <div class="td"></div>
+    <div class="td"></div>
+</div>
+<div class="tr">
+    <div class="td"></div>
+    <div class="td"></div>
+    <div class="td"></div>
+    <div class="td"></div>
+</div>
+<div class="tr" id="last">
+    <div class="td"></div>
+    <div class="td"></div>
+    <div class="td"></div>
+    <div class="td"></div>
+</div>
+</body>
+</html>

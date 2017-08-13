@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>if else语句的嵌套</title>
+    <script>
+        /*
+         * 要实现的需求
+         * 1.如果成绩小于60,不合格
+         * 2大于60-70,及格
+         * 3,70-85,良好
+         * 4大于85优秀
+         * */
+//        var score=80;
+//        if(score<60){
+//            console.log('不合格');
+//        }else{
+//            //这里不能写60<score<70,因为()表达式里的内容 不能连写,不规范
+//            if(score<70){
+//                console.log('及格');
+//            }else{
+//                if(score<85){
+//                    console.log('良好');
+//                }else{
+//                    console.log('优秀');
+//                }
+//            }
+//        }
+//        console.log('这是成绩');
+        var score=85;
+        if(score<60){
+            console.log('不及格');
+        }else if(score<70){
+            console.log('及格');
+        }else if (score<85){
+            console.log('良好');
+        }else{
+            console.log('优秀');
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>二维数组练习</title>
+    <script>
+        //        //for in 写的二维数组  这里的j 会报错
+        //        var arr = new Array(10);
+        //        for (var i in arr) {
+        //            arr[i] = new Array(10);
+        //
+        //            for (var j in arr[i]) {
+        //                arr[i][j] = '';
+        //            }
+        //        }
+        //        console.log(arr[i]);
+        //for 循环写二维数组
+        var arr = new Array(10);
+        for (var i = 0; i < arr.length; i++) {
+            arr[i] = new Array(10);
+            //这里的j是小于arr[i]的length 不要写错成arr.length
+            for (var j = 0; j < arr[i].length; j++) {
+                arr[i][j] = i + j;
+               // console.log(i + j);//20
+            }
+//            alert(j);
+            console.log(arr[i][j]);
+        }
+        //得到的arr是一个长度为10的数组,每个元素还是一个长度为10的数组
+        //数组里的每个元素还是一个有10个元素的数组
+        console.log(arr);//10个长度为10的数组里
+        console.log(arr[i]);//每个空数组里的i都是undefined
+        console.log(i + j);//20
+        console.log(arr[j]);//undefined;
+        console.log(new Array(10));//长度为10的空数组
+       // console.log(arr[i][j]);//放在外边局部变量获取不到
+    </script>
+</head>
+<body>
+
+</body>
+</html>

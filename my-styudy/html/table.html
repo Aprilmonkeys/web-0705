@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table</title>
+</head>
+<body>
+<h3 align="center">跨行和跨列表格演示</h3>
+<table border="1" cellspacing="0" width="400" align="center">
+    <thead>
+    <tr>
+        <!--todo 月份做表头-->
+        <th>一月</th>
+        <th>二月</th>
+        <th>三月</th>
+        <th>四月</th>
+        <th>五月</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <!--todo 要第二行的第二个单元格和第三行的第二个单元格合并,需要删除第三行的第二个单元格-->
+        <td>收入</td>
+        <td rowspan="2" align="center">20</td>
+        <td>34</td>
+        <td>45</td>
+        <td>34</td>
+    </tr>
+    <tr>
+        <td>支出</td>
+<!--todo 这里是合并单元格之后需要删除的多余的那个单元格-->
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+    </tr>
+    </tbody>
+    <tfoot>
+      <!--todo 合并第4行的第4和第5个单元格-->
+    <tr>
+        <td>利润</td>
+        <td>32</td>
+        <td>34</td>
+        <td colspan="2" align="center">35</td>
+        <!--todo 合并列之后删除的单元格-->
+    </tr>
+    </tfoot>
+
+</table>
+</body>
+</html>

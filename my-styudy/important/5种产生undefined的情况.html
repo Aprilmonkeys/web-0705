@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5种产生undefined的情况</title>
+    <script>
+        //第一种情况  定义变量不赋值 不初始化
+        var a ;
+        console.log(a);//undefined
+        //第二种情况 定义变量 的值是undefined
+        var b = undefined;
+        console.log(b);//undefined
+        //第三种情况 定义函数没有写return 返回值 默认返回值是undefined
+        function fn(){
+        }
+        //函数的返回值需要先调用函数 ,用变量声明才能接收到函数的返回值
+        var c = fn();
+        console.log(c);//undefined
+        //第四种情况 定义一个对象 访问不到对象里的属性
+        var object = {};
+        var d =object.name;
+        console.log(d);//undefined
+        //第五种情况 定义一个只有长度的数组 默认的数组的元素都是undefined
+        var e = new Array(10);//定义一个长度为10 的空数组
+        //打印任一个数组的索引得到元素都是undefined
+        console.log(e[3]);//undefined
+        //第六种情况 定义一个空的正则表达式 打印的时候是 undefined
+        var reg = //;
+        console.log(reg);//undefined
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

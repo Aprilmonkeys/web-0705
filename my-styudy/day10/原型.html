@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原型</title>
+    <script>
+        //原型是Function的一个属性
+        //prototype是存在的(Function 对象是预定义的)
+        //prototype的属性值是空对象
+        var fun = new Function();
+        console.log(fun.prototype);
+        //为fun的prototype添加原型属性
+        fun.prototype.name='zhangwuji';
+        console.log(fun.prototype.name);
+        function fn(){
+            console.log('this is function');
+        }console.log(fn.prototype);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

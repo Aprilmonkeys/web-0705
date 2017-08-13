@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1-100之间7的倍数个数和总和</title>
+    <script>
+        //要用for循环
+        var sum=0;
+        var num=0;
+        for (var i = 0; i <= 100;i++) {
+
+            if (i % 7 === 0) {
+                sum += i;
+                //这里num++ 是记录次数的
+                num ++;
+            }
+        }
+        //这里要记住 不要写在for循环里边
+        document.write('7的倍数的总和' + sum +'<br>');
+        document.write('7的倍数的个数' + num +'<br>');
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

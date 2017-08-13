@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>利用border来写三角形</title>
+    <style type="text/css">
+        /* 用border实现三角的效果的时候,主要是要width=0,height=0*
+        再用白色来调色
+        /
+         */
+        .down {
+            width: 0;
+            height: 0;
+            border-top: 20px solid #ff4400;
+            border-bottom: 20px solid #ffffff;
+            border-left: 20px solid #ffffff;
+            border-right: 20px solid #ffffff;
+            margin: 100px auto;
+        }
+
+        .up {
+            width: 0;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 30px solid #0000ff;
+        }
+
+        .left {
+            width: 0;
+            height: 0;
+            border-top: 30px solid transparent;
+            border-bottom: 30px solid transparent;
+            border-right: 30px solid #00ffaa;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<div class="down">
+</div>
+<div class="up">
+</div>
+<div class="left"></div>
+</body>
+</html>

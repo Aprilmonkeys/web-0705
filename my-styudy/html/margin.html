@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>margin问题</title>
+    <style type="text/css">
+        * {
+            margin:0 auto;
+        }
+        /*margin 问题
+        1.影响盒子自身的移动的是 margin-top 和margin-left
+        换句话说意思是 当设置盒子的margin-top 和margin-left会让盒子自己发生移动,影响自身位置
+        margin-top 会让盒子自己向下移动
+        margin-left 会让盒子自己向右移动
+        2.设置自身盒子的同时同样会影响到相邻盒子的位置
+        margin-right 会让盒子的右边盒子向右移动
+        margin-bottom 会让盒子的下边盒子向下移动
+    3垂直方向上设置margin  当两个盒子是父子关系或者嵌套关系的时候会发生margin的叠加效果
+    所以嵌套的盒子不能同时使用margin 要使用padding替换 同时不能忘记减掉宽度和高度
+     */
+        .outer {
+            width: 600px;
+            height: 300px;
+            background-color: #ff4400;
+            padding-top: 100px;
+        }
+        .inner {
+            width: 300px;
+            height: 200px;
+            background-color: #ffff00;
+        }
+    </style>
+</head>
+<body>
+<div class="outer">
+    <div class="inner"></div>
+</div>
+</body>
+</html>

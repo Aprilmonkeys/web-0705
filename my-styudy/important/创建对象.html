@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建对象</title>
+    <script>
+        //创建对象有3种方法
+        //第一种:直接用 {}语句块.创建一个对象 hero1,属性 name 属性值'zhangwuji'
+        //这里需要注意 属性值后边不能用分号,要用逗号否则报错
+        var hero1 = {
+            name:'zhangwuji',
+            age : 18,
+            sayMe : function(){
+                console.log('i am zhangwuji');
+            }
+        };
+        //这里要想看见 i am zhangwuji ,需要调用hero1 里的sayMe()方法
+       console.log(hero1.sayMe());
+        console.log(hero1);
+        //第二种 创建对象的方法
+        var hero2 = new Object();
+        hero2.name='zhouzhiruo';
+        hero2.age=18;
+        hero2.sayMe=function() {
+            console.log('i am zhouzhiruo');
+        };
+        console.log(hero2);
+        //第三种创建对象的方法,必须先有一个对象之后再那个对象的基础上在创建
+        var hero3 = Object.create(hero1);
+        var hero4 = Object.create(null);
+        hero4.name= 'zhaoming';
+        hero4.age = 18;
+        hero4.sayMe =function(){
+            console.log('i am zhaoming');
+        }
+        console.log(hero4);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

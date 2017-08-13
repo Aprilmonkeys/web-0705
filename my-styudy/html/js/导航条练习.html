@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>navy</title>
+    <style type="text/css">
+        /*
+        第一步初始化代码
+        */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*
+        页面做的超级简单都没用div,直接ul
+           */
+        ul {
+            width: 1000px;
+            height: 50px;
+            background-color: lightskyblue;
+            margin: 50px auto;
+            list-style: none;
+            /*overflow:hidden 可以让盒子溢出部分隐藏*/
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+            width: 25%;
+            height: 100%;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        a:hover {
+            background-color: #ff4400;
+        }
+
+    </style>
+</head>
+<body>
+
+<ul>
+    <li><a href="#">首页</a></li>
+    <li><a href="#">新闻</a></li>
+    <li><a href="#">联系</a></li>
+    <li><a href="#">关于</a></li>
+</ul>
+
+</body>
+</html>

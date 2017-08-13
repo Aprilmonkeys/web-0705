@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量</title>
+    <!--当重复定义变量的时候,后定义的变量会覆盖之前的变量
+-->
+    <script type="text/javascript">
+        var num=100;//被覆盖
+//        当重复定义变量的时候,后定义的变量会将之前的覆盖,但是一般不建议使用
+        var num=200;
+        console.log(num);//200
+        //这里是直接num等于300,相当于重新赋值
+        num =300;
+        console.log(num);//300
+        //text1没有定义,直接输出的话,会报错!
+      console.log(text1);
+    </script>
+</head>
+<body>
+</body>
+</html>

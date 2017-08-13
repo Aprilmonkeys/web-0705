@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>行内元素的盒模型特点</title>
+    <style type="text/css">
+        /* 行内元素的盒模型特点
+        1.行内元素对width  height 是无效的
+        2.行内元素的宽度和高度是由内容的多少来决定的
+        3.行内元素 对padding 和border是有效的 但是对margin的上下值是无效的,左右margin是有效的
+        要想使用margin 可以转化为display: inline-block;
+        4,所以可以在在body里使用padding
+        */
+        /*因为行内元素的上下margin无效,所以可以在body里使用padding*/
+        body {
+            padding-top: 50px;
+        }
+         span {
+            margin-top: 100px;
+            border:10px solid #ffff00;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<span>我是一个行内元素span</span>
+</body>
+</html>

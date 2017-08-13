@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>while和do while</title>
+    <script>
+        //do while 和while 的区别
+        //do while 至少执行一次
+        //while 可能一次都不执行,当表达式是false的时候直接跳出语句
+        /*while 语句 第一次执行时,判断当前的表达式结果,true 去执行指定的语句块内容,false则跳出当前的while
+         while语句 继续执行后面的代码,当表达式true,执行指定的语句块后,重新判断表达式的结果
+         死循环 while 语句的表达式的结果永远为true 1指定的语句块会被无限地执行,永不结束
+         2可能导致浏览器内存溢出,浏览器奔溃
+         * */
+        var num = 0;
+        while (num < 0) {
+            console.log(num);
+            num++;
+        }
+        //while 当语句块执行之后,重新判断,重新执行,如果不做处理会死循环
+        console.log('我是语句块后的内容');
+        var num = 0;
+        do {
+            console.log('我上来就先执行一次语句块');
+        } while (num < 0);
+        console.log('我是语句块后边的内容');
+        var num = 0;
+        while(num<10){
+            console.log(num);
+            //这个num++ 必须写,否则就会死循环
+            //while()语句的特点就是当语句块执行之后,还会重新判断,重新执行
+            num++
+        }
+
+        var num=0;
+        do {
+            //do while()一上来之后就直接先执行语句块
+            console.log('do while 一上来就先执行语句');
+            //之后再进行判断条件
+        }while(num<10);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

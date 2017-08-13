@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>绑定事件</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			body {
+				padding-top: 50px;
+				padding-left: 50px;
+			}
+		</style>
+		//script 标签写在 head 里
+		<script>
+			//这里是因为页面的加载顺序是从上到下加载的
+			//这个window.onload（）是在页面的上边，意思是当body页面加载完成之后触发这个函数
+			// 如果不加这个加载页面完成之后的函数当这个页面加载的时候无法获取到下边body里的btn会报错
+
+			window.onload = function(){
+                //通过document对象获取html页面中的btn按钮
+                var btn = document.getElementById('btn');
+                //为Btn绑定单击响应函数
+                btn.onclick = function(){
+                    alert('i am button ');
+			}
+		</script>
+	</head>
+	<body>
+		<button id="btn" class="btn btn-primary">点我点我点我</button>
+	//script 标签写在了 body 里边
+		<script>
+			//通过document对象获取html页面中的btn按钮
+			var btn = document.getElementById('btn');
+			//为Btn绑定单击响应函数
+			btn.onclick = function(){
+			    alert('i am button ');
+			}
+		</script>
+	</body>
+	//script标签写在body 的后边
+	<script>
+		//利用JavaScript将HTML 页面的按钮获取
+		var btn = document.getElementById('btn');
+		//为按钮绑定单击响应事件
+		btn.onclick = function(){
+		    //为当前事件编写处理函数
+		    alert('i am button');
+		}
+	</script>
+</html>

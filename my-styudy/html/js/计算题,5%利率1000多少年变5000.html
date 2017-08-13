@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算1000多少年能变5000</title>
+    <script>
+        //这个题先找变量
+        var num=1000;var i=0;
+        while(num<5000){
+            num =num +num*0.05;
+            i++;
+        }
+        //要在外边输出值,否则又要进入循环
+        console.log('需要'+i+'年才能把1000元变5000');
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>排序的方法</title>
+    <script>
+        //定义一个数组 arr
+        arr = [1, 3, 4, 2, 5, 8];
+        //reverse()反转数组元素的顺序
+        //var arr1 = arr.reverse();
+        //console.log(arr1);//[8, 5, 2, 4, 3, 1]
+        arr.sort(function (a,b) {
+            return b-a ;
+        });
+        console.log(arr);
+       //sort()排序 这个方法并不是默认从小到大排序,是按照首字母排序的
+        //不管数字还是字符串都是按照首字母的顺序排列
+        var arr2 = arr.sort();
+        console.log(arr2);//[1, 2, 3, 4, 5, 8]
+        var arr3 = [34,4,6,33,55,78,];
+        arr3.sort();
+        console.log(arr3);//[33, 34, 4, 55, 6, 78]  并不是从小到大
+        //sort()比较大小的话 需要再引入函数来判断
+        arr3.sort(function(a,b){
+            return a-b
+        });
+        console.log(arr3);//[4, 6, 33, 34, 55, 78]
+        arr.sort(function(a,b) {
+            return a<b;
+        });
+        console.log(arr3);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>测试document对象</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			body {
+				padding-top: 50px;
+				padding-left: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn" class="btn btn-primary">测试document对象</button>
+	</body>
+	<script>
+		var btn = document.getElementById('btn');
+		btn.onclick = function(){
+			console.log(document)
+		}
+	</script>
+</html>

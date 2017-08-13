@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>隔行变色</title>
+    <script>
+        window.onload = function () {
+            var btn = document.getElementById('btn');
+            btn.onclick = function () {
+                var ps = document.getElementsByTagName('p');
+                for (var i = 0; i < ps.length; i++) {
+                    if (i % 2 === 0) {
+                        ps[i].style.backgroundColor = 'red';
+                    }else{
+                        ps[i].style.backgroundColor = 'yellow';
+                    }
+                }
+            }
+        }
+        var str = 'this is message';
+
+        console.log(str instanceof String);//fasle
+        console.log(typeof str);//string
+    </script>
+
+</head>
+<body>
+<button id="btn">点我变色</button>
+<p>我是一段简单文字,用来做隔行变色的一段文字</p>
+<p>我是一段简单文字,用来做隔行变色的一段文字</p>
+<p>我是一段简单文字,用来做隔行变色的一段文字</p>
+<p>我是一段简单文字,用来做隔行变色的一段文字</p>
+<p>我是一段简单文字,用来做隔行变色的一段文字</p>
+<p>我是一段简单文字,用来做隔行变色的一段文字</p>
+<p>我是一段简单文字,用来做隔行变色的一段文字</p>
+</body>
+</html>

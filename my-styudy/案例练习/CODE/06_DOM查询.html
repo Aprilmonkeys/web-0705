@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>DOM查询</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			body {
+				padding-top: 50px;
+				padding-left: 50px;
+			}
+		</style>
+		<script>
+			window.onload = function(){
+			    //获取id是one的按钮
+				var btn1 =document.getElementById('btn1');
+				btn1.onclick = function(){
+				    //找到one
+					var one = document.getElementById('one');
+					one.style.backgroundColor='red';
+				};
+				//得到btn2按钮
+				var bn2 =document.getElementById('btn2');
+				btn2.onclick = function () {
+					//点击btn2的时候要操作2个有name值的li所以获取2个有name值的
+					var list = document.getElementsByName('list');
+					//要让list的背景颜色变绿色
+					for(var i = 0;i<list.length;i++){
+					    list[i].style.backgroundColor='green';
+					}
+                };
+				//点击btn3按钮操作标签的名字
+				var btn3 = document.getElementById('btn3');
+				//为按钮绑定单击函数
+				btn3.onclick=function(){
+                    //得到标签名的类名
+                    var li=document.getElementsByTagName('li');
+                    for(var i = 0;i<li.length;i++){
+                        li[i].style.backgroundColor='yellow';
+                    }
+				};
+				//点击btn4操作classname
+				var btn4 = document.getElementById('btn4');
+				btn4.onclick=function(){
+				    var item =document.getElementsByClassName('list-group-item');
+				    for(var i=0;i<item.length;i++){
+				        item[i].style.backgroundColor='purple';
+					}
+				};
+				//querySelector 使用
+				var btn5 = document.getElementById('btn5');
+				btn5.onclick=function() {
+                    //id选择器在querySelector方法使用的时候需要带着选择器的符号#id
+                    var five = document.querySelector('#five');
+                    five.style.backgroundColor = 'orange';
+                };
+				//querySelectorAll 使用
+				//获取btn6，之后绑定响应函数
+				var btn6 = document.getElementById('btn6');
+				btn6.onclick=function(){
+				    //选择所有的类名
+					var lists = document.querySelectorAll('.list-group-item');
+					for(var i=0;i<lists.length;i++){
+					    lists[i].style.backgroundColor='blue'
+					}
+				}
+
+			};
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="col-md-4">
+				<p><button id="btn1" class="btn btn-primary btn-block">getElementById</button></p>
+				<p><button id="btn2" class="btn btn-primary btn-block">getElementsByName</button></p>
+				<p><button id="btn3" class="btn btn-primary btn-block">getElementsByTagName</button></p>
+				<p><button id="btn4" class="btn btn-primary btn-block">getElementsByClassName</button></p>
+				<p><button id="btn5" class="btn btn-primary btn-block">querySelector</button></p>
+				<p><button id="btn6" class="btn btn-primary btn-block">querySelectorAll</button></p>
+			</div>
+			<div class="col-md-8">
+				<ul class="list-group">
+					<li id="one" class="list-group-item">这是一个 id 为 one 的选项</li>
+					<li id="two" name="list" class="list-group-item">这是一个 id 为 two 的选项</li>
+					<li id="three" class="list-group-item">这是一个 id 为 three 的选项</li>
+					<li id="four" name="list" class="list-group-item">这是一个 id 为 four 的选项</li>
+					<li id="five" class="list-group-item">这是一个 id 为 five 的选项</li>
+				</ul>
+			</div>
+		</div>
+
+	</body>
+</html>

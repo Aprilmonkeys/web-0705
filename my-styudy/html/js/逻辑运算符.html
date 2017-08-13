@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>逻辑运算符</title>
+    <script>
+        var A = 10;
+        var B = 20;
+        // A = A+B 等价于 A+=B
+        console.log(A += B);//30
+        console.log(A);//30
+        //逻辑与运算符 - &&
+        //逻辑与运算符左右两个变量的值都为true时 结果为true
+        //逻辑与 前边是true 返回值是后边 前边是false 返回值是前边
+        //逻辑或 前边是true 返回前边 逻辑或前边是false返回时后边
+        console.log(true && true);//true
+        console.log(true && false);//false
+        console.log(false && true);//false
+        console.log(false && false);//false
+        console.log(true || true);//true
+        console.log(true || false);//true
+        console.log(false || true);//true
+        console.log(false || false);//false
+        console.log('string'&&'number');//number
+        console.log('string'&&'');//kong
+        console.log(''&&'string');//kong
+        console.log(''&&'');//kong
+        console.log(1&&1);//1
+        console.log(1&&0);//0
+        console.log(0&&1);//0
+        console.log(0&&0);//0
+        console.log('string'&&100);//100
+        //逻辑或运算符 前true是前  前fasle是后
+        console.log('string'||'number');//string
+        console.log('string'||'');//string
+        console.log(''||'');//kong
+        console.log(1||1);//1
+        console.log(1||0);//1
+        console.log(0||1);//1
+        console.log(0||0);//0
+        console.log('string'||100);//string
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

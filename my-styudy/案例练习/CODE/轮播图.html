@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图效果</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <style>
+        body {
+            padding: 100px;
+        }
+
+        p {
+            color: #ff4400;
+
+            margin: 5px 0;
+        }
+    </style>
+    <script>
+        //入口函数,body,页面加载完之后触发这个函数
+        window.onload = function () {
+            //实现的效果是点击两个a标签5张图片的轮播效果
+            //先获取2个点击的按钮
+            var prev = document.getElementById('prev');
+            var next = document.getElementById('next');
+            //获取要操作的图片 通过标签元素 获得唯一的一个img标签
+            var show = document.getElementsByTagName('img')[0];//这里需要注意的是得到的类数组需要使用索引值才能得到1个
+            //要操作5张图片 可以先把5张图片放在数组里 通过更改图片的index值 达到切换的效果
+            var hint = document.getElementById('hint');
+            var arr = ['img/1.jpg', 'img/2.jpg', 'img/3.jpg', 'img/4.jpg', 'img/5.jpg'];
+
+            var imgPath = "img";
+
+            var imgArr = [
+                {
+                    title: '第1章图片',
+                    name: '1.jpg',
+                    order : 0
+                },
+                {
+                    title: '第2章图片',
+                    name: '2.jpg'
+                },
+                {
+                    title: '第3章图片',
+                    name: '3.jpg'
+                },
+                {
+                    title: '第4章图片',
+                    name: '4.jpg'
+                },
+                {
+                    title: '第5章图片',
+                    name: '5.jpg'
+                }
+            ];
+
+            if(show.src !== ''){
+
+                show.src =  imgPath + "/" + imgArr[0].name;
+            }
+
+
+
+            //定义一个变量当索引值
+            var index = 0;
+            function fun(){
+                show.src=arr[index];
+                hint.innerHTML = '一共' + imgArr.length + '张图片,' + '我是第' + (index + 1) + '张';
+            }
+
+            //点击右边的next,改变图片数组的src的索引值
+            next.onclick = function () {
+                //每次点击next,图片的索引值都自增1
+                index++;
+                //这里的index
+                if (index >= imgArr.length) {
+                    //console.log(index);
+                    //console.log(arr.index);//undefined
+                    index = 0;
+                }
+                //将数组的索引值赋值给图片的src
+                debugger;
+                show.src =  imgPath + "/" + imgArr[index].name;
+                show.title =  imgPath + imgArr[index].title;
+                fun();
+                //hint.innerHTML = '一共' + imgArr.length + '张图片,' + '我是第' + (index + 1) + '张';
+            };
+            prev.onclick = function () {
+                index--;
+                if (index < 0) {
+                    index = arr.length - 1;
+                }
+                show.src = arr[index];
+                fun();
+                //hint.innerHTML = '一共' + arr.length + '张图片,' + '我是第' + (index + 1) + '张';
+            }
+
+        }
+    </script>
+</head>
+<body>
+<p id="hint"></p>
+<div id="carousel-example-generic" class="carousel slide" style="width: 492px;">
+    <div class="carousel-inner">
+
+        <div class="item active">
+
+            <img src="" alt="..." name="hello">
+        </div>
+    </div>
+
+    <a id="prev" class="left carousel-control" href="#">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a id="next" class="right carousel-control" href="#">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+    <script>
+
+    </script>
+</div>
+</body>
+</html>

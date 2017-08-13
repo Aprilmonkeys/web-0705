@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>回调函数</title>
+    <script>
+        //回调函数:作为另一个函数的参数的函数叫做回调函数
+        var one = function(){
+            return 1;
+        }
+        var two = function(){
+            return 2;
+        }
+        //形参a和b应该都是函数
+        function fn(a,b){
+            return a() + b();
+        }
+        fn(one,two);
+        //将one 和 two 两个函数作为参数传递给fn函数
+        var result = fn(one,two);
+        console.log(result);//3
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

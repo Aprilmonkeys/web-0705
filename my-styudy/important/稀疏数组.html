@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>稀疏数组</title>
+    <script>
+        //稀疏数组定义:是从 0 开始的不连续索引的数组,存储数据的个数可能小于数组的length
+        //正常数组
+        var arr = new Array();
+        arr[0] = 'string';
+        arr[1] = 18;
+        arr[2] = true;
+        console.log(arr.length);//3
+        //1.稀疏数组的索引是可以跳跃的,而没有显示的索引,也是存在的,他们对应的值是undefined
+        //这里需要注意的是,索引值是必须从0 开始的,按顺序存在的,所以虽然只显示索引2的数据
+        //但是实际是存在0,1,2索引的,所以数组的长度是3
+        var arr1 =new Array();
+        //arr1[0] = 'string';
+        //arr1[1] = 18;
+        arr1[2] = true;
+        console.log(arr1.length);//3
+        //2 当隐藏数组的最后一个索引,此时最后显示的索引值是1,所以数组的长度是2
+        var arr2 = new Array();
+        arr2[0] = 'string';
+        arr2[1] = 18;
+        //arr2[2] = true;
+        console.log(arr2.length);//2
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

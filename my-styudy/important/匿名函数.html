@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>匿名函数</title>
+    <script>
+        //匿名函数:没有名的函数;2大应用 1 自调函数 2 回调函数
+        function fn() {
+            console.log('this is function');
+        }
+        fn();
+        //自调函数 语法 ()(); 第一个()定义函数,里边是函数 第二个()调用函数,是实参的位置 这是国内使用的方法 比较重要
+        (function(a,b){console.log('this is function:'+a)})(1,2);//this is function:1
+        //自调函数 语法(  ()); 大的()前部分写函数,后边的()里边写实参.这个方法一般是国外使用的比较多
+        (function(a,b){console.log('this is function:'+b)}(1,2));//this is function:2
+        //自调函数的其他写法 语法 "!"+"函数"+"带实参的小括号"  "+"+"函数"+"带实参的小括号"
+        !function(a,b){console.log(a)}(1,2); //1
+        +function(a,b){console.log(b)}(1,2);//1
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

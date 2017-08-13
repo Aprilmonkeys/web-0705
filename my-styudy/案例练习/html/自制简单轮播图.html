@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用截取字符串的方式制作轮播的效果</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 500px;
+            height: 400px;
+            margin: 100px auto;
+        }
+        button {
+            width: 50px;
+            height: 20px;
+            margin-left:220px;
+        }
+    </style>
+</head>
+<body>
+<p id="title"></p>
+<div>
+    <img src="img/1.jpg" alt="">
+    <button id="prev">上一张</button>
+    <button id="next">下一张</button>
+</div>
+<script>
+    //实现点击按钮实现图片轮播的效果
+    var prev = document.getElementById('prev');
+    var next = document.getElementById('next');
+    var title =document.getElementById('title');
+    //这里后边的索引是因为标签名获取的是一个类似数组的一个集合
+    //因为标签img只有一个这里只需要写一个数组就可以,否则要使用
+    //for进行遍历
+    var pic = document.getElementsByTagName('img')[0];
+    var arr=["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg"];
+    //定义数组的索引是index
+    var index = 0;
+    prev.onclick=function(){
+        index--;
+        if(index < 0){
+            index = arr.length-1;
+            //点击prev按钮图片的src改变
+        }
+        console.log(pic);
+        pic.src=arr[index];
+    };
+    next.onclick=function(){
+        index++;
+        if(index>=5){
+            index=0
+        }
+        pic.src="img/"+(index+1)+".jpg";
+    }
+</script>
+
+</body>
+</html>

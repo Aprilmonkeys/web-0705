@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--当父元素不设置宽的时候是默认浏览器的宽度,不设置高度的时候是默认子元素的高度-->
+    <meta charset="UTF-8">
+    <title>解决height塌陷的方法</title>
+    <!--这里为了解决这个height塌陷问题引入了BFC概念-块级格式化环境
+    (block formatting context)
+
+    -->
+    <style type="text/css">
+        * {
+            margin:0;
+        }
+        .father {
+            border:5px solid #0000ff;
+            background-color: #ff8800;
+            /*1,给父元素设置高度height:300px;*/
+            /*height: 300px;*/
+            /*2,父元素一样设置浮动*/
+            /*float: left;*/
+            /*设置overflow:hidden  这个方法比较完美*/
+            /*overflow: hidden;*/
+
+        }
+        /*当子元素设置浮动的时候,脱离文档流,父亲会因为没有子元素的高度来撑开高度 ,形成height塌陷问题
+        此时要解决这个父元素因为子元素的浮动导致的height塌陷问题有以下方法
+        1,给父元素设置高度height:300px;
+        2,父元素一样设置浮动,虽然解决了height塌陷,但是宽度变成了子元素的宽度,不在是默认浏览器的宽度
+        3,设置overflow:hidden
+        4在父元素里新加一个子元素,之后设置clear:both
+
+        */
+        .son {
+            width: 400px;
+            height: 300px;
+            background-color: #ffff00;
+            float: left;
+            margin:0 250px;
+        }
+        /*4在父元素里新加一个子元素,之后设置clear:both*/
+        .new {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<div class="father">
+    <div class="son"></div>
+    <div class="new"></div>
+</div>
+</body>
+</html>

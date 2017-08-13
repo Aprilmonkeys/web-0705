@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子的怪异模型</title>
+    <!-- 这里的 box-sizing:border-box设置的效果是盒子的宽度和高度不会因为border和padding改变width和height
+    box-sizing:content-box设置的效果width和height会因为border和padding改变
+    -->
+    <style type="text/css">
+        .outer {
+            /* box-sizing:border-box 的宽度是width
+            box-sizing:content-box 宽度是width+border+padding
+            */
+            box-sizing: border-box;
+            width: 600px;
+            height: 400px;
+            background-color: #ff4400;
+            border: 100px solid #00ff00;
+            padding: 50px;
+        }
+        .inner {
+            width: 600px;
+            height: 400px;
+            background-color: #ffff00;
+        }
+    </style>
+</head>
+<body>
+<div class="outer">
+    <div class="inner">
+        iam inside
+    </div>
+</div>
+</body>
+</html>

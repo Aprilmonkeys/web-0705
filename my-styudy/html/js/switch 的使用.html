@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>switch</title>
+    <script>
+        //switch () 里的()可以是number类型,也可以是string ,和boolean;都可以,主要是用于比较值得
+        /*
+        ()表达式 -是计算得到的结果 ,不一定是布尔值,将得到的结果用'=='和后边的case的值进行比较
+        * case 语句提供的就是比较的备选值 ,从上到下执行,当某个case的语句与表达式的结果匹配,去执行对应的语句块内容
+        * break 跳转语句 当执行了对应的语句块内容后,结束当前的switch语句,作用就是表示结束当前的switch语句
+        * */
+        var num = 1;
+        switch (num) {
+            case 0:
+                console.log('我是数字0');
+                //这里的break,是当语句块执行完之后就跳出语句,不继续执行
+                break;
+            case 1:
+                console.log('我是数字1');
+                break;
+            case 2:
+                console.log('我是数字2');
+                break;
+            //这个default 的意思是当其他数字都不能匹配的时候输出这个
+            default:
+                console.log('这是其他数字');
+        }
+        console.log('看看输出的是哪个数字')
+        //转化成if 语句
+        var num = 2;
+        if (num == 0) {
+            console.log('我是数字0');
+        } else if (num == 1) {
+            console.log('我是数字1');
+        } else if (num == 2) {
+            console.log('我是数字2');
+        } else {
+            console.log('这是其他数字');
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

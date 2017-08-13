@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全局变量</title>
+    <script>
+        //作用域的作用:作用域规定变量或函数的可被访问的范围和生命周期
+        //全局作用域:是指当前整个页面环境
+        //函数作用域:指某个函数内部环境
+        //全局变量:定义在全局作用域中的变量,在整个页面内,函数体内都能够访问到的变量
+        //局部变量:定义在函数作用域中的变量,只能在函数体内部访问到,在函数体外访问会报错
+        var a = 'a';
+        console.log(a);//a
+        function fn(){
+             b = 'b';
+            console.log(a);//a
+        }
+        fn();
+        console.log(b);//b
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

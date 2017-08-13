@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作为值得函数</title>
+    <script>
+        //作为值得函数的定义:将一个函数作为另一个函数的结果进行返回,
+        // 作为结果返回的函数称之为作为值的函数
+        //当一个函数嵌套另一个函数的时候,内部函数return后的函数就是作为值得函数
+        function fn(f, args ){
+            return f(args);
+        }
+        /*function fn(add ,10){
+            return add(10);
+            fn(add,10);转换成 add(10);
+        }*/
+        //add()这个函数是作为值得函数
+        function add(num){
+            return num + 10;
+        }
+        /*add(10)
+        调用函数 function add(10){
+        return 10 + 10 ;
+        返回值20
+        * */
+var result = fn(add , 10);
+        console.log(result);//20
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量练习</title>
+    <script>
+        var num = 100;
+        console.log(num);
+        num = 500;
+        //text=500,意思是再次赋值500
+        console.log(num);//500
+        console.log(num1);
+        //这里没有定义直接调用的话,会显示undefined
+        var num1 = 300;
+        //上边的2行代码等价下边的3行代码的意思
+        var num2;
+        console.log(num2);
+        num2 = 400;//undefined;
+        //常量 字母要大写
+        const TEXT = 600;
+        console.log(TEXT);
+        const ABC = 700;
+        console.log(ABC);
+        //number数据类型 主要表示数字,整数,小数
+        var num1 = 100;
+        var num2 = 12.12;
+        console.log(num1);//100
+        console.log(num2);//12.12
+        /*
+         * string字符串型,表示的是字符串文本内容,需要注意的是文本内容
+         * 必须使用单引号或者双引号进行包裹,建议用单引号
+         * */
+        var str1 = "这是一个字符串";
+        var str2 = '这也是一个字符串';
+        console.log(str1);
+        console.log(str2);
+        var str3 = "这还是'一个字符串'";
+        console.log(str3);
+        //布尔类型值 boolean 值有 true  false
+        var boo = true;
+        console.log(boo);
+        //        undefined 类型
+        /*
+         * 结果得undefined 的情况
+         *
+         * 1.定义变量 但是不初始化即不赋值
+         * 定义变量,赋值为undefined 一般不这样操作
+         * */
+        var test;
+        console.log(test);//结果是undefined
+        console.log(typeof test);//类型undefined类型
+        //在实际开发中没什么意义的
+        var test1 = undefined;
+        console.log(test1);
+        console.log(str);
+        var str ='lala';
+        console.log(str);
+        str=100;
+        console.log(str);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

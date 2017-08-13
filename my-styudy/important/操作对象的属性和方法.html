@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作对象的属性和方法</title>
+    <script>
+        var hero = {
+            name :'zhangwuji',
+            age  :18,
+            sayMe:function(){
+                console.log('i am zhangwuji');
+            }
+        };
+        //新增属性名和方法
+            //语法 直接写新的 对象名.新的属性名 = 属性值;
+        //对象名.新的方法名 = function(){}
+        //新增属性
+        hero.job = 'jiaozhu';
+        //新增方法
+        hero.sayJob = function(){
+            'my job is jiaozhu'
+        };
+        //调用对象 看是否添加成功
+        console.log(hero);//查看结果是添加成功
+        //修改属性或方法
+        //修改属性 语法 对象名.原有属性名 = 新的属性值
+        hero.name = 'zhouzhiruo';
+        //修改方法 语法 对象名.原有方法名 = function(){}
+        hero.sayMe = function(){
+            console.log('this is zhouzhiruo');
+        };
+        console.log(hero);//查看结果 属性名更改成功
+        hero.sayMe();
+        //删除属性或方法 用delete
+        //删除属性 语法 delete 对象名.属性名
+        delete hero.job;
+        //删除方法 语法 delete 对象名.方法名
+        delete hero.sayJob();//查看结果 删除成功
+    </script>
+</head>
+<body>
+
+</body>
+</html>

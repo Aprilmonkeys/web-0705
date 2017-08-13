@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>对比getElementBy和querySelector</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<p><button id="btn1" class="btn btn-primary btn-block">getElementById</button></p>
+		<p><button id="btn2" class="btn btn-primary btn-block">getElementsByName</button></p>
+		<p><button id="btn3" class="btn btn-primary btn-block">getElementsByTagName</button></p>
+		<p><button id="btn4" class="btn btn-primary btn-block">getElementsByClassName</button></p>
+		<p><button id="btn5" class="btn btn-primary btn-block">querySelector</button></p>
+		<p><button id="btn6" class="btn btn-primary btn-block">querySelectorAll</button></p>
+		<script>
+			console.time('querySelector');
+			for (var i = 0; i < 100000; i++) {
+				document.querySelector("#btn1");
+			}
+			console.timeEnd('querySelector');
+			//querySelector: 51.9ms
+	
+			console.time('getElementById');
+			for (var i = 0; i < 100000; i++) {
+				document.getElementById("btn1");
+			}
+			console.timeEnd('getElementById');
+			//getElementById: 14.9ms
+	
+			console.time('querySelectorAll');
+			for (var i = 0; i < 10000; i++) {
+			  document.querySelectorAll(".btn");
+			}
+			console.timeEnd('querySelectorAll');
+			//querySelectorAll: 14.6ms
+	
+			console.time('getElementsByClassName');
+			for (var i = 0; i < 10000; i++) {
+			  document.getElementsByClassName("btn");
+			}
+			console.timeEnd('getElementsByClassName');
+			//getElementsByClassName: 3.63ms
+		</script>
+	</body>
+</html>

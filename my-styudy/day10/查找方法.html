@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查找字符方法</title>
+    <script>
+                //定义一个用于验证的字符串
+                var str = 'string';
+                //定义一个正则表达式
+                var reg = /t/;
+                //用正则表达式验证是否符合正则表达式
+                var result = reg.test(str);
+                console.log(result);
+                //用search()方法查找str 里是否有ing
+                //var result1 = str.search('sg');// -1 如果验证的字符串可以找到会输出对应的位置,否则显示 -1
+                //var result1 = str.search('g');//5
+                var result2 = str.search(/g/);//显示的也是字符所在的位置
+                console.log(result2);//5  显示得是字符的位置
+                console.log(str.length);//6
+                //用for循环遍历 str
+                for (var i = 0; i < str.length; i++) {
+                    console.log(str[i]);//可以得到字母string
+                }
+                //用charAt(index)方法 查找字符
+                var result3 = str.charAt(6);
+                var result4 = str.charAt(3);
+                //用chartAt()方法
+                console.log(result3);// 空 但是不报错
+                console.log(result4);// i
+                //用 charcodeAt()方法 查找字符 返回的索引值对应的 Unicode 编码
+                var result5 = str.charCodeAt('s');
+                console.log(result5);//115
+        //检索字符串str
+        var str = 'string';
+        var index1 = str.indexOf('t');
+        var index2 = str.indexOf('tr');
+        var index3 = str.indexOf('tring');
+        console.log(index1);//1
+        console.log(index2);//1
+        console.log(index3);//1
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
