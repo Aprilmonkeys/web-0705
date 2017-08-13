@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    div {
+        width: 165px;
+        height: 238px;
+        padding: 10px;
+        background-color: #ff4400;
+        margin: 100px auto;
+        text-align: center;
+    }
+        div button {
+            background-color: #ccc;
+            margin-top: 6px;
+            outline:0;
+        }
+        div p {
+            font-size: 12px;
+            margin-top: 0;
+        }
+    </style>
+    <script>
+
+        //要实现的效果是点击下一张按钮图片变化,点击上一张按钮图片变化
+        //点击按钮
+        //首先获取2个按钮
+        window.onload=function() {
+            var btn1 = document.getElementById("btn1");
+            var btn2 = document.getElementById("btn2");
+            //分别为两个按钮绑定单击响应函数
+            //要实现图片切换,需要更改src属性;
+            //获取img标签
+            var img =document.getElementsByTagName("img")[0];
+            //创建一个数组来保存图片路径
+            var imgArr =["images/bj01.jpg","images/bj05.jpg","images/bj02.jpg","images/bj03.jpg","images/bj04.jpg"];
+            //创建一个变量,来保存当前正在显示的图片的索引
+            var index =0;
+            //获取id为info的p元素
+            var info =document.getElementById("info");
+            //设置提示文字
+            //这里的第几张图片不能写死了,我们要用索引,方便以后更改
+            //这里的index+1必须用(),否则会被认为是拼接的字符串 不是相加的概念
+            info.innerHTML="一共"+imgArr.length+"张图片,我是第"+(index+1)+"张!";
+            btn1.onclick = function () {
+                //切换到上一张,索引自减;
+                index--;
+                //因为这种方法index会出现小于0或者大约4的情况,所以我们要加个判断
+                if(index<0){
+                    //如果index<0,我们为了实现循环的效果,可以使index等于最后一个照片
+                    index=imgArr.length-1;
+                }
+                img.src = imgArr[index];
+                //每次点击都需要重新加载一遍
+                info.innerHTML="一共"+imgArr.length+"张图片,我是第"+(index+1)+"张!";
+            };
+            btn2.onclick=function(){
+                //切换到下一张是索引自增;
+                //因为这种方法index会出现小于0或者大约4的情况,所以我们要加个判断
+            index++;
+                if(index>imgArr.length-1){
+                    //如果index>arrArr.length-1,我们为了实现循环的效果,可以使index等于第一个照片
+                    index=0;
+                }
+                img.src = imgArr[index];
+                //每一次点击都需要重新加载一遍
+                info.innerHTML="一共"+imgArr.length+"张图片,我是第"+(index+1)+"张!";
+            };
+
+        }
+    </script>
+</head>
+<body>
+<div>
+    <P id="info"></P>
+       <img src="images/bj01.jpg" alt="">
+       <!--<img src="images/bj02.jpg" alt="">
+       <img src="images/bj03.jpg" alt="">
+       <img src="images/bj04.jpg" alt="">
+       <img src="images/bj05.jpg" alt="">-->
+<button id="btn1">上一张</button>
+<button id="btn2">下一张</button>
+</div>
+</body>
+</html>

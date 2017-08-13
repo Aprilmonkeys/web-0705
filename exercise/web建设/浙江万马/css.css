@@ -1,0 +1,244 @@
+/* css reset css初始化代码 */
+body {margin:0; padding:0; font:12px/1.5 "微软雅黑",\5b8b\4f53,Arial,sans-serif; color: #3b3b3b;}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p{padding:0; margin:0;}
+table,td,tr,th{font-size:12px;}
+ol,ul {list-style:none;}
+li{list-style-type:none;}
+img{vertical-align:top;border:0;}
+h1,h2,h3,h4,h5,h6{font-size:inherit; font-weight:normal;}
+address,cite,code,em,th,i{font-weight:normal; font-style:normal;}
+.clearfix{*zoom:1;}
+.clearfix:after{display:block; overflow:hidden; clear:both; height:0; visibility:hidden; content:".";}
+a {color:#252525; text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {color:#ba2636;text-decoration:underline;}
+a:active {color:#ba2636;}
+  .w {
+      width: 815px;
+      margin:0 auto;
+}
+  body {
+      width: 900px;
+      height: 1038px;
+      margin: 0 auto;
+}
+  /*头部开始*/
+  .top {
+      width: 815px;
+      height: 64px;
+      margin: 0 auto;
+
+  }
+  .logo {
+      background: url(images/logo.jpg) no-repeat bottom;
+      width: 218px;
+      height: 64px;
+      float: left;
+  }
+  .nav {
+      width: 554px;
+      height: 64px;
+      float: right;
+  }
+  .nav li {
+      float: left;
+      padding: 26px 20px 4px 3px;
+      border-left: 1px solid #E9E9E9;
+      font: 600 12px "微软雅黑";
+  }
+  .first-letter {
+      color: #0A6CB7;
+  }
+  .first-letter p {
+      color: #9B9B9B;
+  }
+  /*头部结束*/
+/*banner开始*/
+ .banner {
+     background: url(images/banner.jpg) no-repeat;
+     width: 815px;
+     height: 215px;
+     margin-top:33px;
+ }
+ /*banner结束*/
+/*content开始*/
+.main {
+    height: 580px;
+    width: 815px;
+    margin-top: 18px;
+    overflow: hidden;
+   }
+.l {
+    height: 580px;
+    width: 183px;
+    float: left;
+    margin-right: 24px;
+}
+.m {
+    width: 416px;
+    height: 580px;
+    float: left;
+}
+
+.notice {
+    width: 183px;
+    height: 176px;
+    margin-bottom: 18px;
+}
+.login {
+    width: 183px;
+    height: 144px;
+    margin-bottom: 18px;
+    border:1px solid #F0F0F0;
+}
+.go {
+
+    width: 183px;
+    height: 67px;
+    margin-bottom: 12px;
+    border:1px solid #F0F0F0;
+}
+.teach {
+    width: 183px;
+    height: 64px;
+    margin-bottom: 18px;
+    border:1px solid #F0F0F0;
+}
+.small {
+    width: 183px;
+    height: 61px;
+    border-top:1px dashed #949492;
+}
+.news {
+    width: 416px;
+    height: 352px;
+}
+.fast {
+    width: 416px;
+    height: 44px;
+    font:16px "微软雅黑";
+    color: #EE7349;
+    border-bottom: 2px solid #DADAD8;
+}
+.fast .more {
+    width: 33px;
+    height: 9px;
+}
+.fast-in h4{
+    width: 110px;
+    height: 24px;
+    border-bottom: 2px solid #EE7349;
+    padding-top: 18px;
+    float: left;
+}
+.fast-in h4 span {
+    float: right;
+    font-size: 12px;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+.content {
+    width: 416px;
+    height: 536px;
+}
+.first-li {
+    width: 416px;
+    height: 197px;
+}
+.pic img {
+    width: 201px;
+    height: 161px;
+}
+.shu {
+    width: 201px;
+    height: 11px;
+
+}
+
+.pic {
+    float: left;
+}
+.text p {
+    width: 204px;
+    height: 175px;
+    float: right;
+    font:12px "微软雅黑";
+    line-height: 20px;
+}
+.text img {
+    padding-top: 10px;
+
+}
+.horse {
+    float: left;
+}
+.horse img {
+    padding-top: 14px;
+    padding-right: 6px;
+}
+.date {
+    float: right;
+}
+.second-li {
+    overflow: hidden;
+    height: 27px;
+    width: 416px;
+    font:12px "微软雅黑";
+    line-height: 30px;
+}
+.content li {
+    border-bottom: 1px dashed #8A8A8A;
+}
+.shu li {
+    float: left;
+    height: 11px;
+    width: 48px;
+    background-color: #020107;
+    text-align: center;
+    margin-top: 3px;
+    margin-right: 2px;
+    color: #F0F0F0;
+    line-height: 11px;
+    border-bottom: none;
+}
+.purchase {
+    float: left;
+    width: 416px;
+    height: 227px;
+}
+.business {
+    width: 416px;
+    height: 48px;
+    font:16px "微软雅黑";
+    color: #0969D7;
+    border-bottom: 2px solid #DADAD8;
+}
+.business-in h4 {
+    width: 130px;
+    height: 26px;
+    padding-top: 20px;
+    float: left;
+    border-bottom: 2px solid #0969D7;
+}
+.business-in h4 span {
+    float: right;
+    font-size:10px;
+    padding-top: 5px;
+    padding-right: 3px;
+}
+ .r {
+    float: left;
+    width: 190px;
+    height: 580px;
+     background: url(images/picture.jpg) no-repeat top right;
+}
+.footer {
+    height: 54px;
+    background-color: #A2A2A2;
+    margin-top: 45px;
+    text-align: center;
+    line-height: 18px;
+    color: #F0F0F0;
+    padding-top: 14px;
+}
+

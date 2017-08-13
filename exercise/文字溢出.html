@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        function fn(){
+            var a = 'b';
+            function fun(){
+               console.log('a');
+            }
+            fun();
+            console.log('b');
+        }
+        console.log('c');
+        fn();
+
+
+    </script>
+    <style>
+        p {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            white-space: nowrap; /*所有文字必须强制在一行*/
+            overflow: hidden; /*溢出部分文字隐藏*/
+            text-overflow: ellipsis; /*文字显示不开用省略号代替*/
+
+        }
+    </style>
+</head>
+<body>
+<div>
+    <p>
+        啦啦啦,明天放假啦好高兴啊,马上要端午节来,又要放假啦好高兴啊
+    </p>
+</div>
+</body>
+</html>

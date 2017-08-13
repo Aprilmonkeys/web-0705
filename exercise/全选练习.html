@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload=function(){
+            //因为多选框的全选,反选,和全部选都需要获得到这个items,所以这个可以拿到外边去,全局作用域里,就不用重复写
+            var items =document.getElementsByName("items");
+            //获取全选/全不选的多选框,把他放上边了
+            var checkedAllBox =document.getElementById("checkedAllBox");
+
+            //获取全选按钮
+            var checkedAllBtn =document.getElementById("checkedAllBtn");
+            //点击全选按钮,为id是checkedAllBtn的按钮绑定一个单击响应函数
+            checkedAllBtn.onclick=function(){
+                //获取到所有的选项,获取4个多选框的items
+                //因为多选框的全选,反选,和全部选都需要获得到这个items,所以这个可以拿到外边去,全局作用域里,就不用重复写
+                //var items =document.getElementsByName("items");
+                //此时得到的items是4个多选框的一个数组,要想得到每一个多选框的状态必须进行数组遍历;
+                for(var i=0; i<items.length;i++) {
+                    //这时候我们不知道怎么做的时候可以打开W3C查看下
+                    //通过多选框checked属性可以获取或者设置多选框的选中状态
+                    //设置全选;
+                    //想要完成全选按钮都能一起选中的效果
+                    items[i].checked=true;
+                }
+                //这里要解决的问题是在点击下边的全选按钮时候,上边的全选和全不选的按钮没变化
+                //将全选或者全不选设置为选中,这样在单击全选按钮checkedAllBtn时候,上边的checkedAllBox默认为选中的状态
+                checkedAllBox.checked=true;
+            };
+            //获取全不选按钮
+            var checkedNoBtn =document.getElementById("checkedNoBtn");
+            //点击全不选按钮,为id是checkedNoBtn的按钮绑定一个单击响应函数
+            checkedNoBtn.onclick=function(){
+                //获取到所有的选项,获取4个多选框的items
+                //因为多选框的全选,反选,和全部选都需要获得到这个items,所以这个可以拿到外边去,全局作用域里,就不用重复写
+                //var items =document.getElementsByName("items");
+                //此时得到的items是4个多选框的一个数组,要想得到每一个多选框的状态必须进行数组遍历;
+                for(var i=0; i<items.length;i++) {
+                    //这时候我们不知道怎么做的时候可以打开W3C查看下
+                    //通过多选框checked属性可以获取或者设置多选框的选中状态
+                    //设置全不选;
+                    items[i].checked=false;
+                }
+                //这里要解决的问题是在点击下边的全不checkedNoBtn选按钮时候,上边的全选和全不选的按钮checkedAllBox没变化
+                //将全选或者全不选设置为不选中,这样在单击全选按钮checkedNoBtn时候,上边的checkedAllBox默认为不选中的状态
+                checkedAllBox.checked=false;
+            };
+            //获取反选按钮
+            var checkedRevBtn =document.getElementById("checkedRevBtn");
+            //点击反选按钮,为id是checkedRevBtn的按钮绑定一个单击响应函数
+            checkedRevBtn.onclick=function(){
+                //获取到所有的选项,获取4个多选框的items
+                //因为多选框的全选,反选,和全部选都需要获得到这个items,所以这个可以拿到外边去,全局作用域里,就不用重复写
+               // var items =document.getElementsByName("items");
+                //此时得到的items是4个多选框的一个数组,要想得到每一个多选框的状态必须进行数组遍历;
+                for(var i=0; i<items.length;i++) {
+
+                    //这时候我们不知道怎么做的时候可以打开W3C查看下
+                    //通过多选框checked属性可以获取或者设置多选框的选中状态
+                    //设置反选;
+                    //这里需要注意的是,if判断语句里的语句本身就是布尔值,所以如果要写的话
+                    //必须写items[i].checked==true;或者直接不写==.已经是选中的意思了
+//                    if(items[i].checked){
+//                        items[i].checked=false;
+//                    }else{
+//                        items[i].checked=true;
+//                    }
+                    //另一种简单写法
+                    items[i].checked=!items[i].checked;
+
+                }
+                //这里要解决的问题是在点击反选按钮时候,全选和不全选没有反应的问题
+                //在反选时需要加一个判断,来判断四个多选框是否全部选中
+                //而此时最简单的办法就是将下边刚刚做的对4个多选框的判断的代码粘贴过来
+                checkedAllBox.checked=true;
+                for(var j=0;j<items.length;j++){
+                    //判断四个选项框是否全选
+                    //只要有一个没选中则就不是全选
+                    if(!items[j].checked){
+                        //一旦进入判断则证明不是全选状态
+                        //将checkedAllBox设置为没选中的状态
+                        checkedAllBox.checked=false;
+                        //一旦进入判断已经得出结果,不用再进行循环
+                        break;
+                    }
+                }
+
+            };
+            //提交按钮,点击按钮以后所有选中的多选框的value值弹出
+            //先获取按钮sendBtn;
+            var sendBtn =document.getElementById("sendBtn");
+            //为id为sendBtn的按钮绑定单击响应函数;
+            sendBtn.onclick=function(){
+                //这里不需要获取items了.因为在全局作用域里已经写了,只需要直接遍历items就可以了
+                for(var i=0;i<items.length;i++){
+                    //需要添加判断,是否选中,如果选中就弹出,否则就不操作
+                    if(items[i].checked){
+                        alert(items[i].value);
+
+                    }
+                }
+            };
+            //在事件的响应函数中,响应函数时给谁绑定的,this就是谁
+
+
+            //全选/全不选 多选框
+            //当你选中时,其余的也选中,当取消时候,其余的也取消
+            //先为checkedAll绑定单击响应函数
+            checkedAllBox.onclick=function(){
+                for (var i=0;i<items.length;i++){
+                    //alert(this===checkedAllBox);
+                    //设置多选框的选中状态
+                    items[i].checked=this.checked;
+                }
+            };
+            //这里要解决的问题是当点击上边的全选和全不选的时候和每一个多选框之间的bug
+            //点击全选后,再点击任何一个多选框,都是全选状态,再选中之后也不恢复
+            //如果四个多选框全部选中则checkedAllBox也应该选中
+            //如果四个多选框都没选中则checkedAllBox也不应该选中
+
+            //为4个多选框分别绑定单击响应函数
+            for(var i=0;i<items.length;i++){
+                items[i].onclick=function(){
+                    //判断4个多选框是否全选,需要一个一个判断,还需要再次进行遍历
+                    //因为此时需要一个将checkedAllBox设置为选中状态,这个默认值,才会完成要的效果
+                    checkedAllBox.checked=true;
+                    for(var j=0;j<items.length;j++){
+                        //判断四个选项框是否全选
+                        //只要有一个没选中则就不是全选
+                        if(!items[j].checked){
+                            //一旦进入判断则证明不是全选状态
+                            //将checkedAllBox设置为没选中的状态
+                            checkedAllBox.checked=false;
+                            //一旦进入判断已经得出结果,不用再进行循环
+                            break;
+                        }
+                    }
+
+                }
+            }
+
+
+        };
+
+    </script>
+</head>
+<body>
+<form method="post"  action="">
+    你爱好的运动是?
+    <input type="checkbox" id="checkedAllBox"/>全选/全不选
+    <br/>
+    <input type="checkbox" name="items" value="足球"/>足球
+    <input type="checkbox" name="items" value="篮球"/>篮球
+    <input type="checkbox" name="items" value="羽毛球"/>羽毛球
+    <input type="checkbox" name="items" value="乒乓球"/>乒乓球
+    <br/>
+    <input type="button" id="checkedAllBtn" value="全 选"/>
+    <input type="button" id="checkedNoBtn" value="全不选"/>
+    <input type="button" id="checkedRevBtn" value="反 选"/>
+    <input type="button" id="sendBtn" value="提 交"/>
+
+</form>
+</body>
+</html>

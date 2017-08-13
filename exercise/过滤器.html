@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        //入口函数
+        $(function(){
+            //使用过滤器筛选实现隔行变色的效果
+            //:odd是筛选索引是奇数,设置的是偶数的行数
+            var jqliodd =$("ul li:odd");
+            jqliodd.css("background","red");
+            //:even是筛选索引是偶数,设置的是奇数行
+            var jqlieven = $("ul li:even");
+            jqlieven.css("background","green");
+            var jqlifirst = $("ul li:eq(0)");
+            jqlifirst.css("background","blue");
+            var li =$("li");
+            var length  = li.length - 1;
+            //这里最大索引值为啥写+我也不知道
+            //因为"length"不能表示是length是变量的意思,+length+则表示是变量的意思
+            var jqlilast = $("ul li:eq("+length+")");
+            jqlilast.css("background","yellow");
+
+            console.info("li  =" + li.length + "的长度")
+
+        });
+    </script>
+</head>
+<body>
+<ul>
+    <li>又要下雨啦</li>
+    <li>又要下雨啦</li>
+    <li>又要下雨啦</li>
+    <li>又要下雨啦</li>
+    <li>又要下雨啦</li>
+    <li>又要下雨啦</li>
+    <li>又要下雨啦</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>工厂方法生产对象</title>
+    <script>
+//创建一个对象
+/*var obj1 = {
+    name: "孙悟空",
+    age: 18,
+    gender: "男",
+    sayName: function () {
+    }
+};
+var obj2 ={
+    name:"孙悟空",
+    age:18,
+    gender:"男",
+    sayName:function(){
+    }
+};
+var obj3 ={
+    name:"孙悟空",
+    age:18,
+    gender:"男",
+    sayName:function(){
+    }
+
+};*/
+
+//使用工厂法创建一个对象
+//通过该方法可以大批量的生产对象
+
+        function creatPerson(name,age,gender){
+            var obj = new Object();
+//        向对象中添加属性
+          obj.name=name;
+          obj.age=age;
+          obj.gender=gender;
+          obj.sayName=function(){
+              alert(this.name);
+          };
+//            将新的对象返回用return
+
+            return obj;
+        }
+        var obj2=creatPerson("猪八戒",16,"男");
+        var obj3=creatPerson("孙悟空",16,"男");
+        var obj4=creatPerson("白骨精",486,"女");
+        console.log(obj3);
+        obj3.sayName();
+
+//因为每次调用的时候得到到值不一样,我们需要引用参数,用实参和形参来表示方便大量使用
+    </script>
+</head>
+<body>
+
+</body>
+</html>

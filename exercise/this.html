@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="javascript" >
+        var name="全局";
+//        创建一个fun函数
+        function fun() {
+//这里使用this.name,就会方便后期对象调用实现想调用哪一个就调用哪一个的效果
+            console.log(this.name);
+        }
+//        创建2个object对象
+
+        var obj1 ={
+            name:"孙悟空",
+            sayName:fun
+        };
+        var obj2 ={
+            name:"猪八戒",
+            sayName:fun
+        };
+//我们希望调用obj1.sayName()可以出来孙悟空;但是需要把console,log(obj1.name)才能实现
+        obj1.sayName();
+        //我们希望调用obj2.sayName()可以出来猪八戒;但是需要把console,log(obj2.name)才能实现
+        obj2.sayName();
+//        当我们把函数中console.log(this.name)就可以实现
+        console.log("A"-"B"+2");
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

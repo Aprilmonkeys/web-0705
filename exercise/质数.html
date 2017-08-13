@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+//        for(var i =1; i<=100;i++){
+//            for(j=1;j<i;j++){
+//                if(i%j == 0)
+//                document.write(i%j);
+//            }
+//        }
+//        var i =0 ;
+//        var sum =0;
+//        while(i<=100){
+//            sum=sum+i;
+//            i++;
+//}
+//document.write(sum);
+
+//   for(var i =0;i<=100;i++){
+//
+//       var i =prompt("请输入");
+//       if(i>100||i<0){
+//
+//           break;
+//           alert("good");
+//       }
+//   }
+
+
+//        function fun (a,b){
+//            alert(a+b);
+//        }
+//        fun(1,2);
+
+
+        for(var i=1;i<=100;i++){
+            var sum=0;
+            for(var j=1;j<=i;j++){
+                if(i%j ==0){
+                    sum++;
+                }
+               }
+               if(sum == 2){
+                document.write(i+"<br />");
+
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: #f40;
+            position: absolute;
+            left:0;
+        }
+    </style>
+    <script>
+        window.onload=function() {
+            var box1 = document.getElementById("box1");
+            //先获取元素按钮btn01
+            var btn01 = document.getElementById("btn01");
+            var btn02 = document.getElementById("btn02");
+            //在全局作用域中去定义个timer
+            var timer;
+            //为btn01绑定单机响应函数
+            //我们现在要做的功能是,点击按钮以后,使box1向右移动(就是改变left值变大)
+            btn01.onclick = function () {
+                move(box1, 800, 10);
+            };
+            btn02.onclick = function () {
+                move(box1, 0, 10)
+            };
+            //因为当多次点击鼠标的时候,盒子会越动越快,所以我们需要在运行一次之后就要关闭一次
+            //而且还要将变量定义在全局作用域中
+            //尝试创建一个可以执行简单动画的函数
+            /*
+            参数
+            obj 要执行动画的参数
+            speed 要移动的速度(整数向右移动,负值向左走)
+            target  要移动的目标位置
+            */
+
+            function move(obj, target, speed) {
+
+                clearInterval(timer);
+                //需要先获取元素当前位置
+                var current = parseInt(getStyle(obj, "left"));
+
+                //判断下speed的正负
+                //如果从0到800speed为正
+                //如果从800到0speed为负
+                if(current>target){
+                    speed = -speed;
+                }
+
+                //开启一个定时器,执行动画效果
+                timer = setInterval(function(){
+                    //获取box1原来的left值
+                    //这里的offsetleft 写死了不行
+                    // var oldValue =box1.offsetLeft;
+                    //此时需要加法运算所以要把px去掉,对oldValue取整
+                        var oldValue = parseInt(getStyle(obj, "left"));
+                    //在旧值得基础上增加
+                        var newValue = oldValue + speed;
+                    //这里每次增加的是整数10,可以直接到达800,如果是11,或19这类数不能被800整除的话,就会有空隙
+                    //所以这里我们需要加一个判断
+                    //向左移动时候,需要判断newValue是否小于800
+                        if (
+                            speed < 0 && newValue < target || speed > 0 && newValue > target){
+                            newValue = target;
+                        }
+                        //将新值设置给box1
+                        obj.style.left = newValue+ "px";
+                        //当元素移动到800px的时候使其停止执行动画
+                        if (newValue=== target){
+                            //达到800的时候,关闭定时器
+                            clearInterval(timer);
+                        }
+                    },30)
+                }
+
+            /*
+            定义一个函数,用来获取指定元素的当前的样式
+            参数
+            obj 要获取样式的元素
+            name 要获取的样式名
+             */
+           // getStyle()方法
+            function getStyle(obj, name){
+                if(window.getComputedStyle){
+                    //正常浏览器的方式.具有getComputedStyle()方法
+                    return getComputedStyle(obj,null)[name];
+                }else{
+                    //ie8的方式,没有getComputedStyle()方法
+                    return obj.currentStyle[name];
+                }
+            }
+
+        }
+    </script>
+
+</head>
+<body>
+<button id="btn01">点击按钮之后box1一直向右移动</button>
+<button id="btn02">点击按钮之后box1一直向左移动</button>
+<div id="box1"></div>
+</body>
+</html>

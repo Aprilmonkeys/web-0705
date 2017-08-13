@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图下边的12345</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+        .cast {
+            width: 992px;
+            height: 420px;
+            margin: 100px auto;
+            position: relative;
+        }
+        /*这里需要注意的是图片是行内元素,要想使用auto生效 必须转换为块级元素*/
+        .number {
+            width: 200px;
+            height: 50px;
+            position: absolute;
+            bottom: 5px;
+            left:50%;
+            margin-left: -100px;
+        }
+        .number ul {
+            list-style: none;
+
+        }
+        .number li {
+            float: left;
+            background-color: #ff4400;
+            width: 20px;
+            height: 20px;
+            margin: 5px;
+            text-align: center;
+            border: 1px solid #333;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<!--分析想做出轮播图下边的切换数字按钮
+考虑到可能用到定位
+-->
+<div class="cast">
+    <img src="../images/01.jpg" alt="">
+    <div class="number">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

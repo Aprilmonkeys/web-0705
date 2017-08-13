@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+        ul {
+            list-style: none;
+        }
+        /*设置outer样式*/
+        #outer {
+            width: 173px;
+            height: 216px;
+            margin:100px auto;
+            background-color: #ff4400;
+            overflow: hidden;
+        }
+        ul li {
+            width: 165px;
+            height: 208px;
+            float: left;
+            border: 4px solid red;
+        }
+    </style>
+
+</head>
+<body>
+<!--创建一个外部div,来作为打的容器-->
+<div id="outer">
+    <!--创建一个ul用于放置图片-->
+    <ul id="imgList">
+          <li><img src="images/bj01.jpg" alt=""></li>
+          <li><img src="images/bj02.jpg" alt=""></li>
+          <li><img src="images/bj03.jpg" alt=""></li>
+          <li><img src="images/bj04.jpg" alt=""></li>
+          <li><img src="images/bj05.jpg" alt=""></li>
+    </ul>
+    
+</div>
+</body>
+</html>

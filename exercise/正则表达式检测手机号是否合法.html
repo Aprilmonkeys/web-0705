@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //检测一个手机号码是否合法
+        var phonestr ="13511234535";
+        /*思考过程
+        * 1,手机号码必须要1开头  ^1
+        * 2第二位数字  不能是0,1,2.所以要是3以上到9之间的数字  [3-9]
+        * 3到11位数字可以是[0-9]的任意9个数
+        * */
+        var phonereg =/^1[3-9][0-9]{9}$/;
+
+        //一般要写上开头和结尾
+
+        console.log(phonereg.test(phonestr));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据类型的转换</title>
+    <script>
+        var num = 100;
+        var boo = true;
+        var str = 'string';
+        //将数据类型和布尔转换为字符型 方法是直接加上  '' ;
+        // var result1 = '100'; 不要这样写
+        // var result2 = 'true'; 不要这样写
+        var result1 = num + ''; //直接在数据类型后边加上' '
+        var result2 = boo + '';//直接在布尔后边加上''
+        console.log(result1);// '100'
+        console.log(result2);//'true'
+        console.log(typeof result1); //字符型
+        console.log(typeof result2);//字符型
+        //将布尔类型和字符型转换为数据类型 方法是 用 +
+        var result3 = +num;
+        var result4 = +str;
+        var result5 = +boo;
+        console.log(result3);//100
+        console.log(result4);//nan
+        //这里需要注意的是布尔值在转换为数据类型的时候
+        //0 是false,转换数据 是0
+        //1 是true, 布尔值转换为数据类型就是1
+        console.log(result5);//1
+        console.log(typeof result3);//数据
+        console.log(typeof result4);//数据
+        console.log(typeof result5);//数据
+        //数据和字符型转换布尔值  前边加上!!
+        // 非 空字符串 转换布尔是true
+        //空字符串是false
+        var res1= !!num;
+        var res2=!!str;
+        console.log(res1);//true
+        console.log(res2);//true
+        console.log(typeof res1);//boolean
+        console.log(typeof res2);//boolean
+    </script>
+</head>
+<body>
+</body>
+</html>

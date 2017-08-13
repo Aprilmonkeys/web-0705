@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xiaomi</title>
+    <style>
+        /*页面初始化*/
+        * {
+            margin:0;
+            padding:0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        /*头部开始*/
+        .header {
+            height: 140px;
+        }
+        .header-in {
+            height: 40px;
+            background-color: #333333;
+        }
+        .header-t {
+            width: 1226px;
+            margin: 0 auto;
+        }
+
+        .header-t li {
+            font: 12px "微软雅黑";
+            border-right:1px solid #40403b;
+            float: left;
+            text-align: center;
+            margin: 12px 6px;
+            padding-right: 7px;
+            color: #9FB09F;
+        }
+        li.select {
+            border-style: none;
+        }
+        .header-b {
+            width: 1226px;
+            height: 100px;
+
+            margin: 0 auto;
+        }
+        .logo {
+            float: left;
+            padding-top: 22px;
+        }
+        .haidao {
+            float: left;
+            padding: 15px 0;
+            margin-left: 40px;
+        }
+        .index {
+            float: left;
+            width: 950px;
+        }
+        .index li {
+            float: left;
+            font-size: 16px;
+            margin:40px 13px;
+            padding-left: 5px;
+        }
+        .nav {
+            width: 1226px;
+            height: 460px;
+            margin:0 auto;
+            
+        }
+        .sider-l {
+            float: left;
+            background-color: #2C505F;
+            width: 238px;
+            height: 460px;
+        }
+        .sider-l li {
+            color: #FFFFFF;
+            padding-left: 30px;
+            line-height: 40px;
+            position: relative;
+        }
+        .sider-l li  p {
+            margin-top: 5px;
+        }
+        .sider-l li img {
+            position: absolute;
+            right: 24px;
+            top: 15px;
+        }
+        .sider-r {
+            float: right;
+            height: 460px;
+        }
+        .main {
+            width: 1226px;
+            height: 248px;
+            margin: 0 auto;
+        }
+        .gray {
+            float: left;
+            width: 235px;
+            height: 169px;
+            margin: 13px 6px  66px 0;
+        }
+        .red {
+            float: left;
+            height: 169px;
+            top:0;
+            margin: 13px 6px  66px 6px;
+        }
+        .blue {
+            float: left;
+            width: 316px;
+            height: 169px;
+            margin: 13px 0px  66px 8px;
+        }
+        .yellow {
+            float: right;
+            width: 316px;
+            height: 169px;
+            margin: 13px 0  66px 6px;
+        }
+        .footer {
+            height: 800px;
+            background-color: #F5F5F5;
+        }
+        .footer-t {
+            width: 1226px;
+            margin:0 auto;
+            height: 20px;
+            padding: 82px 0 18px 0;
+        }
+        .smart {
+            font: 22px "微软雅黑";
+            float: left;
+        }
+        .all {
+            font: 16px "微软雅黑";
+            float: right;
+        }
+        .footer-b {
+            width: 1226px;
+            height: 614px;
+
+            margin:0 auto;
+        }
+        .footer-l {
+            width: 234px;
+            height: 614px;
+            background:url(girl.png) no-repeat;
+            float: left;
+        }
+        .footer-r {
+            width: 992px;
+            height: 614px;
+            float: left;
+        }
+        .footer-r-t {
+            width: 992px;
+            height: 300px;
+        }
+        .pc1 {
+            width: 236px;
+            height: 300px;
+            background: url(pc1.png)no-repeat;
+            float: left;
+            margin:0 12px;
+        }
+        .pc2 {
+            width: 236px;
+            height: 300px;
+            background: url(pc2.png)no-repeat;
+            float: left;
+        }
+        .pc3 {
+            width: 236px;
+            height: 300px;
+            background: url(pc3.png)no-repeat;
+            float: left;
+            margin: 0 12px;
+        }
+        .pc4 {
+            width: 236px;
+            height: 300px;
+            background: url(pc4.png)no-repeat;
+            float: left;
+        }
+.footer-r-b {
+            width: 992px;
+            height: 300px;
+            margin-top: 12px;
+
+        }
+        .pc5 {
+            width: 236px;
+            height: 300px;
+            background: url(pc5.png)no-repeat;
+            float: left;
+            margin:0 12px;
+        }
+        .pc6 {
+            width: 236px;
+            height: 300px;
+            background: url(pc6.png)no-repeat;
+            float: left;
+        }
+        .pc7 {
+            width: 236px;
+            height: 300px;
+            background: url(pc7.png)no-repeat;
+            float: left;
+            margin: 0 12px;
+        }
+        .pc8 {
+            width: 236px;
+            height: 300px;
+            background: url(pc8.png)no-repeat;
+            float: left;
+        }
+        .last-t {
+            width: 1226px;
+            height: 211px;
+            margin:0 auto;
+        }
+        .last-t-l {
+            float: left;
+            width: 974px;
+            height: 211px;
+        }
+        .last-t-l dl {
+            float: left;
+        }
+        .last-t-l dt {
+            font: 14px  "微软雅黑";
+            padding-top: 58px;
+            padding-bottom: 33px;
+            padding-right: 100px;
+        }
+        .last-t-l dd {
+            font: 12px  "微软雅黑";
+            line-height: 26px;
+        }
+        .last-t-r {
+            float: left;
+            width: 250px;
+            height: 153px;
+        }
+        .last-t-r {
+            padding-top: 58px;
+        }
+        .border {
+            width: 250px;
+            height: 116px;
+            border-left: 1px solid #ECECEC;
+            text-align: center;
+            font-size: 10px;
+        }
+        .tel {
+            font: 20px "微软雅黑";
+            color: #FF6D3F;
+        }
+        .last-b {
+            background-color: #FAFAFA;
+            height: 158px;
+        }
+        .mi {
+            height: 58px;
+            width: 1226px;
+            margin: 0 auto;
+            padding-top: 33px;
+        }
+        .mi .img {
+            float: left;
+        }
+        .mi-r  {
+            width: 1160px;
+            height: 58px;
+            margin-left: 65px;
+        }
+        .laster {
+            height: 20px;
+            width: 1000px;
+            float: left;
+        }
+        .laster li {
+            float: left;
+            height: 10px;
+            font: 12px "微软雅黑";
+            color: #757575;
+            border-right:1px solid #BABACC;
+            padding: 0 5px;
+            line-height: 10px;
+        }
+        .lastest {
+            height: 44px;
+            width: 1000px;
+        }
+        .lastest p {
+            font:12px "微软雅黑";
+            color: #B0B0B0;
+            line-height: 20px;
+        }
+        .laster .region {
+            border-right-style: none;
+        }
+        .mi .black {
+            height: 30px;
+            text-align: center;
+            line-height: 70px;
+        }
+    </style>
+
+
+</head>
+<body>
+<!--头部开始-->
+<div class="header">
+    <div class="header-in">
+    <div class="header-t">
+        <ul>
+            <li>小米网</li>
+            <li>MIUI</li>
+            <li>米聊</li>
+            <li>游戏</li>
+            <li>多看阅读</li>
+            <li>云服务</li>
+            <li>小米网移动版</li>
+            <li>问题反馈</li>
+            <li class="select">Select Region</li>
+        </ul>
+    </div>
+    </div>
+    <div class="header-b">
+        <div class="logo">
+            <img src="logo.png" alt="">
+        </div>
+        <div class="haidao">
+            <img src="haidaoquannew.gif" alt="">
+        </div>
+        <div class="index">
+            <ul>
+                <li>小米手机</li>
+                <li>红米</li>
+                <li>平板</li>
+                <li>电视</li>
+                <li>盒子·影音</li>
+                <li>路由器</li>
+                <li>智能硬件</li>
+                <li>服务</li>
+                <li>社区</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="nav">
+    <div class="sider-l">
+        <ul>
+            <li><p>手机&nbsp;平板&nbsp;电话卡</p><img src="sanjiao.png" alt=""></li>
+            <li><p>电视&nbsp;盒子</p><img src="sanjiao.png" alt=""></li>
+            <li><p>路由器&nbsp;智能硬件</p><img src="sanjiao.png" alt=""></li>
+            <li><p>移动电源&nbsp;插线板</p><img src="sanjiao.png" alt=""></li>
+            <li><p>耳机&nbsp;音箱</p><img src="sanjiao.png" alt=""></li>
+            <li><p>电池&nbsp;存储卡</p><img src="sanjiao.png" alt=""></li>
+            <li><p>保护套&nbsp;后盖</p><img src="sanjiao.png" alt=""></li>
+            <li><p>贴膜&nbsp;其他配件</p><img src="sanjiao.png" alt=""></li>
+            <li><p>米兔&nbsp;服装</p><img src="sanjiao.png" alt=""></li>
+            <li><p>箱包&nbsp;其他周边</p><img src="sanjiao.png" alt=""></li>
+        </ul>
+    </div>
+    <div class="sider-r">
+        <img src="nav.png" alt="">
+    </div>
+</div>
+<div class="main">
+    <div class="gray">
+        <img src="gray.png" alt="">
+    </div>
+    <div class="red">
+        <img src="red.png" alt="">
+    </div>
+    <div class="blue">
+        <img src="blue.png" alt="">
+    </div>
+    <div class="yellow">
+        <img src="yellow.png" alt="">
+    </div>
+</div>
+<div class="footer">
+    <div class="footer-t">
+        <ul>
+            <li class="smart"><p>智能硬件</p></li>
+            <li class="all"><p>查看全部</p></li>
+        </ul>
+    </div>
+    <div class="footer-b">
+        <div class="footer-l">
+            
+        </div>
+        <div class="footer-r">
+            <div class="footer-r-t">
+                <div class="pc1"></div>
+                <div class="pc2"></div>
+                <div class="pc3"></div>
+                <div class="pc4"></div>
+            </div>
+            <div class="footer-r-b">
+                <div class="pc5"></div>
+                <div class="pc6"></div>
+                <div class="pc7"></div>
+                <div class="pc8"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="last">
+    <div class="last-t">
+        <div class="last-t-l">
+            <dl>
+                <dt>帮助中心</dt>
+                <dd>账户管理</dd>
+                <dd>购物指南</dd>
+                <dd>订单操作</dd>
+
+            </dl>
+            <dl>
+                <dt>服务支持</dt>
+                <dd>售后政策</dd>
+                <dd>自助服务</dd>
+                <dd>相关下载</dd>
+
+            </dl>
+            <dl>
+                <dt>线下门店</dt>
+                <dd>小米之家</dd>
+                <dd>服务网点</dd>
+                <dd>零售网点</dd>
+
+            </dl>
+            <dl>
+                <dt>关于小米</dt>
+                <dd>了解小米</dd>
+                <dd>加入小米</dd>
+                <dd>联系我们</dd>
+
+            </dl>
+            <dl>
+                <dt>关注我们</dt>
+                <dd>新浪微博</dd>
+                <dd>小米部落</dd>
+                <dd>官方微信</dd>
+
+            </dl>
+            <dl>
+                <dt>特色服务</dt>
+                <dd>F码通道</dd>
+                <dd>小米移动</dd>
+                <dd>防伪查询</dd>
+
+            </dl>
+        </div>
+        <div class="last-t-r">
+            <div class="border">
+            <ul>
+                <li class="tel"><p>400-100-5678</p></li>
+                <li><p>周一到周日8：00-18：00</p></li>
+                <li><p>（仅收市话费）</p></li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    <div class="last-b">
+        <div class="mi">
+            <div class="img">
+            <img src="logo.png" alt="">
+            </div>
+            <div class="mi-r">
+            <div class="laster">
+            <ul>
+                <li>小米网</li>
+                <li>MIUI</li>
+                <li>米聊</li>
+                <li>多看书城</li>
+                <li>小米路由器</li>
+                <li>视频电话</li>
+                <li>小米后院</li>
+                <li>小米天猫店</li>
+                <li>小米淘宝直营店</li>
+                <li>小米网盟</li>
+                <li>问题反馈</li>
+                <li class="region">Select&nbsp;Region</li>
+            </ul></div>
+            <div class="lastest">
+            <p>@xiaomi.com京ICP证110507号京ICP备10046444号京公网安备11010802020134号京网文[2014]0059-0009号</p>
+            <p>违法和不良信息举报电话:185-0130-1238,本网站所列数据,除特殊说明,所有数据均出自我司实验室测试</p>
+            </div>
+            </div>
+            <div class="black">
+                <img src="slogan2016.png" alt="">
+            </div>
+        </div>
+
+
+    </div>
+</div>
+</body>
+</html>

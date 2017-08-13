@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style>
+	div {
+            width: 0;
+            height: 0;
+            border-top:10px solid red;
+           /*这里会用transparent 不能4个边都设置 否则会报错*/
+            border-left:10px solid transparent;
+            border-right:10px solid transparent;
+            margin: 100px auto;
+
+        }
+        .small {
+        	width: 0;
+        	height: 0;
+        	border-width: 20px;
+        	border-color: transparent transparent blue transparent;
+        }
+        .yellow {
+        	width: 200px;
+        	height: 200px;
+        	background-color: #ff0;
+        	
+        }
+	</style>
+</head>
+<body>
+	<div>
+	<div class="small">
+		
+	</div>
+	</div>
+	<div class="yellow">
+		
+	</div>
+</body>
+</html>

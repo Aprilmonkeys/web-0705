@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.11.1.js"></script>
+</head>
+<body>
+你爱好的运动是什么
+<input type="checkbox" id="yesorno">全选/全不选 <br>
+<input type="checkbox" name="items" value="足球">足球 <br>
+<input type="checkbox" name="items" value="篮球">篮球 <br>
+<input type="checkbox" name="items" value="羽毛球">羽毛球 <br>
+<input type="checkbox" name="items" value="乒乓球">乒乓球 <br>
+<input type="checkbox" name="items" value="桌球">桌球 <br>
+<input type="button" value="全选" id="Allcheck"> <br>
+<input type="button" value="全不选" id="AllNo"> <br>
+<input type="button" value="反选" id="invert"> <br>
+<input type="submit" id="submit">
+</body>
+<script>
+    var checkbox =$('input:checkbox[name=items]');
+    var index =checkbox.index();
+$(function () {
+    //全选
+    $('#Allcheck').click(function(){
+        checkbox.prop('checked',true);
+        $('#yesorno').prop('checked',checkbox.filter(':not(:checked)').size()===0)
+    });
+    //全不选
+    $('#AllNo').click(function(){
+        checkbox.prop('checked',false);
+        $('#yesorno').prop('checked',checkbox.filter(':not(:checked)').size()===0)
+    });
+    //反选
+    $('#invert').click(function(){
+       checkbox.each(function () {
+           this.checked=!this.checked
+           $('#yesorno').prop('checked',checkbox.filter(':not(:checked)').size()===0)
+       })
+    })
+    //全选或全不选
+    $('#yesorno').click(function () {
+        checkbox.prop('checked',this.checked);
+    })
+    checkbox.click(function () {
+        $('#yesorno').prop('checked',checkbox.filter(':not(:checked)').size()===0)
+    })
+    //提交
+$('#submit').click(function () {
+    checkbox.filter(':checked').each(function(){
+        alert(this.value);
+    })
+})
+})
+
+</script>
+</html>
