@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>声明提前</title>
+    <script>
+        /*
+            TODO 直接输出变量 a 时
+            TODO * 如果当前环境中不存在变量 a 声明 -> 报错：a is not defined
+            TODO * 如果在当前输出语句的后面，声明变量 a，并且赋值 -> undefined
+            TODO   console.log(a);
+            TODO   var a = 'a';
+            TODO   上述代码等价于
+            TODO   var a;// 变量只定义而不赋值时 - undefined
+            TODO   console.log(a);
+            TODO   a = 'a';
+         */
+        /*console.log(a);
+        var a = 'a';*/
+
+        // TODO 局部变量也存在声明提前
+        /*function fn(){
+            console.log(a);// TODO undefined
+            var a = 'a';
+        }
+        fn();*/
+
+
+        console.log(a);// undefined
+
+        var a = 'a';
+
+        console.log(a);// a
+        // TODO 当全局变量与局部变量同名时 - 在函数作用域中只能访问局部变量
+        function fn(){
+            console.log(a);// undefined
+
+            var a = 'b';
+
+            console.log(a);// b
+        }
+        fn();
+
+        console.log(a);// a
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

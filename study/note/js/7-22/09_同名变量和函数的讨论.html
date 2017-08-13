@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    /*
+    * TODO 变量和函数同名时
+    * TODO  -函数声明方式定义： - 一旦变量赋值了，函数就无效了
+    * TODO    - 变量赋值先于函数定义
+    * TODO        函数定义无效，变量有效
+    * TODO    - 变量赋值后于函数定义
+    * TODO        变量赋值之前，函数定义有效，
+    * TODO        变量赋值后，即使同名函数再次被函数声明方式定义也无效了
+    * TODO  -函数字面量方式定义： - 变量赋值和函数赋值相互覆盖
+    * TODO    - 变量赋值先于函数定义赋值，
+    * TODO        函数定义赋值覆盖变量赋值
+    * TODO    - 变量赋值后于函数定义赋值，
+    * TODO        变量赋值覆盖函数定义赋值
+    * */
+    function fn() {
+      console.log(a);//①先调用还没有声明的a，function a(){ console.log(2);}
+      //声明优先级提前：函数的优先级要高于变量；它们没有覆盖的效果
+      function a() {//②然后声明函数a
+        console.log(2);
+      }
+      var a = 1;//③同名变量a赋值了
+      function a() {//④再次声明同名函数a
+        console.log(2);
+      }
+      console.log(a);//1  已经是变量
+      console.log(a());//报错：Uncaught TypeError: a is not a function  - 不是覆盖效果，为什么又执行不了a()了？因为作为其作用域变量名或函数名a已被赋值占用，如果不用赋值的方式，已经无法修改。
+    }
+    fn();
+  </script>
+</head>
+<body>
+
+</body>
+</html>

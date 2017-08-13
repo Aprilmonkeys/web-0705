@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>轮播图效果</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			body {
+				padding: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="carousel-example-generic" class="carousel slide" style="width: 492px;">
+			<div class="carousel-inner">
+				<div class="item active">.
+					<img src="img/1.jpg" alt="...">
+				</div>
+			</div>
+		
+			<a id="prev" class="left carousel-control" href="#">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a id="next" class="right carousel-control" href="#">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+		</div>
+	</body>
+	<script>
+		/*
+			 TODO 思路的分析
+			 TODO * 先选择图片轮播是累加(向右)还是累减(向左)
+			 TODO   * 选择的结果没有多少区别
+			 TODO   * 如果选择向右自动轮播 - 修改向右轮播的逻辑代码
+			 TODO * 当点击向右或向左按钮时 - 自动轮播要停止
+		 */
+        var prev = document.getElementById('prev');
+        var next = document.getElementById('next');
+        // TODO 获取图片标签
+        var img = document.getElementsByTagName('img')[0];
+        // TODO 将所有图片的地址存储在一个数组中
+        var imgSrc = ['img/1.jpg','img/2.jpg','img/3.jpg','img/4.jpg','img/5.jpg'];
+        prev.onclick = function(){
+            // TODO 清除定时器
+            clearInterval(t);
+            // TODO 轮播逻辑
+            prevImg();
+		}
+		function prevImg(){
+            // TODO <img> 标签的 src 属性
+            var src = img.src;// 'http://localhost:63342/DAY18/img/1.jpg'
+            // TODO 截取 src 属性的值 -> img/1.jpg
+            var str = src.substring(src.indexOf('i'));
+            // TODO 在对应数组中得到指定的索引值
+            var index = imgSrc.indexOf(str);
+            // TODO 判断当前的 index 是否为 0
+            if(index === 0){
+                img.src = imgSrc[4];
+            }else{
+                // TODO 将下一张图片的地址设置给 <img> 标签的 src 属性
+                img.src = imgSrc[index-1];
+            }
+        }
+        next.onclick = function(){
+            // TODO 清除定时器
+			clearInterval(t);
+			// TODO 轮播逻辑
+			nextImg();
+		};
+
+		function nextImg(){
+            // TODO <img> 标签的 src 属性
+            var src = img.src;// 'http://localhost:63342/DAY18/img/1.jpg'
+            // TODO 截取 src 属性的值 -> img/1.jpg
+            var str = src.substring(src.indexOf('i'));
+            // TODO 在对应数组中得到指定的索引值
+            var index = imgSrc.indexOf(str);
+            if(index === 4){
+                img.src = imgSrc[0];
+            }else{
+                // TODO 将下一张图片的地址设置给 <img> 标签的 src 属性
+                img.src = imgSrc[index+1];
+            }
+            // TODO 设置定时器
+			//setTimeout(nextImg, 1000);
+        }
+        nextImg();
+        // TODO 设置周期性的定时器
+		var t = setInterval(nextImg,1000);
+	</script>
+</html>

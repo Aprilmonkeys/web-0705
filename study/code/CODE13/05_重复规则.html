@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>重复规则</title>
+    <script>
+
+        // TODO 1. 定义一个用于验证的字符串 - 从页面输入框中获取
+        var str = '1234abcdefg';
+
+        /*
+         TODO 2. 定义正则表达式的规则
+         TODO * {n,m} - 最少出现 n 次,最多出现 m 次
+         TODO   * 出现次数为 0 时 - 表示什么都不匹配 -> true
+         */
+        var reg = /[0-9]{5,8}/;
+
+        // TODO 3. 验证字符串是否符合正则表达式的规则
+        var result = reg.test(str);
+
+        console.log(result);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

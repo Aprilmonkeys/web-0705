@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原型</title>
+    <script>
+        /*
+            TODO 原型是 Function 对象的一个属性
+            TODO * prototype属性是存在的(Function对象预定义的)
+            TODO * prototype属性的值 -> 空对象
+         */
+        var fun = new Function();
+        //console.log(fun.prototype);
+        // TODO proto 也是一个空对象
+        //var proto = fun.prototype;
+        // TODO 为 proto 对象添加了一个属性
+        /*proto.name = 'zhangwuji';
+        console.log(proto.name);*/
+
+        // TODO 为 fun 对象的 prototype 添加属性
+        fun.prototype.name = 'zhangwuji';
+        console.log(fun.prototype.name);
+        // TODO 为 fun 对象添加属性 - 失败
+        fun.name = 'zhouzhiruo';
+        console.log(fun.name);
+
+        /*
+            TODO 函数是 Function 类型的对象
+            TODO * 函数本身具有原型属性prototype
+         */
+        function fn(){
+            console.log('this is function.');
+        }
+        console.log(fn.prototype);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

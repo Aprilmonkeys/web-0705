@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量与数组</title>
+    <script>
+        // TODO 变量只能存储一个数据内容
+        /*var str = 'string';
+
+        var newStr = str;
+        console.log('newStr: '+newStr);// string
+
+        str = 'number';
+        console.log('str修改后的值: '+str);
+
+        console.log('newStr: '+newStr);*/
+
+        // TODO 数组允许存储多个数据内容
+        var arr = ['string','number',18];
+        // TODO 浅复制 - 内存地址的复制
+        //var newArr = arr;
+        // TODO 深复制 - 数据内容的复制
+        var newArr = [];
+        for(var i in arr){
+           newArr[i] = arr[i];
+        }
+
+        console.log(newArr);
+
+        arr[1] = 'boolean';
+        console.log(arr);
+
+        console.log(newArr);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>事件对象</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style type="text/css">
+			body {
+				padding: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn" class="btn btn-primary">事件对象</button>
+		<script type="text/javascript">
+			var btn = document.getElementById('btn');
+			/*btn.addEventListener('click',function(event){
+			    console.log(event);
+			});*/
+			btn.attachEvent('onclick',function(event){
+			    /*
+			    	TODO Event事件对象
+			    	TODO * 通过事件的处理函数的形参 - 得到事件对象
+			    	TODO * 事件对象也是 window 对象的属性 - window.event
+			     */
+			    event = event || window.event;
+			});
+		</script>
+	</body>
+</html>

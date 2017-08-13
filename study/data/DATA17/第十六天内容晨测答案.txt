@@ -1,0 +1,22 @@
+﻿1.以下哪个方法不是 Element 对象的 - C
+  A setAttribute()
+  B getAttribute()
+  C replaceNode()
+  D removeAttribute()
+
+2.以下哪些属性不是 Element 对象的 - BD
+  A firstElementChild
+  B nextSibling
+  C lastElementChild
+  D childNodes
+
+3.请写出 clientHeight 的值等于哪几个属性值的相加结果
+  clientHeight = heihgt + padding-top + padding-bottom
+
+4.请写出 style 属性与 getComputedStyle() 方法的区别
+  * style属性：获取内联样式
+  * getComputedStyle()方法：获取当前有效样式
+
+5.innerHTML属性的作用是什么，以及应用中会遇到什么问题
+  * innerHTML属性的作用：获取或设置指定标签的HTML代码
+  * 遇到的问题：网络安全问题

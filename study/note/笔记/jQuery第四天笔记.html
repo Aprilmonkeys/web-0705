@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://192.168.10.165/day26/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>jQuery第四天笔记</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+<style type="text/css">
+/**
+ * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ * @author Rose Pritchard
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #ccc;
+	background: none;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #2d2d2d;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #999;
+}
+
+.token.punctuation {
+	color: #ccc;
+}
+
+.token.tag,
+.token.attr-name,
+.token.namespace,
+.token.deleted {
+	color: #e2777a;
+}
+
+.token.function-name {
+	color: #6196cc;
+}
+
+.token.boolean,
+.token.number,
+.token.function {
+	color: #f08d49;
+}
+
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+	color: #f8c555;
+}
+
+.token.selector,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+	color: #cc99cd;
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable {
+	color: #7ec699;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+	color: #67cdcc;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.token.inserted {
+	color: green;
+}
+</style>
+
+<style type="text/css">
+pre.line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
+}
+
+pre.line-numbers > code {
+	position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 3em; /* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	border-right: 1px solid #999;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+	.line-numbers-rows > span {
+		pointer-events: none;
+		display: block;
+		counter-increment: linenumber;
+	}
+
+		.line-numbers-rows > span:before {
+			content: counter(linenumber);
+			color: #999;
+			display: block;
+			padding-right: 0.8em;
+			text-align: right;
+		}
+</style>
+
+
+</head>
+
+<body>
+
+<p>jQuery UI 能做的事可谓是包罗万象。实际上，jQuery UI 在某种意义上并不是插件，而是一个完整的插件库。</p>
+
+<p>jQuery UI 中主要包含以下几个功能:</p>
+
+<ul>
+<li>Effect（效果）</li>
+<li>Interactions（交互组件）</li>
+<li>Widget（部件）</li>
+<li>此外，还为jQuery和核心动画提供了很多高级效果。</li>
+</ul>
+
+<h2 id="toc_0">Effect（效果）</h2>
+
+<h3 id="toc_1">animate() 方法</h3>
+
+<p>文档在引入核心效果文件的情况下，扩展的 <code>.animate()</code> 方法可接受另外一些样式属性。</p>
+
+<p>扩展后 animate 方法接受以下属性:</p>
+
+<ul>
+<li>backgroundColor</li>
+<li>borderBottomColor</li>
+<li>borderLeftColor</li>
+<li>borderRightColor</li>
+<li>borderTopColor</li>
+<li>Color</li>
+<li>outlineColor</li>
+</ul>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> state <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#button"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span> state <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#effect"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">animate</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            backgroundColor<span class="token punctuation">:</span> <span class="token string">"#aa0000"</span><span class="token punctuation">,</span>
+            color<span class="token punctuation">:</span> <span class="token string">"#fff"</span><span class="token punctuation">,</span>
+            width<span class="token punctuation">:</span> <span class="token number">500</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#effect"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">animate</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            backgroundColor<span class="token punctuation">:</span> <span class="token string">"#fff"</span><span class="token punctuation">,</span>
+            color<span class="token punctuation">:</span> <span class="token string">"#000"</span><span class="token punctuation">,</span>
+            width<span class="token punctuation">:</span> <span class="token number">240</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    state <span class="token operator">=</span> <span class="token operator">!</span>state<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<h3 id="toc_2">effect() 方法</h3>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token keyword">function</span> <span class="token function">runEffect</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> selectedEffect <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#effectTypes"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">var</span> options <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span> selectedEffect <span class="token operator">===</span> <span class="token string">"scale"</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        options <span class="token operator">=</span> <span class="token punctuation">{</span> percent<span class="token punctuation">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span> selectedEffect <span class="token operator">===</span> <span class="token string">"transfer"</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        options <span class="token operator">=</span> <span class="token punctuation">{</span> to<span class="token punctuation">:</span> <span class="token string">"#button"</span><span class="token punctuation">,</span> className<span class="token punctuation">:</span> <span class="token string">"ui-effects-transfer"</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span> selectedEffect <span class="token operator">===</span> <span class="token string">"size"</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        options <span class="token operator">=</span> <span class="token punctuation">{</span> to<span class="token punctuation">:</span> <span class="token punctuation">{</span> width<span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">,</span> height<span class="token punctuation">:</span> <span class="token number">60</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#effect"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">effect</span><span class="token punctuation">(</span> selectedEffect<span class="token punctuation">,</span> options<span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">,</span> callback <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">callback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#effect"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeAttr</span><span class="token punctuation">(</span> <span class="token string">"style"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">hide</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fadeIn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#button"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">runEffect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<h2 id="toc_3">Interactions（交互组件）</h2>
+
+<h3 id="toc_4">Draggable Widget</h3>
+
+<p>Draggable Widget 允许使用鼠标移动元素。</p>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"draggable"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-widget-content"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Drag me around<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#draggable"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">draggable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<p>draggable()的事件:</p>
+
+<ul>
+<li>start：当拖动开始时触发。</li>
+<li>drag：当鼠标在拖动过程中移动时触发。</li>
+<li>stop：当拖动停止时触发。</li>
+</ul>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"draggable"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-widget ui-widget-content"</span><span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Drag me to trigger the chain <span class="token keyword">of</span> events<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span>ul <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-helper-reset"</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>li id<span class="token operator">=</span><span class="token string">"event-start"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-state-default ui-corner-all"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>span <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-icon ui-icon-play"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span><span class="token string">"start"</span> invoked <span class="token operator">&lt;</span>span <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"count"</span><span class="token operator">&gt;</span><span class="token number">0</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>x<span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>li id<span class="token operator">=</span><span class="token string">"event-drag"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-state-default ui-corner-all"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>span <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-icon ui-icon-arrow-4"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span><span class="token string">"drag"</span> invoked <span class="token operator">&lt;</span>span <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"count"</span><span class="token operator">&gt;</span><span class="token number">0</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>x<span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>li id<span class="token operator">=</span><span class="token string">"event-stop"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-state-default ui-corner-all"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>span <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-icon ui-icon-stop"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span><span class="token string">"stop"</span> invoked <span class="token operator">&lt;</span>span <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"count"</span><span class="token operator">&gt;</span><span class="token number">0</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>x<span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token keyword">var</span> $start_counter <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#event-start"</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+            $drag_counter <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#event-drag"</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+            $stop_counter <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#event-stop"</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+            counts <span class="token operator">=</span> <span class="token punctuation">[</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#draggable"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">draggable</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        start<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            counts<span class="token punctuation">[</span> <span class="token number">0</span> <span class="token punctuation">]</span><span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token function">updateCounterStatus</span><span class="token punctuation">(</span> $start_counter<span class="token punctuation">,</span> counts<span class="token punctuation">[</span> <span class="token number">0</span> <span class="token punctuation">]</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        drag<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            counts<span class="token punctuation">[</span> <span class="token number">1</span> <span class="token punctuation">]</span><span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token function">updateCounterStatus</span><span class="token punctuation">(</span> $drag_counter<span class="token punctuation">,</span> counts<span class="token punctuation">[</span> <span class="token number">1</span> <span class="token punctuation">]</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        stop<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            counts<span class="token punctuation">[</span> <span class="token number">2</span> <span class="token punctuation">]</span><span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token function">updateCounterStatus</span><span class="token punctuation">(</span> $stop_counter<span class="token punctuation">,</span> counts<span class="token punctuation">[</span> <span class="token number">2</span> <span class="token punctuation">]</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">function</span> <span class="token function">updateCounterStatus</span><span class="token punctuation">(</span> $event_counter<span class="token punctuation">,</span> new_count <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// first update the status visually...</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token operator">!</span>$event_counter<span class="token punctuation">.</span><span class="token function">hasClass</span><span class="token punctuation">(</span> <span class="token string">"ui-state-hover"</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            $event_counter<span class="token punctuation">.</span><span class="token function">addClass</span><span class="token punctuation">(</span> <span class="token string">"ui-state-hover"</span> <span class="token punctuation">)</span>
+                    <span class="token punctuation">.</span><span class="token function">siblings</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeClass</span><span class="token punctuation">(</span> <span class="token string">"ui-state-hover"</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">// ...then update the numbers</span>
+        <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"span.count"</span><span class="token punctuation">,</span> $event_counter <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span> new_count <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<p>draggable() 的选项:</p>
+
+<ul>
+<li>axis：设置只能在x轴或y轴方向拖动。</li>
+<li>containment：设置在某个区域内拖动。</li>
+<li>cursor：设置拖动时鼠标的样式。</li>
+<li>cursorAt：设置鼠标的相对定位。</li>
+<li>handle：设置指定元素触发鼠标按下事件才能拖动。</li>
+<li>cancel：防止在指定元素上拖动。</li>
+<li>revert：当停止拖动时，元素是否被重置到初始位置。</li>
+<li>snap：拖动元素是否吸附在其他元素。</li>
+<li>snapMode：设置拖动元素在指定元素的哪个边缘。
+
+<ul>
+<li>snap设置为true时该选项有效。</li>
+<li>可选值 - inner|outer|both</li>
+</ul></li>
+</ul>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"draggable1"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"draggable ui-widget-content"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>I can be dragged only vertically<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"draggable2"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"draggable ui-widget-content"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>I can be dragged only horizontally<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"draggable4"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"draggable ui-widget-content"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>I will always stick to the center <span class="token punctuation">(</span>relative to the mouse<span class="token punctuation">)</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"draggable5"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"draggable ui-widget-content"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>p <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-widget-header"</span><span class="token operator">&gt;</span>I can be dragged only by <span class="token keyword">this</span> handle<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"draggable6"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"draggable ui-widget-content"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>You can drag me around<span class="token operator">&amp;</span>hellip<span class="token punctuation">;</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>p <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-widget-header"</span><span class="token operator">&gt;</span><span class="token operator">&amp;</span>hellip<span class="token punctuation">;</span>but you can't drag me by <span class="token keyword">this</span> handle<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"draggable7"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"draggable ui-widget-content"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Revert the original<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"draggable8"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"draggable ui-widget-content"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Default <span class="token punctuation">(</span>snap<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">,</span> snaps to all other draggable elements<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"draggable9"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"draggable ui-widget-content"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>I only snap to the outer edges <span class="token keyword">of</span> the big box<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"containment-wrapper"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"draggable"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"draggable3"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"draggable ui-widget-content"</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>I'm contained within the box<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#draggable1"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">draggable</span><span class="token punctuation">(</span><span class="token punctuation">{</span> axis<span class="token punctuation">:</span> <span class="token string">"y"</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#draggable2"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">draggable</span><span class="token punctuation">(</span><span class="token punctuation">{</span> axis<span class="token punctuation">:</span> <span class="token string">"x"</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#draggable3"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">draggable</span><span class="token punctuation">(</span><span class="token punctuation">{</span> containment<span class="token punctuation">:</span> <span class="token string">"#containment-wrapper"</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#draggable4"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">draggable</span><span class="token punctuation">(</span><span class="token punctuation">{</span> cursor<span class="token punctuation">:</span> <span class="token string">"move"</span><span class="token punctuation">,</span> cursorAt<span class="token punctuation">:</span> <span class="token punctuation">{</span> top<span class="token punctuation">:</span> <span class="token number">56</span><span class="token punctuation">,</span> left<span class="token punctuation">:</span> <span class="token number">56</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#draggable5"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">draggable</span><span class="token punctuation">(</span><span class="token punctuation">{</span> handle<span class="token punctuation">:</span> <span class="token string">"p"</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#draggable6"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">draggable</span><span class="token punctuation">(</span><span class="token punctuation">{</span> cancel<span class="token punctuation">:</span> <span class="token string">"p.ui-widget-header"</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#draggable7"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">draggable</span><span class="token punctuation">(</span><span class="token punctuation">{</span> revert<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#draggable8"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">draggable</span><span class="token punctuation">(</span><span class="token punctuation">{</span> snap<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#draggable9"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">draggable</span><span class="token punctuation">(</span><span class="token punctuation">{</span> snap<span class="token punctuation">:</span> <span class="token string">"#containment-wrapper"</span><span class="token punctuation">,</span> snapMode<span class="token punctuation">:</span> <span class="token string">"outer"</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<h3 id="toc_5">Droppable Widget</h3>
+
+<p>Droppable Widget 为可拖拽小部件创建目标。</p>
+
+<p>droppable() 的事件:</p>
+
+<ul>
+<li>drop：该事件在被允许拖放的元素覆盖时触发。</li>
+</ul>
+
+<p>droppable() 的选项:</p>
+
+<ul>
+<li>accept：指定可拖动的元素可被接受。</li>
+<li>activeClass：被允许拖放的元素覆盖时，改变样式。</li>
+<li>hoverClass：被允许拖放的元素悬停时，改变样式。</li>
+</ul>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"draggable-nonvalid"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-widget-content"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>I<span class="token string">'m draggable but can'</span>t be dropped<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"draggable"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-widget-content"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Drag me to my target<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"droppable"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-widget-header"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Drop here<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#draggable, #draggable-nonvalid"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">draggable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#droppable"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">droppable</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        accept<span class="token punctuation">:</span> <span class="token string">"#draggable"</span><span class="token punctuation">,</span>
+        activeClass<span class="token punctuation">:</span> <span class="token string">"ui-state-hover"</span><span class="token punctuation">,</span>
+        hoverClass<span class="token punctuation">:</span> <span class="token string">"ui-state-active"</span><span class="token punctuation">,</span>
+        drop<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span> event<span class="token punctuation">,</span> ui <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">$</span><span class="token punctuation">(</span> <span class="token keyword">this</span> <span class="token punctuation">)</span>
+                    <span class="token punctuation">.</span><span class="token function">addClass</span><span class="token punctuation">(</span> <span class="token string">"ui-state-highlight"</span> <span class="token punctuation">)</span>
+                    <span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span> <span class="token string">"p"</span> <span class="token punctuation">)</span>
+                    <span class="token punctuation">.</span><span class="token function">html</span><span class="token punctuation">(</span> <span class="token string">"Dropped!"</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<h3 id="toc_6">Resizeable Widget</h3>
+
+<p>Resizeable Widget 使用鼠标改变元素的尺寸。</p>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"resizable"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-widget-content"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>h3 <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-widget-header"</span><span class="token operator">&gt;</span>Resizable<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#resizable"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">resizable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<h3 id="toc_7">Sortable Widget</h3>
+
+<p>Sortable Widget 使用鼠标调整列表中或者网格中元素的排序。</p>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token operator">&lt;</span>ul id<span class="token operator">=</span><span class="token string">"sortable"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-state-default"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>span <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-icon ui-icon-arrowthick-2-n-s"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>Item <span class="token number">1</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-state-default"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>span <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-icon ui-icon-arrowthick-2-n-s"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>Item <span class="token number">2</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-state-default"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>span <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-icon ui-icon-arrowthick-2-n-s"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>Item <span class="token number">3</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-state-default"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>span <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-icon ui-icon-arrowthick-2-n-s"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>Item <span class="token number">4</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-state-default"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>span <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-icon ui-icon-arrowthick-2-n-s"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>Item <span class="token number">5</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-state-default"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>span <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-icon ui-icon-arrowthick-2-n-s"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>Item <span class="token number">6</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-state-default"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>span <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-icon ui-icon-arrowthick-2-n-s"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>Item <span class="token number">7</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#sortable"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sortable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<h2 id="toc_8">Widget（部件）</h2>
+
+<h3 id="toc_9">Accordion Widget</h3>
+
+<p>Accordion Widget 把一对标题和内容面板转换成折叠面板。</p>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"accordion"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>Section <span class="token number">1</span><span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>
+            Mauris mauris ante<span class="token punctuation">,</span> blandit et<span class="token punctuation">,</span> ultrices a<span class="token punctuation">,</span> suscipit eget<span class="token punctuation">,</span> quam<span class="token punctuation">.</span> Integer
+            ut neque<span class="token punctuation">.</span> Vivamus nisi metus<span class="token punctuation">,</span> molestie vel<span class="token punctuation">,</span> gravida <span class="token keyword">in</span><span class="token punctuation">,</span> condimentum sit
+            amet<span class="token punctuation">,</span> nunc<span class="token punctuation">.</span> Nam a nibh<span class="token punctuation">.</span> Donec suscipit eros<span class="token punctuation">.</span> Nam mi<span class="token punctuation">.</span> Proin viverra leo ut
+            odio<span class="token punctuation">.</span> Curabitur malesuada<span class="token punctuation">.</span> Vestibulum a velit eu ante scelerisque vulputate<span class="token punctuation">.</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>Section <span class="token number">2</span><span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>
+            Sed non urna<span class="token punctuation">.</span> Donec et ante<span class="token punctuation">.</span> Phasellus eu ligula<span class="token punctuation">.</span> Vestibulum sit amet
+            purus<span class="token punctuation">.</span> Vivamus hendrerit<span class="token punctuation">,</span> dolor at aliquet laoreet<span class="token punctuation">,</span> mauris turpis porttitor
+            velit<span class="token punctuation">,</span> faucibus interdum tellus libero ac justo<span class="token punctuation">.</span> Vivamus non quam<span class="token punctuation">.</span> In
+            suscipit faucibus urna<span class="token punctuation">.</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>Section <span class="token number">3</span><span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>
+            Nam enim risus<span class="token punctuation">,</span> molestie et<span class="token punctuation">,</span> porta ac<span class="token punctuation">,</span> aliquam ac<span class="token punctuation">,</span> risus<span class="token punctuation">.</span> Quisque lobortis<span class="token punctuation">.</span>
+            Phasellus pellentesque purus <span class="token keyword">in</span> massa<span class="token punctuation">.</span> Aenean <span class="token keyword">in</span> pede<span class="token punctuation">.</span> Phasellus ac libero
+            ac tellus pellentesque semper<span class="token punctuation">.</span> Sed ac felis<span class="token punctuation">.</span> Sed commodo<span class="token punctuation">,</span> magna quis
+            lacinia ornare<span class="token punctuation">,</span> quam ante aliquam nisi<span class="token punctuation">,</span> eu iaculis leo purus venenatis dui<span class="token punctuation">.</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>ul<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span>List item one<span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span>List item two<span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span>List item three<span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>Section <span class="token number">4</span><span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>
+            Cras dictum<span class="token punctuation">.</span> Pellentesque habitant morbi tristique senectus et netus
+            et malesuada fames ac turpis egestas<span class="token punctuation">.</span> Vestibulum ante ipsum primis <span class="token keyword">in</span>
+            faucibus orci luctus et ultrices posuere cubilia Curae<span class="token punctuation">;</span> Aenean lacinia
+            mauris vel est<span class="token punctuation">.</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>
+            Suspendisse eu nisl<span class="token punctuation">.</span> Nullam ut libero<span class="token punctuation">.</span> Integer dignissim consequat lectus<span class="token punctuation">.</span>
+            Class <span class="token class-name">aptent</span> taciti sociosqu ad litora torquent per conubia nostra<span class="token punctuation">,</span> per
+            inceptos himenaeos<span class="token punctuation">.</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#accordion"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">accordion</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<blockquote>
+<p><strong>值得注意的是:</strong></p>
+
+<ul>
+<li>使用<code>&lt;div&gt;</code>元素作为折叠面板的容器。</li>
+<li>使用<code>&lt;h3&gt;</code>元素作为折叠面板的标题。</li>
+<li>使用<code>&lt;div&gt;</code>元素作为折叠面板的内容。</li>
+</ul>
+</blockquote>
+
+<h3 id="toc_10">Autocomplete Widget</h3>
+
+<p>Autocomplete Widget 自动完成功能根据用户输入值进行搜索和过滤，让用户快速找到并从预设值列表中选择。</p>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ui-widget"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>label <span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"tags"</span><span class="token operator">&gt;</span>Tags<span class="token punctuation">:</span> <span class="token operator">&lt;</span><span class="token operator">/</span>label<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>input id<span class="token operator">=</span><span class="token string">"tags"</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token keyword">var</span> availableTags <span class="token operator">=</span> <span class="token punctuation">[</span>
+        <span class="token string">"ActionScript"</span><span class="token punctuation">,</span>
+        <span class="token string">"AppleScript"</span><span class="token punctuation">,</span>
+        <span class="token string">"Asp"</span><span class="token punctuation">,</span>
+        <span class="token string">"BASIC"</span><span class="token punctuation">,</span>
+        <span class="token string">"C"</span><span class="token punctuation">,</span>
+        <span class="token string">"C++"</span><span class="token punctuation">,</span>
+        <span class="token string">"Clojure"</span><span class="token punctuation">,</span>
+        <span class="token string">"COBOL"</span><span class="token punctuation">,</span>
+        <span class="token string">"ColdFusion"</span><span class="token punctuation">,</span>
+        <span class="token string">"Erlang"</span><span class="token punctuation">,</span>
+        <span class="token string">"Fortran"</span><span class="token punctuation">,</span>
+        <span class="token string">"Groovy"</span><span class="token punctuation">,</span>
+        <span class="token string">"Haskell"</span><span class="token punctuation">,</span>
+        <span class="token string">"Java"</span><span class="token punctuation">,</span>
+        <span class="token string">"JavaScript"</span><span class="token punctuation">,</span>
+        <span class="token string">"Lisp"</span><span class="token punctuation">,</span>
+        <span class="token string">"Perl"</span><span class="token punctuation">,</span>
+        <span class="token string">"PHP"</span><span class="token punctuation">,</span>
+        <span class="token string">"Python"</span><span class="token punctuation">,</span>
+        <span class="token string">"Ruby"</span><span class="token punctuation">,</span>
+        <span class="token string">"Scala"</span><span class="token punctuation">,</span>
+        <span class="token string">"Scheme"</span>
+    <span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#tags"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">autocomplete</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        source<span class="token punctuation">:</span> availableTags
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<h3 id="toc_11">Datepicker Widget</h3>
+
+<p>Datepicker Widget 从弹出框或在线日历选择一个日期。</p>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Date<span class="token punctuation">:</span> <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> id<span class="token operator">=</span><span class="token string">"datepicker"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#datepicker"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">datepicker</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<h3 id="toc_12">Dialog Widget</h3>
+
+<p>Dialog Widget 在一个交互覆盖层中打开内容。</p>
+
+<ul>
+<li>基本对话框示例</li>
+</ul>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"dialog"</span> title<span class="token operator">=</span><span class="token string">"Basic dialog"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>This is the <span class="token keyword">default</span> dialog which is useful <span class="token keyword">for</span> displaying information<span class="token punctuation">.</span> The dialog window can be moved<span class="token punctuation">,</span> resized and closed <span class="token keyword">with</span> the <span class="token string">'x'</span> icon<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#dialog"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">dialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<ul>
+<li>模式对话框示例</li>
+</ul>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"dialog-modal"</span> title<span class="token operator">=</span><span class="token string">"Basic modal dialog"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Adding the modal overlay screen makes the dialog look more prominent because it dims out the page content<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#dialog-modal"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">dialog</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        modal<span class="token punctuation">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<ul>
+<li>操作对话框示例</li>
+</ul>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"dialog"</span> title<span class="token operator">=</span><span class="token string">"Basic dialog"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>This is an animated dialog which is useful <span class="token keyword">for</span> displaying information<span class="token punctuation">.</span> The dialog window can be moved<span class="token punctuation">,</span> resized and closed <span class="token keyword">with</span> the <span class="token string">'x'</span> icon<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>button id<span class="token operator">=</span><span class="token string">"opener"</span><span class="token operator">&gt;</span>Open Dialog<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#dialog"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">dialog</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        autoOpen<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        show<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            effect<span class="token punctuation">:</span> <span class="token string">"blind"</span><span class="token punctuation">,</span>
+            duration<span class="token punctuation">:</span> <span class="token number">1000</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        hide<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            effect<span class="token punctuation">:</span> <span class="token string">"explode"</span><span class="token punctuation">,</span>
+            duration<span class="token punctuation">:</span> <span class="token number">1000</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        buttons <span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">"OK"</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">$</span><span class="token punctuation">(</span> <span class="token keyword">this</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">dialog</span><span class="token punctuation">(</span> <span class="token string">"close"</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            Cancel<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">$</span><span class="token punctuation">(</span> <span class="token keyword">this</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">dialog</span><span class="token punctuation">(</span> <span class="token string">"close"</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#opener"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">button</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#dialog"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">dialog</span><span class="token punctuation">(</span> <span class="token string">"open"</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<h3 id="toc_13">Tabs Widget</h3>
+
+<p>Tabs Widget 是一种多面板的单内容区，每个面板与列表中的标题相关。</p>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"tabs"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>ul<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"#tabs-1"</span><span class="token operator">&gt;</span>Nunc tincidunt<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"#tabs-2"</span><span class="token operator">&gt;</span>Proin dolor<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"#tabs-3"</span><span class="token operator">&gt;</span>Aenean lacinia<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"tabs-1"</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Proin elit arcu<span class="token punctuation">,</span> rutrum commodo<span class="token punctuation">,</span> vehicula tempus<span class="token punctuation">,</span> commodo a<span class="token punctuation">,</span> risus<span class="token punctuation">.</span> Curabitur nec arcu<span class="token punctuation">.</span> Donec sollicitudin mi sit amet mauris<span class="token punctuation">.</span> Nam elementum quam ullamcorper ante<span class="token punctuation">.</span> Etiam aliquet massa et lorem<span class="token punctuation">.</span> Mauris dapibus lacus auctor risus<span class="token punctuation">.</span> Aenean tempor ullamcorper leo<span class="token punctuation">.</span> Vivamus sed magna quis ligula eleifend adipiscing<span class="token punctuation">.</span> Duis orci<span class="token punctuation">.</span> Aliquam sodales tortor vitae ipsum<span class="token punctuation">.</span> Aliquam nulla<span class="token punctuation">.</span> Duis aliquam molestie erat<span class="token punctuation">.</span> Ut et mauris vel pede varius sollicitudin<span class="token punctuation">.</span> Sed ut dolor nec orci tincidunt interdum<span class="token punctuation">.</span> Phasellus ipsum<span class="token punctuation">.</span> Nunc tristique tempus lectus<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"tabs-2"</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Morbi tincidunt<span class="token punctuation">,</span> dui sit amet facilisis feugiat<span class="token punctuation">,</span> odio metus gravida ante<span class="token punctuation">,</span> ut pharetra massa metus id nunc<span class="token punctuation">.</span> Duis scelerisque molestie turpis<span class="token punctuation">.</span> Sed fringilla<span class="token punctuation">,</span> massa eget luctus malesuada<span class="token punctuation">,</span> metus eros molestie lectus<span class="token punctuation">,</span> ut tempus eros massa ut dolor<span class="token punctuation">.</span> Aenean aliquet fringilla sem<span class="token punctuation">.</span> Suspendisse sed ligula <span class="token keyword">in</span> ligula suscipit aliquam<span class="token punctuation">.</span> Praesent <span class="token keyword">in</span> eros vestibulum mi adipiscing adipiscing<span class="token punctuation">.</span> Morbi facilisis<span class="token punctuation">.</span> Curabitur ornare consequat nunc<span class="token punctuation">.</span> Aenean vel metus<span class="token punctuation">.</span> Ut posuere viverra nulla<span class="token punctuation">.</span> Aliquam erat volutpat<span class="token punctuation">.</span> Pellentesque convallis<span class="token punctuation">.</span> Maecenas feugiat<span class="token punctuation">,</span> tellus pellentesque pretium posuere<span class="token punctuation">,</span> felis lorem euismod felis<span class="token punctuation">,</span> eu ornare leo nisi vel felis<span class="token punctuation">.</span> Mauris consectetur tortor et purus<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"tabs-3"</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Mauris eleifend est et turpis<span class="token punctuation">.</span> Duis id erat<span class="token punctuation">.</span> Suspendisse potenti<span class="token punctuation">.</span> Aliquam vulputate<span class="token punctuation">,</span> pede vel vehicula accumsan<span class="token punctuation">,</span> mi neque rutrum erat<span class="token punctuation">,</span> eu congue orci lorem eget lorem<span class="token punctuation">.</span> Vestibulum non ante<span class="token punctuation">.</span> Class <span class="token class-name">aptent</span> taciti sociosqu ad litora torquent per conubia nostra<span class="token punctuation">,</span> per inceptos himenaeos<span class="token punctuation">.</span> Fusce sodales<span class="token punctuation">.</span> Quisque eu urna vel enim commodo pellentesque<span class="token punctuation">.</span> Praesent eu risus hendrerit ligula tempus pretium<span class="token punctuation">.</span> Curabitur lorem enim<span class="token punctuation">,</span> pretium nec<span class="token punctuation">,</span> feugiat nec<span class="token punctuation">,</span> luctus a<span class="token punctuation">,</span> lacus<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Duis cursus<span class="token punctuation">.</span> Maecenas ligula eros<span class="token punctuation">,</span> blandit nec<span class="token punctuation">,</span> pharetra at<span class="token punctuation">,</span> semper at<span class="token punctuation">,</span> magna<span class="token punctuation">.</span> Nullam ac lacus<span class="token punctuation">.</span> Nulla facilisi<span class="token punctuation">.</span> Praesent viverra justo vitae neque<span class="token punctuation">.</span> Praesent blandit adipiscing velit<span class="token punctuation">.</span> Suspendisse potenti<span class="token punctuation">.</span> Donec mattis<span class="token punctuation">,</span> pede vel pharetra blandit<span class="token punctuation">,</span> magna ligula faucibus eros<span class="token punctuation">,</span> id euismod lacus dolor eget odio<span class="token punctuation">.</span> Nam scelerisque<span class="token punctuation">.</span> Donec non libero sed nulla mattis commodo<span class="token punctuation">.</span> Ut sagittis<span class="token punctuation">.</span> Donec nisi lectus<span class="token punctuation">,</span> feugiat porttitor<span class="token punctuation">,</span> tempor ac<span class="token punctuation">,</span> tempor vitae<span class="token punctuation">,</span> pede<span class="token punctuation">.</span> Aenean vehicula velit eu tellus interdum rutrum<span class="token punctuation">.</span> Maecenas commodo<span class="token punctuation">.</span> Pellentesque nec elit<span class="token punctuation">.</span> Fusce <span class="token keyword">in</span> lacus<span class="token punctuation">.</span> Vivamus a libero vitae lectus hendrerit hendrerit<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#tabs"</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">tabs</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<h3 id="toc_14">Tooltip Widget</h3>
+
+<p>Tooltip Widget 可自定义的、可主题化的工具提示框，替代原生的工具提示框。</p>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>label <span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"age"</span><span class="token operator">&gt;</span>Your age<span class="token punctuation">:</span><span class="token operator">&lt;</span><span class="token operator">/</span>label<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>input id<span class="token operator">=</span><span class="token string">"age"</span> title<span class="token operator">=</span><span class="token string">"We ask for your age only for statistical purposes."</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span> document <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">tooltip</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<h3 id="toc_15">Menu Widget</h3>
+
+<p>Menu Widget 带有鼠标和键盘交互的用于导航的可主题化菜单。</p>
+
+<ul>
+<li>禁用页面中默认的鼠标右键功能。</li>
+</ul>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">contextmenu</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></div>
+
+<ul>
+<li>自定义鼠标右键菜单。</li>
+</ul>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">mousedown</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>button <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">$</span><span class="token punctuation">(</span> <span class="token string">"#menu"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeAttr</span><span class="token punctuation">(</span><span class="token string">"style"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">menu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">position</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            my<span class="token punctuation">:</span> <span class="token string">"left top"</span><span class="token punctuation">,</span>
+            at<span class="token punctuation">:</span> <span class="token string">"left top"</span><span class="token punctuation">,</span>
+            <span class="token keyword">of</span> <span class="token punctuation">:</span> event<span class="token punctuation">,</span>
+            collision<span class="token punctuation">:</span> <span class="token string">"fit"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<h2 id="toc_16">版权说明</h2>
+
+<p>本笔记的内容免费开源，任何人都可以免费学习、分享，甚至可以进行修改。但需要注明作者及来源，并且不能用于商业。</p>
+
+<p>本笔记采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议进行许可</a>。</p>
+
+<h2 id="toc_17">联系方式</h2>
+
+<p><img src="./jQuery第四天笔记_files/connection.png" alt=""></p>
+
+
+
+<script type="text/javascript">
+var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(\w+)\b/i,t=0,n=_self.Prism={util:{encode:function(e){return e instanceof a?new a(e.type,n.util.encode(e.content),e.alias):"Array"===n.util.type(e)?e.map(n.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function(e){var t=n.util.type(e);switch(t){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=n.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return n.util.clone(e)})}return e}},languages:{extend:function(e,t){var a=n.util.clone(n.languages[e]);for(var r in t)a[r]=t[r];return a},insertBefore:function(e,t,a,r){r=r||n.languages;var l=r[e];if(2==arguments.length){a=arguments[1];for(var i in a)a.hasOwnProperty(i)&&(l[i]=a[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==t)for(var i in a)a.hasOwnProperty(i)&&(o[i]=a[i]);o[s]=l[s]}return n.languages.DFS(n.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,t,a,r){r=r||{};for(var l in e)e.hasOwnProperty(l)&&(t.call(e,l,e[l],a||l),"Object"!==n.util.type(e[l])||r[n.util.objId(e[l])]?"Array"!==n.util.type(e[l])||r[n.util.objId(e[l])]||(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,l,r)):(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,null,r)))}},plugins:{},highlightAll:function(e,t){var a={callback:t,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};n.hooks.run("before-highlightall",a);for(var r,l=a.elements||document.querySelectorAll(a.selector),i=0;r=l[i++];)n.highlightElement(r,e===!0,a.callback)},highlightElement:function(t,a,r){for(var l,i,o=t;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1],i=n.languages[l]),t.className=t.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=t.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var s=t.textContent,u={element:t,language:l,grammar:i,code:s};if(!s||!i)return n.hooks.run("complete",u),void 0;if(n.hooks.run("before-highlight",u),a&&_self.Worker){var c=new Worker(n.filename);c.onmessage=function(e){u.highlightedCode=e.data,n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},c.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=n.highlight(u.code,u.grammar,u.language),n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(t),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},highlight:function(e,t,r){var l=n.tokenize(e,t);return a.stringify(n.util.encode(l),r)},tokenize:function(e,t){var a=n.Token,r=[e],l=t.rest;if(l){for(var i in l)t[i]=l[i];delete t.rest}e:for(var i in t)if(t.hasOwnProperty(i)&&t[i]){var o=t[i];o="Array"===n.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],c=u.inside,g=!!u.lookbehind,h=!!u.greedy,f=0,d=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var m=r[p];if(r.length>e.length)break e;if(!(m instanceof a)){u.lastIndex=0;var y=u.exec(m),v=1;if(!y&&h&&p!=r.length-1){var b=r[p+1].matchedStr||r[p+1],k=m+b;if(p<r.length-2&&(k+=r[p+2].matchedStr||r[p+2]),u.lastIndex=0,y=u.exec(k),!y)continue;var w=y.index+(g?y[1].length:0);if(w>=m.length)continue;var _=y.index+y[0].length,P=m.length+b.length;if(v=3,P>=_){if(r[p+1].greedy)continue;v=2,k=k.slice(0,P)}m=k}if(y){g&&(f=y[1].length);var w=y.index+f,y=y[0].slice(f),_=w+y.length,S=m.slice(0,w),O=m.slice(_),j=[p,v];S&&j.push(S);var A=new a(i,c?n.tokenize(y,c):y,d,y,h);j.push(A),O&&j.push(O),Array.prototype.splice.apply(r,j)}}}}}return r},hooks:{all:{},add:function(e,t){var a=n.hooks.all;a[e]=a[e]||[],a[e].push(t)},run:function(e,t){var a=n.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(t)}}},a=n.Token=function(e,t,n,a,r){this.type=e,this.content=t,this.alias=n,this.matchedStr=a||null,this.greedy=!!r};if(a.stringify=function(e,t,r){if("string"==typeof e)return e;if("Array"===n.util.type(e))return e.map(function(n){return a.stringify(n,t,e)}).join("");var l={type:e.type,content:a.stringify(e.content,t,r),tag:"span",classes:["token",e.type],attributes:{},language:t,parent:r};if("comment"==l.type&&(l.attributes.spellcheck="true"),e.alias){var i="Array"===n.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}n.hooks.run("wrap",l);var o="";for(var s in l.attributes)o+=(o?" ":"")+s+'="'+(l.attributes[s]||"")+'"';return"<"+l.tag+' class="'+l.classes.join(" ")+'" '+o+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var t=JSON.parse(e.data),a=t.language,r=t.code,l=t.immediateClose;_self.postMessage(n.highlight(r,n.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var r=document.currentScript||[].slice.call(document.getElementsByTagName("script")).pop();return r&&(n.filename=r.src,document.addEventListener&&!r.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",n.highlightAll)),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+</script>
+
+<script type="text/javascript">
+Prism.languages.clike={comment:[{pattern:/(^|[^\\])\/\*[\w\W]*?\*\//,lookbehind:!0},{pattern:/(^|[^\\:])\/\/.*/,lookbehind:!0}],string:{pattern:/(["'])(\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,greedy:!0},"class-name":{pattern:/((?:\b(?:class|interface|extends|implements|trait|instanceof|new)\s+)|(?:catch\s+\())[a-z0-9_\.\\]+/i,lookbehind:!0,inside:{punctuation:/(\.|\\)/}},keyword:/\b(if|else|while|do|for|return|in|instanceof|function|new|try|throw|catch|finally|null|break|continue)\b/,"boolean":/\b(true|false)\b/,"function":/[a-z0-9_]+(?=\()/i,number:/\b-?(?:0x[\da-f]+|\d*\.?\d+(?:e[+-]?\d+)?)\b/i,operator:/--?|\+\+?|!=?=?|<=?|>=?|==?=?|&&?|\|\|?|\?|\*|\/|~|\^|%/,punctuation:/[{}[\];(),.:]/};
+</script>
+
+<script type="text/javascript">
+Prism.languages.javascript=Prism.languages.extend("clike",{keyword:/\b(as|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|finally|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|var|void|while|with|yield)\b/,number:/\b-?(0x[\dA-Fa-f]+|0b[01]+|0o[0-7]+|\d*\.?\d+([Ee][+-]?\d+)?|NaN|Infinity)\b/,"function":/[_$a-zA-Z\xA0-\uFFFF][_$a-zA-Z0-9\xA0-\uFFFF]*(?=\()/i}),Prism.languages.insertBefore("javascript","keyword",{regex:{pattern:/(^|[^\/])\/(?!\/)(\[.+?]|\\.|[^\/\\\r\n])+\/[gimyu]{0,5}(?=\s*($|[\r\n,.;})]))/,lookbehind:!0,greedy:!0}}),Prism.languages.insertBefore("javascript","class-name",{"template-string":{pattern:/`(?:\\\\|\\?[^\\])*?`/,greedy:!0,inside:{interpolation:{pattern:/\$\{[^}]+\}/,inside:{"interpolation-punctuation":{pattern:/^\$\{|\}$/,alias:"punctuation"},rest:Prism.languages.javascript}},string:/[\s\S]+/}}}),Prism.languages.markup&&Prism.languages.insertBefore("markup","tag",{script:{pattern:/(<script[\w\W]*?>)[\w\W]*?(?=<\/script>)/i,lookbehind:!0,inside:Prism.languages.javascript,alias:"language-javascript"}}),Prism.languages.js=Prism.languages.javascript;
+</script>
+
+<script type="text/javascript">
+!function(){"undefined"!=typeof self&&self.Prism&&self.document&&Prism.hooks.add("complete",function(e){if(e.code){var t=e.element.parentNode,s=/\s*\bline-numbers\b\s*/;if(t&&/pre/i.test(t.nodeName)&&(s.test(t.className)||s.test(e.element.className))&&!e.element.querySelector(".line-numbers-rows")){s.test(e.element.className)&&(e.element.className=e.element.className.replace(s,"")),s.test(t.className)||(t.className+=" line-numbers");var n,a=e.code.match(/\n(?!$)/g),l=a?a.length+1:1,m=new Array(l+1);m=m.join("<span></span>"),n=document.createElement("span"),n.className="line-numbers-rows",n.innerHTML=m,t.hasAttribute("data-start")&&(t.style.counterReset="linenumber "+(parseInt(t.getAttribute("data-start"),10)-1)),e.element.appendChild(n)}}})}();
+</script>
+
+
+
+
+
+</body></html>

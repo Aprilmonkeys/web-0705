@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>eval()方法</title>
+    <script>
+        // TODO 符合JSON格式要求的字符串
+        var jsonTxt = '{"name":"zhangwuji","age":18}';
+        //console.log(JSON.parse(jsonTxt));
+
+        /*
+            TODO eval()函数的问题
+            TODO * 如果没有"()" -> 将一对大括号解析为语句块
+            TODO   * 返回的是 -> undefined
+            TODO * 如果加上"()" -> 将一对大括号强制转换为JSON格式
+         */
+        //var jsonObject = eval("("+jsonTxt+")");
+        //console.log(jsonObject);
+
+        /*
+            TODO 解决浏览器的兼容性
+            TODO * IE8之前的浏览器不支持 JSON 对象
+            TODO   * 报错 - JSON未定义
+            TODO * 不是报错，而是 undefined 或 null
+         */
+        if (JSON) {
+            //
+        } else {
+
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

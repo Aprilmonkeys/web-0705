@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>document对象的属性</title>
+</head>
+<body>
+<form id="myform" name="myform" action="">
+    <input type="text" name="username">
+    <input type="submit">
+</form>
+<img id="img" name="img" src="img/1.jpg" alt="">
+<script>
+    console.log(document.documentElement);
+    console.log(document.head);
+    console.log(document.body);
+    /*
+        TODO 获取页面中的表单
+        TODO * 必须定义id属性 - getElementById()
+        TODO * 必须定义name属性 - getElementsByName()[index]
+        TODO * getElementsByTagName()[index]
+
+        TODO * document.forms - 获取页面中所有的表单
+     */
+    console.log(document.forms[0]);
+    // TODO document.images - 获取页面中所有的图片
+    console.log(document.images);
+</script>
+</body>
+</html>

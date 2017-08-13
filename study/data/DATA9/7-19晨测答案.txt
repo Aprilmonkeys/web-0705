@@ -1,0 +1,72 @@
+1.使用三目运算符获取a、b、c三个变量中的最大值
+答：方式一：(a>=b && a>=c)?a:(b>=a && b>=c ? b: c)
+    方式二：(a>=b)?(a>=c?a:c):(b>=c?b:c)
+    或者其它方式，能运行出来，逻辑上没有错误也行。
+
+2.while语句和do..while语句的区别
+答：while语句的语法：while(条件判断表达式){ 语句块 }
+    do..while语句的语法：do { 语句块 } while(条件判断表达式)
+    区别：当条件判断表达式不成立时，do..while语句的语句块至少执行一次，而while语句一次也不执行。
+
+3.通过键盘输入小明的数学、语文、英语三个学科的成绩，并计算平均分，
+   如果平均分大于等于85，则输出“你的成绩优秀！”
+   如果平均分大于等于60，则输出“你的成绩及格！”
+   否则输出“成绩不及格！”
+答：var math = +prompt("请输入您的数学成绩：");
+    var chinese = +prompt("请输入您的语文成绩：");
+    var english = +prompt("请输入您的英语成绩：");
+    var arg = (math+chinese+english)/3;
+    if(arg>=85) {
+      console.log('你的成绩优秀！')
+    } else if(arg>=60) {
+      console.log('你的成绩及格！')
+    } else {
+      console.log('成绩不及格！')
+    }
+
+
+4.根据用户输入的不同的数字，打印出对应的星期的英文
+	输入 1 打印 Monday
+	输入 2 打印 Tuesday
+	输入 3 打印 Wednesday
+	输入 4 打印 Thursday
+	输入 5 打印 Friday
+	输入 6 打印 Saturday
+	输入 7 打印 Sunday
+答：var week = prompt("请输入星期数字");
+    switch(week){
+      case 1: 
+	console.log('Monday');
+	break;
+      case 2: 
+	console.log('Tuesday');
+	break;
+      case 3: 
+	console.log('Wednesday');
+	break;
+      case 4: 
+	console.log('Thursday');
+	break;
+      case 5: 
+	console.log('Friday');
+	break;
+      case 6: 
+	console.log('Saturday');
+	break;
+      case 7: 
+	console.log('Sunday');
+	break;
+      default:
+        console.log('输入的信息有误！')
+    }
+
+5.将下面的 if 语句代码，改写成 条件运算符
+   var num = 10;
+   if(num == 10) {
+	console.log('10');
+   }else if(num == 20) {
+	console.log('20');
+   }else {
+	console.log('30');
+   }
+答：console.log(num==10?'10':(num==20?'20':'30'));

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数的作用域</title>
+    <script>
+        // TODO 全局函数
+        /*function fn(){
+            console.log('this is function');
+        }
+
+        // TODO 在全局作用域中
+        fn();
+
+        function n(){
+            // TODO 在函数作用域中
+            fn();
+        }
+        n();*/
+
+        // TODO 内部函数
+        function fn(){
+            var a = 'a';
+            function n(){
+                console.log('this is function');
+            }
+            // TODO 当前函数作用域
+            n();
+        }
+        fn();
+        // TODO 全局作用域
+        n();
+
+        var a = 'a';
+        function fn(){
+            var b = 'b';
+            function n(){}
+        }
+
+        fn();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

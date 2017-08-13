@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>行内元素的定位</title>
+    <style>
+        #s1 {
+            width: 100px;
+            height: 100px;
+            background-color: lightskyblue;
+            /* TODO 行内元素设置为绝对定位时 - 呈现出块级元素的效果 */
+            position: absolute;
+        }
+        #s2 {
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+            /* TODO 行内元素设置为固定定位时 - 呈现出块级元素的效果 */
+            position: fixed;
+            left: 120px;
+        }
+        #s3 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            /* TODO 行内元素设置为相对定位时 - 呈现出内联元素的效果 */
+            position: relative;
+            left: 240px;
+        }
+    </style>
+</head>
+<body>
+<span id="s1">这是第一个span元素</span>
+<span id="s2">这是第二个span元素</span>
+<span id="s3">这是第三个span元素</span>
+</body>
+</html>

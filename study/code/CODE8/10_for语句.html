@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for语句</title>
+    <script>
+
+        /*
+            var num = 0;
+            while (num < 10) {
+                console.log('这是while语句');
+                num++;
+            }
+            TODO 使用 for 语句改写上面的 while 语句
+         */
+        for (var num=0; num<10; num++){
+            console.log(num);
+        }
+        /*
+            TODO for 语句中的三个表达式是否是必须的?
+            TODO * 作为 for 语句的三个表达式(存在两个分号分隔符)
+            TODO   * 分号分隔符缺少任意一个，会报错
+            TODO     Uncaught SyntaxError: Unexpected token )
+            TODO * 这三个表达式全部都可以省略
+            TODO   * 条件判断表达式 -> 被省略，循环没有意义
+         */
+        var num = 0;
+        for (; num<10; ){
+            console.log(num);
+            num++;
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

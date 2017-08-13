@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>获取当前样式</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style type="text/css">
+			body {
+				padding: 50px;
+			}
+			#div1 {
+				width: 100px;
+				height: 100px;
+				background-color: lightskyblue;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="col-md-3">
+				<p><button id="btn1" class="btn btn-primary">getComputedStyle方法</button></p>
+				<p><button id="btn2" class="btn btn-primary">currentStyle属性</button></p>
+				<p><button id="btn3" class="btn btn-primary">兼容方案</button></p>
+			</div>
+			<div class="col-md-9">
+				<p><div id="div1" style="width: 200px"></div></p>
+				<p id="show"></p>
+			</div>
+		</div>
+		<script type="text/javascript">
+            // 使用 getComputedStyle() 方法获取当前样式
+			var btn1 = document.getElementById('btn1');
+			btn1.onclick = function(){
+			    var div1 = document.getElementById('div1');
+			    /*
+			    	TODO window.getComputedStyle(element,null)方法
+			    	TODO * 返回值 - CSSStyleDeclaration 对象
+			    	TODO * 作用 - 获取指定标签当前有效的样式属性值
+			    	TODO * 注意 - 该方法只能获取指定标签的样式属性，而不能进行设置
+			    	TODO * 问题 - IE8及以下版本的浏览器不支持
+			     */
+			    var result = window.getComputedStyle(div1,null);
+			    console.log(result.width);
+			}
+
+            // 使用 currentStyle 属性获取当前样式
+			var btn2 = document.getElementById('btn2');
+			btn2.onclick = function(){
+                var div1 = document.getElementById('div1');
+			    /*
+			    	TODO IE8及以下版本浏览器不支持 getComputedStyle() 方法，而是提供 currentStyle 属性
+			    	TODO * currentStyle 属性在其他浏览器中并不支持
+			    	TODO   * 返回值 - IE单独提供的 currentStyle 对象，类似于 CSSStyleDeclaration 对象
+			     */
+			    console.log(div1.currentStyle.backgroundColor);
+			}
+
+            // 兼容解决方案
+			var btn3 = document.getElementById('btn3');
+			btn3.onclick = function(){
+                var div1 = document.getElementById('div1');
+
+                var result;
+                // TODO 判断 getComputedStyle() 方法是否存在
+				if(window.getComputedStyle){
+				    // TODO 当前浏览器支持 getComputedStyle() 方法
+					result = window.getComputedStyle(div1,null);
+				}else{
+					// TODO 当前浏览器不支持 getComputedStyle() 方法
+					result = div1.currentStyle;
+				}
+				console.log(result);
+			}
+
+			function getStyle(elem){
+                var result;
+                // TODO 判断 getComputedStyle() 方法是否存在
+                if(window.getComputedStyle){
+                    // TODO 当前浏览器支持 getComputedStyle() 方法
+                    result = window.getComputedStyle(elem,null);
+                }else{
+                    // TODO 当前浏览器不支持 getComputedStyle() 方法
+                    result = elem.currentStyle;
+                }
+                return result;
+			}
+
+		</script>
+	</body>
+</html>

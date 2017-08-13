@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定义数组</title>
+    <script>
+
+        /*
+            TODO 对象方式创建数组
+            TODO * new Array() - 表示创建了一个空数组
+            TODO * new Array(数据) - 表示创建了索引数组
+          */
+        //var arr1 = new Array('string',20,true);
+        //console.log(arr1);
+
+        /*
+            TODO 字面量方式创建数组
+            TODO * [] - 表示创建了一个空数组
+         */
+        //var arr2 = ['string',18,false];
+        //console.log(arr2);
+
+        // TODO 面试题一 - 以下哪个选项的两个变量类型是相同的
+        var num1 = 100;// number
+        var num2 = new Number(100);// object
+
+        var str1 = 'string';// string
+        var str2 = new String('string');// object
+
+        var boo1 = true;// boolean
+        var boo2 = new Boolean(true);// object
+
+        var arr1 = [1,2,3,4,5];// object
+        var arr2 = new Array(1,2,3,4,5);// object
+
+        console.log(typeof arr1);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+﻿1.请写出JSON的两种数据结构
+
+2.请写出日期格式为 YYYY年MM月DD日 hh:mm:ss 的当前时间
+
+3.请写出 2 ~ 8 之间的随机数
+
+4.请写出以下哪个说法是错误的
+  A prototype是Function对象的属性
+  B prototype是函数的一个属性
+  C 函数本身也是一个对象
+  D Function对象无法创建函数
+
+5.请写出 Date 对象的 getTime() 方法的作用
+

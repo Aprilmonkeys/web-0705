@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON对象转换为JSON字符串</title>
+    <script src="json2.js"></script>
+    <script>
+
+        // TODO 对象
+        var jsonObject = {
+            name : 'zhangwuji',
+            age : 18
+        }
+        // TODO 数组
+        var jsonArray = [1,2,3,4,5];
+
+        //console.log(JSON);
+
+        //var jsonTxt = JSON.stringify(jsonObject);
+        var jsonTxt = JSON.stringify(jsonArray);
+        console.log(jsonTxt);
+
+        /*
+            TODO IE 8 之前版本的浏览器，不支持 JSON 对象的
+            TODO * 浏览器的兼容问题 - json2.js
+         */
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

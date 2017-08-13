@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>构造函数的案例</title>
+    <script>
+
+        /*function Hero(){
+            // TODO 函数 - 局部变量和内部函数
+            var name = 'zhangwuji';
+            function n(){
+                console.log('this is n function');
+            }
+            // TODO 构造函数 - 属性和方法
+            this.name = 'zhouzhiruo';
+            this.sayMe = function(){
+                console.log('this is zhouzhiruo');
+            }
+        }
+        // TODO 解析为函数使用
+        Hero();
+        // TODO 解析为构造函数使用 - 创建对象
+        var hero = new Hero();*/
+
+        function Hero(){
+            var name = 'zhangwuji';
+            this.getName = function(){
+                return name;
+            }
+        }
+
+        var hero = new Hero();
+
+        var name = hero.getName();
+        console.log(name);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

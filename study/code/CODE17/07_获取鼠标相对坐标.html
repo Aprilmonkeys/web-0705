@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取鼠标相对坐标</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="col-md-6">
+        <img id="pic" class="img-responsive" src="img/timg.jpeg">
+    </div>
+    <div class="col-md-6">
+        <p>offsetX: <input type="text" id="ox" /></p>
+        <p>offsetY: <input type="text" id="oy" /></p>
+        <p>pageX: <input type="text" id="px" /></p>
+        <p>pageY: <input type="text" id="py" /></p>
+    </div>
+</div>
+<script>
+    var ox = document.getElementById('ox');
+    var oy = document.getElementById('oy');
+    var px = document.getElementById('px');
+    var py = document.getElementById('py');
+
+    var img = document.getElementById('pic');
+    img.onmousemove = function(){
+        ox.value = event.offsetX;
+        oy.value = event.offsetY;
+        px.value = event.pageX;
+        py.value = event.pageY;
+    }
+</script>
+</body>
+</html>

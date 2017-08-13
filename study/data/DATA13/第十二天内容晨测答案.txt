@@ -1,0 +1,35 @@
+1.请写出定义数组的所有方式
+  var arr1 = [];
+  var arr2 = new Array();
+
+2.请使用两种 for 语句循环以下数组
+  var arr = ['this','is','string','and','function']
+
+  for(var i=0;i<arr.length;i++){
+    console.log(arr[i]);
+  }
+
+  for(var i in arr){
+    console.log(arr[i]);
+  }
+
+3.请写出删除数组中元素的所有方式，并写出之间的区别
+  1.delete arr[i]; - 删除元素，但保留位置
+  2.arr.pop() - 删除数组中最后一个元素
+  3.arr.shift() - 删除数组中第一个元素
+  4.arr.splice(i,n); - 删除数组中索引值为 i 的 n 个元素
+
+4.请使用 for 嵌套语句循环以下二维数组
+  var arr = [[11,12,13],[21,22,23],[31,32,33]]
+
+  for(var i=0;i<arr.length;i++){
+    for(var j=0;j<arr[i].length;j++){
+      console.log(arr[i][j]);
+    }
+  }
+
+ 5.请写出 push() 、pop() 、shfit() 和 unshfit() 方法的作用 
+   push() - 向数组的末尾添加一个或更多元素，并返回新的长度。
+   pop() - 删除数组的最后一个元素并返回删除的元素。
+   shfit() - 删除并返回数组的第一个元素。
+   unshfit() - 向数组的开头添加一个或更多元素，并返回新的长度。

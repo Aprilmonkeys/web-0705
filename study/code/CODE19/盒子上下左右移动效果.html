@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子上下左右移动的效果</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            height: 600px;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: #f40;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            border:1px solid black;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<div id="d"></div>
+<script>
+    //用JS来操作div,通过控制top和left
+    var div = document.getElementById('d');
+    //用这个方法返回的是一个样式集合的对象
+    var style = window.getComputedStyle(div, null);
+    //这里要想获取到div的top值必须给盒子开启绝对定位
+    //先获取到html
+    var html = document.documentElement;
+    //获取页面的宽度
+    var htmlStyle = window.getComputedStyle(html, null);
+    //console.log(html);
+    var hWidth = parseInt(htmlStyle.width);
+    var hheight = parseInt(htmlStyle.height);
+    // var dTop =parseInt(style.top);
+    var dLeft = parseInt(style.left);
+    var dWidth = parseInt(style.width);
+    var dTop = parseInt(style.top);
+    var dheight = parseInt(style.height);
+    var num = 0;
+    var dLeft = 0;
+    var dTop = 0;
+    //console.log(dTop);得到的值是字符串 需要转化成数字
+    //盒子向右移动
+    //设置4个开关写一个开关函数
+    var speed =3;
+    function fun() {
+        if (num === 0) {
+            dLeft+=speed;
+        } else if (num === 1) {
+            dTop+=speed;
+        } else if (num === 2) {
+            dLeft-=speed;
+        } else if (num === 3) {
+            dTop-=speed;
+        }
+
+        if (dLeft + dWidth >= hWidth) {
+            num = 1;
+            div.style.backgroundColor='green';
+            if (dTop + dheight >= hheight) {
+                num = 2;
+                div.style.backgroundColor='yellow';
+            }
+        } else if (dLeft <= 0) {
+            num = 3;
+            div.style.backgroundColor='blue';
+            if (dTop <= 0) {
+                num = 0;
+            }
+        }
+        div.style.left = dLeft + 'px';
+        div.style.top = dTop + 'px';
+    }
+
+    setInterval(fun, 10);
+    /*dLeft++;
+     //单独停止
+     div.style.left = dLeft + 'px';
+     if (dLeft + dWidth > hWidth) {
+     clearInterval(t);
+     }*/
+
+</script>
+</body>
+</html>

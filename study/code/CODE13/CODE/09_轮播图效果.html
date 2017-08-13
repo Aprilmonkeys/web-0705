@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>轮播图效果</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			body {
+				padding: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="carousel-example-generic" class="carousel slide" style="width: 492px;">
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="img/1.jpg" alt="...">
+				</div>
+			</div>
+		
+			<a id="prev" class="left carousel-control" href="#">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a id="next" class="right carousel-control" href="#">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+		</div>
+	</body>
+	<script>
+		// TODO 获取作为左右切换的按钮<a>标签
+		var prev = document.getElementById('prev');
+		var next = document.getElementById('next');
+		// TODO 获取页面中的图片元素<img>
+		var img = document.getElementsByTagName('img')[0];
+		// TODO http://localhost:63342/DAY14/img/1.jpg
+		var src = img.src;
+		src = src.substr(src.search('i'));
+		// TODO 定义一个数组 - 用于存储所有图片的地址
+		var arr = ['img/1.jpg','img/2.jpg','img/3.jpg','img/4.jpg','img/5.jpg'];
+		// TODO 定义一个变量 - 用于表示数组中当前图片的索引值
+		var index = arr.indexOf(src);
+
+		// TODO 分别为两个作为按钮<a>绑定事件
+		prev.onclick = function(){
+		    // TODO 向左切换
+			index--;
+			if(index <= 0){
+			    index = arr.length-1;
+			}
+			img.src = arr[index];
+		}
+		next.onclick = function(){
+		    // TODO 向右切换
+			index++;
+			if(index >= arr.length){
+			    index = 0;
+			}
+            img.src = arr[index];
+		}
+	</script>
+</html>

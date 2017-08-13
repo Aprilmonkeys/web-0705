@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>条件运算符</title>
+    <script>
+
+        /*
+            TODO 条件运算符
+            TODO * 判断的表达式
+            TODO   1. 可以是一个变量
+            TODO   2. 还可以是表达式 - 结果为 boolean 类型
+            TODO   3. 表达式 - 结果为非 boolean 类型
+         */
+        var boo = false;
+        console.log(boo ? '这是真的' : '这是假的');
+
+        console.log( (11 <= 10) ? 11 : 10);
+
+        console.log( (1 - 1) ? 3 : NaN );
+
+        /*
+            TODO 嵌套条件运算符
+            TODO * JavaScript的语法并没有限制嵌套的层级 - 嵌套多少层都行
+            TODO * 在实际开发中，当嵌套的层级过多时 - 代码的可读性不高
+            TODO 建议 - 一般不会超过三层
+          */
+        var num = 76;
+        console.log( ( num >= 80) ? ( ( num >= 90) ? '优秀' : '良好' ) : '合格');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

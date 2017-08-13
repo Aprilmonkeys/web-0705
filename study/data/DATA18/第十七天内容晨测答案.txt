@@ -1,0 +1,32 @@
+﻿1.元素绑定事件共有几种方式，请分别写出(示意代码)
+  <button onclick="eventFunction()"></button>
+  element.onclick = function(){}
+  element.addEventListener(eventName,functionName,boolean)
+
+2.请写出事件监听器的浏览器兼容解决方案(代码实现)
+  function bind(elem,eventName,functionName){
+      if(elem.addEventListener){
+          elem.addEventListener(eventName,functionName);
+      }else{
+          elem.attachEvent('on'+eventName,function(){
+              functionName.call(elem);
+          });
+      }
+  }
+
+3.this与event.target属性的区别是什么
+  this - 代表绑定事件的元素
+  event.target - 代表触发事件的元素
+
+4.通过event对象获取鼠标的坐标值共有几种，分别表示什么含义
+  pageX和pageY - 鼠标相对于页面的坐标值
+  clientX和clientY - 鼠标相对于窗口的坐标值
+  screenX和screenY - 鼠标相对于屏幕的坐标值
+  offsetX和offsetY - 鼠标相对坐标值
+
+5.请写出阻止默认行为的浏览器兼容解决方案(代码实现)
+  if(event.preventDefault{
+      event.preventDefault();
+  }else{
+      event.returnValue = false;
+  }

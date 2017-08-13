@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上外边距的传递性</title>
+    <style>
+        /*
+            TODO d2显示在d1的中间(居中显示)
+            TODO * d1和d2之间是父与子的关系
+            TODO * 如果为子元素d2设置上外边距时 - 将此值传递给父元素d2
+         */
+        #d1 {
+            width: 300px;
+            height: 200px;
+            background-color: lightslategrey;
+
+            /*padding: 100px 50px;*/
+
+            padding-top: 100px;
+        }
+        #d2 {
+            width: 200px;
+            height: 100px;
+            background-color: lightcoral;
+            /* TODO 作为子元素设置上外边距时，传递给父元素 */
+            /*margin-top: 100px;*/
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+<div id="d1">
+    <div id="d2"></div>
+</div>
+</body>
+</html>

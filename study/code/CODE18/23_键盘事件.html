@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>键盘事件</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <form action="#">
+        <textarea id="data" rows="5" class="form-control"></textarea>
+        <h3 id="show"></h3>
+    </form>
+</div>
+<script>
+    var data = document.getElementById('data');
+    var show = document.getElementById('show');
+    /*
+        TODO 有关键盘事件
+        TODO * onkeydown - 键盘的按键被按下
+        TODO * onkeyup - 键盘的按键被释放
+        TODO * onkeypress - 键盘的按键按一下
+        TODO * oninput - 输入事件
+     */
+    data.onkeypress = function(event){
+        /*
+            TODO event事件对象提供哪些获取到有关键盘的属性
+            TODO * charCode - 得到对应键盘的值 - 97
+            TODO * keyCode - 得到对应键盘的值 - 97
+            TODO * which - 得到对应键盘的值 - 97
+            TODO 注意 - 以上三个event事件对象的属性 - IE8及以下版本都不支持
+            TODO * key - 得到对应键盘的值 - a
+         */
+        //console.log(event.charCode,event.keyCode,event.which);
+        var code = event.keyCode;
+        // TODO 只允许用户输入英文字母
+        if(code >= 97 && code <= 122){
+            show.innerHTML = code
+        }else{
+            show.innerHTML = '你输入的内容有误！'
+        }
+    }
+</script>
+</body>
+</html>

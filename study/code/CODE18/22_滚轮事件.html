@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>滚轮事件</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            padding: 50px;
+            height: 1000px;
+        }
+        img {
+            position: absolute;
+            width: 200px;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <img id="pic" src="img/timg.jpeg" class="img-responsive">
+</div>
+<script>
+    var img = document.getElementById('pic');
+    var style = window.getComputedStyle(img,null);
+    // TODO 得到当前图片距离浏览器可视窗口顶部的距离
+    var imgTop = parseInt(style.top);
+
+    /*
+        TODO * onscroll事件 - 拖动滚动条，鼠标的滚轮
+        TODO   * IE8及以下版本浏览器不支持 - 并不报错，也是无效的
+        TODO * onmousewheel事件 - 鼠标的滚轮
+     */
+    document.onscroll = function(){
+        /*
+            TODO 滚动事件是当前页面提供的滚动效果
+            TODO * 通过当前页面获取到 clientHeight,scrollHeight和scrollTop 属性的值
+            TODO * 问题 - document 对象并没有对应的这三个属性
+         */
+        var body = document.body;
+        // TODO 当前页面滚动的距离
+        var height = body.scrollTop;
+        // TODO 当滚动的距离 == 图片到顶部的距离 -> 表示当前图片处在浏览器可视窗口的顶部
+        if(height >= imgTop){
+            // TODO 将图片设置在浏览器可视窗口的顶部
+            img.style.position = 'fixed';
+            img.style.top = '0px';
+        }else{
+            img.style.position = 'absolute';
+            img.style.top = '100px';
+        }
+    }
+</script>
+</body>
+</html>

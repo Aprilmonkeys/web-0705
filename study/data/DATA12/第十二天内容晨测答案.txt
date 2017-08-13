@@ -1,0 +1,19 @@
+﻿1.请写出JSON的两种数据结构
+  Object对象 - { key : value, key : value,... }
+  Array数组 - [ value1, value2, value3,... ]
+
+2.请写出日期格式为 YYYY年MM月DD日 的当前时间
+  var date = new Date();
+  console.log(date.getFullYear() + '年' + date.getMonth() + '月' + date.getDay() + '日');
+
+3.请写出 2 ~ 8 之间的随机数
+  console.log(Math.random()*6+2);
+
+4.请写出以下哪个说法是错误的 - D
+  A prototype是Function对象的属性
+  B prototype是函数的一个属性
+  C 函数本身也是一个对象
+  D Function对象无法创建函数
+
+5.请写出 Date 对象的 getTime() 方法的作用
+  getTime() 方法的作用是获取距离 1970 年 1 月 1 日的毫秒值

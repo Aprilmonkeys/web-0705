@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>文本操作</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style type="text/css">
+			body {
+				padding: 100px;
+			}
+			i {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="col-md-4">
+				<p><button id="btn1" class="btn btn-primary btn-block">nodeValue</button></p>
+				<p><button id="btn2" class="btn btn-primary btn-block">textContent</button></p>
+				<p><button id="btn3" class="btn btn-primary btn-block">innerText</button></p>
+				<p><button id="btn4" class="btn btn-primary btn-block">获取文本内容</button></p>
+			</div>
+			<div class="col-md-8">
+				<ul class="list-group">
+					<li id="one" class="list-group-item">这是一个 id 为 one 的选项</li>
+					<li id="two" name="list" class="list-group-item">这是一个 <i>id</i> 为 two 的选项</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">
+			/*
+			 	TODO 1. 利用 Node 方式操作文本（文本节点）
+			 	TODO    * 文本节点一定是元素节点的子节点
+			 	TODO      * 通过获取子节点的方式得到文本节点
+			 	TODO      * 通过 appendChild() 方法添加文本节点
+			 	TODO      * 通过 removeChild() 方法删除文本节点
+			 	TODO    * 文本节点具有 nodeName、nodeType和nodeValue
+			 	TODO      * nodeType - 用于判断当前是否是文本节点（3）
+			 	TODO      * nodeValue - 用于获取或设置文本节点的文本内容
+			  */
+			var btn1 = document.getElementById('btn1');
+			btn1.onclick = function(){
+			    var two = document.getElementById('two');
+			    /*
+			    	TODO 当元素节点的子节点为文本节点时
+			    	TODO * 不存在空白节点的问题
+			     */
+			    var textNode = two.firstChild;// 文本节点
+				console.log(textNode.nodeValue);// 文本节点的文本内容
+
+				textNode.nodeValue = '这是一个新的';
+			}
+			var btn2 = document.getElementById('btn2');
+			btn2.onclick = function(){
+			    // TODO 这是一个 <i>id</i> 为 two 的选项
+			    var two = document.getElementById('two');
+			    // TODO 这是一个 id 为 two 的选项
+			    var text = two.textContent;
+			    /*
+			    	TODO textContent属性
+			    	TODO * 获取的并不是元素节点的文本节点
+			    	TODO * 作用 - 获取指定元素中所有的文本内容
+
+			    	TODO 注意 - IE8及以下版本的浏览器不支持
+			    	TODO * IE8及以下版本提供另一个属性 - innerText属性
+			     */
+			    console.log(text);
+
+			    two.textContent = '这是一个新的li标签';
+			}
+			var btn3 = document.getElementById('btn3');
+			btn3.onclick = function(){
+			    var two = document.getElementById('two');
+			    /*
+			    	TODO 除IE8及以下版本浏览器之外的 Chrome 和火狐浏览器的新版本都兼容 innerText 属性
+			    	TODO * 但是 IE8及以下版本浏览器只支持 innerText 属性
+			     */
+			    var text = two.innerText;
+			    console.log(text);
+			}
+
+			var btn4 = document.getElementById('btn4');
+			btn4.onclick = function(){
+			    var two = document.getElementById('two');
+				/*
+					TODO IE8及以下版本浏览器不支持 textContent 属性 -> 结果为 undefined
+					TODO * 结果没有报错，而是得到 undefined 值 -> 转换为boolean类型 false
+				 */
+			    console.log(two.textContent);
+
+			    var text;
+			    if(two.textContent){
+			        // TODO 当前浏览器支持 textContent
+					text = two.textContent;
+				}else{
+			        // TODO 当前浏览器不支持 textContent，换成 innerText
+					text = two.innerText;
+				}
+			}
+
+			// TODO 自定义函数 - 解决获取文本的浏览器兼容问题
+			function getText(elem){
+                var text;
+                if(elem.textContent){
+                    // TODO 当前浏览器支持 textContent
+                    text = elem.textContent;
+                }else{
+                    // TODO 当前浏览器不支持 textContent，换成 innerText
+                    text = elem.innerText;
+                }
+                return text;
+			}
+		</script>
+	</body>
+</html>

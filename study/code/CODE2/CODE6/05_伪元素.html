@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪元素</title>
+    <style>
+        span {
+            background-color: lightskyblue;
+        }
+        /*
+            TODO :before 伪元素
+            TODO * 向指定元素添加第一个子元素
+            TODO * 通过为添加的第一个子元素设置指定的样式
+         */
+        span:before {
+            content: '<<';
+        }
+        /*
+            TODO :after 伪元素
+            TODO * 向指定元素添加最后一个子元素
+            TODO * 通过为添加的第一个子元素设置指定的样式
+         */
+        span:after {
+            content: '>>';
+        }
+    </style>
+</head>
+<body>
+<span>这是一个span元素</span>
+</body>
+</html>

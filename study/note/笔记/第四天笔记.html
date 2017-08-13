@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://192.168.10.165/day04/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>第四天笔记</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+<style type="text/css">
+/**
+ * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ * @author Rose Pritchard
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #ccc;
+	background: none;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #2d2d2d;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #999;
+}
+
+.token.punctuation {
+	color: #ccc;
+}
+
+.token.tag,
+.token.attr-name,
+.token.namespace,
+.token.deleted {
+	color: #e2777a;
+}
+
+.token.function-name {
+	color: #6196cc;
+}
+
+.token.boolean,
+.token.number,
+.token.function {
+	color: #f08d49;
+}
+
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+	color: #f8c555;
+}
+
+.token.selector,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+	color: #cc99cd;
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable {
+	color: #7ec699;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+	color: #67cdcc;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.token.inserted {
+	color: green;
+}
+</style>
+
+<style type="text/css">
+pre.line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
+}
+
+pre.line-numbers > code {
+	position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 3em; /* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	border-right: 1px solid #999;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+	.line-numbers-rows > span {
+		pointer-events: none;
+		display: block;
+		counter-increment: linenumber;
+	}
+
+		.line-numbers-rows > span:before {
+			content: counter(linenumber);
+			color: #999;
+			display: block;
+			padding-right: 0.8em;
+			text-align: right;
+		}
+</style>
+
+
+</head>
+
+<body>
+
+<h2 id="toc_0">盒子模型</h2>
+
+<h3 id="toc_1">什么是盒子模型</h3>
+
+<p>盒子模型，也可以称为框模型。</p>
+
+<p>所有 HTML 元素可以看作盒子。在 CSS 中，"box model" 这一术语是用来设计和布局时使用。</p>
+
+<p>CSS 盒模型本质上是一个盒子，封装周围的 HTML 元素，它包括：边距，边框，填充，和实际内容。</p>
+
+<p><img src="./第四天笔记_files/01.png" alt=""></p>
+
+<p>不同部分的说明:</p>
+
+<ul>
+<li>Margin（外边距）: 清除边框区域。Margin没有背景颜色，它是完全透明。</li>
+<li>Border（边框）: 边框周围的填充和内容。边框是受到盒子的背景颜色影响。</li>
+<li>Padding（内边距）: 清除内容周围的区域。会受到框中填充的背景颜色影响。</li>
+<li>Content（内容）: 盒子的内容，显示文本和图像。</li>
+</ul>
+
+<p>为了在所有浏览器中的元素的宽度和高度设置正确的话，你需要知道的盒模型是如何工作的。</p>
+
+<h3 id="toc_2">元素的宽度和高度</h3>
+
+<p>下面的例子中的元素的总宽度为 300px:</p>
+
+<div><pre class="line-numbers language-css"><code class=" language-css"><span class="token property">width</span><span class="token punctuation">:</span><span class="token number">250</span>px<span class="token punctuation">;</span>
+<span class="token property">padding</span><span class="token punctuation">:</span><span class="token number">10</span>px<span class="token punctuation">;</span>
+<span class="token property">border</span><span class="token punctuation">:</span><span class="token number">5</span>px solid gray<span class="token punctuation">;</span>
+<span class="token property">margin</span><span class="token punctuation">:</span><span class="token number">10</span>px<span class="token punctuation">;</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<p>完整的 HTML 代码如下:</p>
+
+<div><pre class="line-numbers language-markup"><code class=" language-markup"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span> 
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style language-css">
+    <span class="token selector">div<span class="token class">.ex</span>
+    </span><span class="token punctuation">{</span>
+        <span class="token property">width</span><span class="token punctuation">:</span><span class="token number">220</span>px<span class="token punctuation">;</span>
+        <span class="token property">padding</span><span class="token punctuation">:</span><span class="token number">10</span>px<span class="token punctuation">;</span>
+        <span class="token property">border</span><span class="token punctuation">:</span><span class="token number">5</span>px solid gray<span class="token punctuation">;</span>
+        <span class="token property">margin</span><span class="token punctuation">:</span><span class="token number">0</span>px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ex<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>The picture above is 250px wide.
+                    The total width of this element is also 250px.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<p>上述示例运行的结果如下:</p>
+
+<p><img src="./第四天笔记_files/02.png" alt=""></p>
+
+<blockquote>
+<p><strong>值得注意的是:</strong> 当指定一个 CSS 元素的宽度和高度属性时，只是设置内容区域的宽度和高度。要知道，完全大小的元素，还必须添加填充，边框和边距。</p>
+</blockquote>
+
+<h2 id="toc_3">边框</h2>
+
+<p>CSS 边框属性允许指定一个元素边框的样式和颜色。</p>
+
+<p>CSS 边框属性常见如下:</p>
+
+<ul>
+<li>border-width: 设置边框的宽度</li>
+<li>border-color: 设置边框的颜色</li>
+<li>border-style: 边框的样式</li>
+</ul>
+
+<h3 id="toc_4">设置边框的宽度</h3>
+
+<p>如果设置一个值，则同时设置边框的四个方向的宽度。如下代码:</p>
+
+<div><pre class="line-numbers language-css"><code class=" language-css"><span class="token property">border-width</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span><span class="line-numbers-rows"><span></span></span></code></pre></div>
+
+<p>上述代码则表示同时四个方向的边框宽度为 10px。</p>
+
+<p>如果设置两个值，则第一个值表示设置边框的上下方向宽度，第二个值表示设置边框的左右方向宽度。</p>
+
+<div><pre class="line-numbers language-css"><code class=" language-css"><span class="token property">border-width</span><span class="token punctuation">:</span> <span class="token number">10</span>px <span class="token number">20</span>px<span class="token punctuation">;</span><span class="line-numbers-rows"><span></span></span></code></pre></div>
+
+<p>如果设置三个值，则第一个值表示设置边框的上边宽度，第二个值表示设置边框的左右方向宽度，第三个值表示设置边框的下边宽度。</p>
+
+<div><pre class="line-numbers language-css"><code class=" language-css"><span class="token property">border-width</span><span class="token punctuation">:</span> <span class="token number">10</span>px <span class="token number">20</span>px <span class="token number">30</span>px<span class="token punctuation">;</span><span class="line-numbers-rows"><span></span></span></code></pre></div>
+
+<p>如果设置四个值，则分别表示设置上、右、下和左四个方向的边框宽度。</p>
+
+<div><pre class="line-numbers language-css"><code class=" language-css"><span class="token property">border-width</span><span class="token punctuation">:</span> <span class="token number">10</span>px <span class="token number">20</span>px <span class="token number">30</span>px <span class="token number">40</span>px<span class="token punctuation">;</span><span class="line-numbers-rows"><span></span></span></code></pre></div>
+
+<p>除了上述方式设置边框宽度，CSS 还提供如下方式分别设置上、右、下和左边框的宽度。</p>
+
+<table>
+<thead>
+<tr>
+<th>属性名称</th>
+<th>描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>border-top-width</td>
+<td>设置一个元素的顶部边框的宽度。</td>
+</tr>
+<tr>
+<td>border-right-width</td>
+<td>设置一个元素的右边框的宽度。</td>
+</tr>
+<tr>
+<td>border-bottom-width</td>
+<td>设置一个元素的底部边框的宽度。</td>
+</tr>
+<tr>
+<td>border-left-width</td>
+<td>设置一个元素的左边框的宽度。</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_5">设置边框的颜色</h3>
+
+<p>如果设置一个值，则同时设置边框的四个方向的颜色。如下代码:</p>
+
+<div><pre class="line-numbers language-css"><code class=" language-css"><span class="token property">border-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span><span class="line-numbers-rows"><span></span></span></code></pre></div>
+
+<p>上述代码则表示同时四个方向的边框颜色为 red。</p>
+
+<p>如果设置两个值，则第一个值表示设置边框的上下方向颜色，第二个值表示设置边框的左右方向颜色。</p>
+
+<div><pre class="line-numbers language-css"><code class=" language-css"><span class="token property">border-color</span><span class="token punctuation">:</span> red orange<span class="token punctuation">;</span><span class="line-numbers-rows"><span></span></span></code></pre></div>
+
+<p>如果设置三个值，则第一个值表示设置边框的上边颜色，第二个值表示设置边框的左右方向颜色，第三个值表示设置边框的下边颜色。</p>
+
+<div><pre class="line-numbers language-css"><code class=" language-css"><span class="token property">border-color</span><span class="token punctuation">:</span> red orange yellow<span class="token punctuation">;</span><span class="line-numbers-rows"><span></span></span></code></pre></div>
+
+<p>如果设置四个值，则分别表示设置上、右、下和左四个方向的边框颜色。</p>
+
+<div><pre class="line-numbers language-css"><code class=" language-css"><span class="token property">border-color</span><span class="token punctuation">:</span> red orange yellow blue<span class="token punctuation">;</span><span class="line-numbers-rows"><span></span></span></code></pre></div>
+
+<p>除了上述方式设置边框颜色，CSS 还提供如下方式分别设置上、右、下和左边框的颜色。</p>
+
+<table>
+<thead>
+<tr>
+<th>属性名称</th>
+<th>描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>border-top-color</td>
+<td>设置一个元素的顶部边框的颜色。</td>
+</tr>
+<tr>
+<td>border-right-color</td>
+<td>设置一个元素的右边框的颜色。</td>
+</tr>
+<tr>
+<td>border-bottom-color</td>
+<td>设置一个元素的底部边框的颜色。</td>
+</tr>
+<tr>
+<td>border-left-color</td>
+<td>设置一个元素的左边框的颜色。</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_6">设置边框的样式</h3>
+
+<p>边框样式的常用备选想如下:</p>
+
+<table>
+<thead>
+<tr>
+<th>边框样式</th>
+<th>描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>none</td>
+<td>定义无边框。</td>
+</tr>
+<tr>
+<td>hidden</td>
+<td>与 "none" 相同。不过应用于表时除外，对于表，hidden 用于解决边框冲突。</td>
+</tr>
+<tr>
+<td>dotted</td>
+<td>定义点状边框。在大多数浏览器中呈现为实线。</td>
+</tr>
+<tr>
+<td>dashed</td>
+<td>定义虚线。在大多数浏览器中呈现为实线。</td>
+</tr>
+<tr>
+<td>solid</td>
+<td>定义实线。</td>
+</tr>
+<tr>
+<td>double</td>
+<td>定义双线。双线的宽度等于 border-width 的值。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承边框样式。</td>
+</tr>
+</tbody>
+</table>
+
+<p>如果设置一个值，则同时设置边框的四个方向的样式。如下代码:</p>
+
+<div><pre class="line-numbers language-css"><code class=" language-css"><span class="token property">border-style</span><span class="token punctuation">:</span> dotted<span class="token punctuation">;</span><span class="line-numbers-rows"><span></span></span></code></pre></div>
+
+<p>如果设置两个值，则第一个值表示设置边框的上下方向样式，第二个值表示设置边框的左右方向样式。</p>
+
+<div><pre class="line-numbers language-css"><code class=" language-css"><span class="token property">border-style</span><span class="token punctuation">:</span> dotted solid<span class="token punctuation">;</span><span class="line-numbers-rows"><span></span></span></code></pre></div>
+
+<p>如果设置三个值，则第一个值表示设置边框的上边样式，第二个值表示设置边框的左右方向样式，第三个值表示设置边框的下边样式。</p>
+
+<div><pre class="line-numbers language-css"><code class=" language-css"><span class="token property">border-style</span><span class="token punctuation">:</span> dotted solid dashed<span class="token punctuation">;</span><span class="line-numbers-rows"><span></span></span></code></pre></div>
+
+<p>如果设置四个值，则分别表示设置上、右、下和左四个方向的边框样式。</p>
+
+<div><pre class="line-numbers language-css"><code class=" language-css"><span class="token property">border-style</span><span class="token punctuation">:</span> dotted solid dashed double<span class="token punctuation">;</span><span class="line-numbers-rows"><span></span></span></code></pre></div>
+
+<p>除了上述方式设置边框样式，CSS 还提供如下方式分别设置上、右、下和左边框的样式。</p>
+
+<table>
+<thead>
+<tr>
+<th>属性名称</th>
+<th>描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>border-top-style</td>
+<td>设置一个元素的顶部边框的样式。</td>
+</tr>
+<tr>
+<td>border-right-style</td>
+<td>设置一个元素的右边框的样式。</td>
+</tr>
+<tr>
+<td>border-bottom-style</td>
+<td>设置一个元素的底部边框的样式。</td>
+</tr>
+<tr>
+<td>border-left-style</td>
+<td>设置一个元素的左边框的样式。</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_7">简写设置边框</h3>
+
+<p>CSS 提供了 <code>border</code> 属性允许同时设置边框的宽度、颜色和样式。</p>
+
+<div><pre class="line-numbers language-css"><code class=" language-css"><span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">5</span>px solid red<span class="token punctuation">;</span><span class="line-numbers-rows"><span></span></span></code></pre></div>
+
+<blockquote>
+<p><strong>值得注意的是:</strong> 设置的顺序没有明确要求。</p>
+</blockquote>
+
+<p>除了上述方式设置边框，CSS 还提供如下方式分别设置上、右、下和左边框。</p>
+
+<table>
+<thead>
+<tr>
+<th>属性名称</th>
+<th>描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>border-top</td>
+<td>设置一个元素的顶部边框。</td>
+</tr>
+<tr>
+<td>border-right</td>
+<td>设置一个元素的右边框。</td>
+</tr>
+<tr>
+<td>border-bottom</td>
+<td>设置一个元素的底部边框。</td>
+</tr>
+<tr>
+<td>border-left</td>
+<td>设置一个元素的左边框。</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_8">内边距</h2>
+
+<p>CSS Padding（内边距）属性定义元素边框与元素内容之间的距离。</p>
+
+<p>如果设置一个值，则同时设置内边距的四个方向。如下代码:</p>
+
+<div><pre class="line-numbers language-css"><code class=" language-css"><span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">25</span>px<span class="token punctuation">;</span><span class="line-numbers-rows"><span></span></span></code></pre></div>
+
+<p>如果设置两个值，则第一个值表示设置内边距的上下方向，第二个值表示设置内边距的左右方向。</p>
+
+<div><pre class="line-numbers language-css"><code class=" language-css"><span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">25</span>px <span class="token number">50</span>px<span class="token punctuation">;</span><span class="line-numbers-rows"><span></span></span></code></pre></div>
+
+<p>如果设置三个值，则第一个值表示设置内边距的上边，第二个值表示设置内边距的左右方向，第三个值表示设置内边距的下边。</p>
+
+<div><pre class="line-numbers language-css"><code class=" language-css"><span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">25</span>px <span class="token number">50</span>px <span class="token number">75</span>px<span class="token punctuation">;</span><span class="line-numbers-rows"><span></span></span></code></pre></div>
+
+<p>如果设置四个值，则分别表示设置上、右、下和左四个方向的内边距。</p>
+
+<div><pre class="line-numbers language-css"><code class=" language-css"><span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">25</span>px <span class="token number">50</span>px <span class="token number">75</span>px <span class="token number">100</span>px<span class="token punctuation">;</span><span class="line-numbers-rows"><span></span></span></code></pre></div>
+
+<p>除了上述方式设置内边距，CSS 还提供如下方式分别设置上、右、下和左边的内边距。</p>
+
+<table>
+<thead>
+<tr>
+<th>属性名称</th>
+<th>描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>padding-top</td>
+<td>设置一个元素的顶部内边距。</td>
+</tr>
+<tr>
+<td>padding-right</td>
+<td>设置一个元素的右边内边距。</td>
+</tr>
+<tr>
+<td>padding-bottom</td>
+<td>设置一个元素的底部内边距。</td>
+</tr>
+<tr>
+<td>padding-left</td>
+<td>设置一个元素的左边内边距。</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_9">外边距</h2>
+
+<p>CSS Margin（外边距）属性定义元素周围的距离。</p>
+
+<p>外边距不会影响元素的可见大小，但是会影响元素的位置。</p>
+
+<table>
+<thead>
+<tr>
+<th>属性名称</th>
+<th>描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>margin-top</td>
+<td>设置元素的上外边距。</td>
+</tr>
+<tr>
+<td>margin-right</td>
+<td>设置元素的右外边距。</td>
+</tr>
+<tr>
+<td>margin-left</td>
+<td>设置元素的左外边距。</td>
+</tr>
+<tr>
+<td>margin-bottom</td>
+<td>设置元素的下外边距。</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_10">设置上和左外边距</h3>
+
+<div><pre class="line-numbers language-css"><code class=" language-css"><span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+<span class="token property">margin-left</span><span class="token punctuation">:</span> <span class="token number">50</span>px<span class="token punctuation">;</span><span class="line-numbers-rows"><span></span><span></span></span></code></pre></div>
+
+<p>由于元素在 HTML 页面中默认是靠左靠上显示的。所以默认情况下，修改左外边距和上外边距时，会影响当前元素的位置。</p>
+
+<h3 id="toc_11">设置下和右外边距</h3>
+
+<div><pre class="line-numbers language-css"><code class=" language-css"><span class="token property">margin-bottom</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+<span class="token property">margin-right</span><span class="token punctuation">:</span> <span class="token number">50</span>px<span class="token punctuation">;</span><span class="line-numbers-rows"><span></span><span></span></span></code></pre></div>
+
+<p>修改右和下外边距时会影响其他元素相对于当前元素的位置。</p>
+
+<h3 id="toc_12">简写设置外边距</h3>
+
+<p>如果设置一个值，则同时设置外边距的四个方向。如下代码:</p>
+
+<div><pre class="line-numbers language-css"><code class=" language-css"><span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">25</span>px<span class="token punctuation">;</span><span class="line-numbers-rows"><span></span></span></code></pre></div>
+
+<p>如果设置两个值，则第一个值表示设置外边距的上下方向，第二个值表示设置外边距的左右方向。</p>
+
+<div><pre class="line-numbers language-css"><code class=" language-css"><span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">25</span>px <span class="token number">50</span>px<span class="token punctuation">;</span><span class="line-numbers-rows"><span></span></span></code></pre></div>
+
+<p>如果设置三个值，则第一个值表示设置外边距的上边，第二个值表示设置外边距的左右方向，第三个值表示设置外边距的下边。</p>
+
+<div><pre class="line-numbers language-css"><code class=" language-css"><span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">25</span>px <span class="token number">50</span>px <span class="token number">75</span>px<span class="token punctuation">;</span><span class="line-numbers-rows"><span></span></span></code></pre></div>
+
+<p>如果设置四个值，则分别表示设置上、右、下和左四个方向的外边距。</p>
+
+<div><pre class="line-numbers language-css"><code class=" language-css"><span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">25</span>px <span class="token number">50</span>px <span class="token number">75</span>px <span class="token number">100</span>px<span class="token punctuation">;</span><span class="line-numbers-rows"><span></span></span></code></pre></div>
+
+<h3 id="toc_13">外边距重叠</h3>
+
+<p>当同时为两个相邻的 <code>&lt;div&gt;</code> 标签设置外边距，为第一个 <code>&lt;div&gt;</code> 标签设置下外边距，为第二个 <code>&lt;div&gt;</code> 标签设置上外边距。具体代码如下:</p>
+
+<div><pre class="line-numbers language-markup"><code class=" language-markup"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token style language-css">
+            <span class="token selector"><span class="token class">.box1</span></span><span class="token punctuation">{</span>
+                <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+                <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+                <span class="token property">background-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+                <span class="token comment" spellcheck="true">/*为上边的元素设置一个下外边距*/</span>
+                <span class="token property">margin-bottom</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>       
+            <span class="token selector"><span class="token class">.box2</span></span><span class="token punctuation">{</span>
+                <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+                <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+                <span class="token property">background-color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+                <span class="token comment" spellcheck="true">/*为下边的元素设置一个上外边距*/</span>
+                <span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>box1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>box2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>    
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<p>上述示例代码，最终运行的结果是: 两个 <code>&lt;div&gt;</code> 之间的距离为 100px。</p>
+
+<p>垂直方向的相邻的外边距会发生外边距的重叠现象，兄弟元素的相邻外边距会取最大值。</p>
+
+<blockquote>
+<p><strong>值得注意的是:</strong> 外边距的重叠现象只会出现在垂直方向，而水平方向并不存在外边距重叠现象。</p>
+</blockquote>
+
+<p>如果定义两个 <code>&lt;div&gt;</code> 标签是父子关系的话，当为作为子元素的 <code>&lt;div&gt;</code> 设置上外边距，该上外边距会传递给作为父元素的 <code>&lt;div&gt;</code>。具体代码如下:</p>
+
+<div><pre class="line-numbers language-markup"><code class=" language-markup"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>     
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token style language-css">     
+            <span class="token selector"><span class="token class">.box3</span></span><span class="token punctuation">{</span>
+                <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">300</span>px<span class="token punctuation">;</span>
+                <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+                <span class="token property">background-color</span><span class="token punctuation">:</span> skyblue<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            
+            <span class="token selector"><span class="token class">.box4</span></span><span class="token punctuation">{</span>
+                <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+                <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+                <span class="token property">background-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+                <span class="token comment" spellcheck="true">/*设置一个margin-top*/</span>
+                <span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>           
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>      
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>box3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>box4<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<p>上述外边距的重叠现象，可以通过为作为父元素的 <code>&lt;div&gt;</code> 下内边距解决。</p>
+
+<div><pre class="line-numbers language-markup"><code class=" language-markup"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>     
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token style language-css">     
+            <span class="token selector"><span class="token class">.box3</span></span><span class="token punctuation">{</span>
+                <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">300</span>px<span class="token punctuation">;</span>
+                <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+                <span class="token property">background-color</span><span class="token punctuation">:</span> skyblue<span class="token punctuation">;</span>
+                <span class="token property">padding-top</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            
+            <span class="token selector"><span class="token class">.box4</span></span><span class="token punctuation">{</span>
+                <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+                <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+                <span class="token property">background-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>           
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>      
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>box3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>box4<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<h2 id="toc_14">内联元素的盒子模型</h2>
+
+<h3 id="toc_15">内联元素的宽度和高度</h3>
+
+<p>内联元素不支持设置宽和高，内联元素元素的大小由内容决定。</p>
+
+<h3 id="toc_16">内联元素的内边距</h3>
+
+<ul>
+<li>内联元素支持水平方向的内边距。</li>
+<li>内联元素可以设置垂直方向的内边距，但是不会影响布局。</li>
+</ul>
+
+<h3 id="toc_17">内联元素的边框</h3>
+
+<ul>
+<li>内联元素支持水平方向的边框。</li>
+<li>内联元素可以设置垂直方向的边框，但是不会影响布局。</li>
+</ul>
+
+<h3 id="toc_18">内联元素的外边距</h3>
+
+<p>内联元素支持水平方向的外边距 , 不支持垂直方向的外边距。</p>
+
+<hr>
+
+<h2 id="toc_19">版权说明</h2>
+
+<p>本笔记的内容免费开源，任何人都可以免费学习、分享，甚至可以进行修改。但需要注明作者及来源，并且不能用于商业。</p>
+
+<p>本笔记采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可。</p>
+
+<h2 id="toc_20">联系方式</h2>
+
+<p><img src="./第四天笔记_files/connection.png" alt=""></p>
+
+
+
+<script type="text/javascript">
+var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(\w+)\b/i,t=0,n=_self.Prism={util:{encode:function(e){return e instanceof a?new a(e.type,n.util.encode(e.content),e.alias):"Array"===n.util.type(e)?e.map(n.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function(e){var t=n.util.type(e);switch(t){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=n.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return n.util.clone(e)})}return e}},languages:{extend:function(e,t){var a=n.util.clone(n.languages[e]);for(var r in t)a[r]=t[r];return a},insertBefore:function(e,t,a,r){r=r||n.languages;var l=r[e];if(2==arguments.length){a=arguments[1];for(var i in a)a.hasOwnProperty(i)&&(l[i]=a[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==t)for(var i in a)a.hasOwnProperty(i)&&(o[i]=a[i]);o[s]=l[s]}return n.languages.DFS(n.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,t,a,r){r=r||{};for(var l in e)e.hasOwnProperty(l)&&(t.call(e,l,e[l],a||l),"Object"!==n.util.type(e[l])||r[n.util.objId(e[l])]?"Array"!==n.util.type(e[l])||r[n.util.objId(e[l])]||(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,l,r)):(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,null,r)))}},plugins:{},highlightAll:function(e,t){var a={callback:t,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};n.hooks.run("before-highlightall",a);for(var r,l=a.elements||document.querySelectorAll(a.selector),i=0;r=l[i++];)n.highlightElement(r,e===!0,a.callback)},highlightElement:function(t,a,r){for(var l,i,o=t;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1],i=n.languages[l]),t.className=t.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=t.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var s=t.textContent,u={element:t,language:l,grammar:i,code:s};if(!s||!i)return n.hooks.run("complete",u),void 0;if(n.hooks.run("before-highlight",u),a&&_self.Worker){var c=new Worker(n.filename);c.onmessage=function(e){u.highlightedCode=e.data,n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},c.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=n.highlight(u.code,u.grammar,u.language),n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(t),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},highlight:function(e,t,r){var l=n.tokenize(e,t);return a.stringify(n.util.encode(l),r)},tokenize:function(e,t){var a=n.Token,r=[e],l=t.rest;if(l){for(var i in l)t[i]=l[i];delete t.rest}e:for(var i in t)if(t.hasOwnProperty(i)&&t[i]){var o=t[i];o="Array"===n.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],c=u.inside,g=!!u.lookbehind,h=!!u.greedy,f=0,d=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var m=r[p];if(r.length>e.length)break e;if(!(m instanceof a)){u.lastIndex=0;var y=u.exec(m),v=1;if(!y&&h&&p!=r.length-1){var b=r[p+1].matchedStr||r[p+1],k=m+b;if(p<r.length-2&&(k+=r[p+2].matchedStr||r[p+2]),u.lastIndex=0,y=u.exec(k),!y)continue;var w=y.index+(g?y[1].length:0);if(w>=m.length)continue;var _=y.index+y[0].length,P=m.length+b.length;if(v=3,P>=_){if(r[p+1].greedy)continue;v=2,k=k.slice(0,P)}m=k}if(y){g&&(f=y[1].length);var w=y.index+f,y=y[0].slice(f),_=w+y.length,S=m.slice(0,w),O=m.slice(_),j=[p,v];S&&j.push(S);var A=new a(i,c?n.tokenize(y,c):y,d,y,h);j.push(A),O&&j.push(O),Array.prototype.splice.apply(r,j)}}}}}return r},hooks:{all:{},add:function(e,t){var a=n.hooks.all;a[e]=a[e]||[],a[e].push(t)},run:function(e,t){var a=n.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(t)}}},a=n.Token=function(e,t,n,a,r){this.type=e,this.content=t,this.alias=n,this.matchedStr=a||null,this.greedy=!!r};if(a.stringify=function(e,t,r){if("string"==typeof e)return e;if("Array"===n.util.type(e))return e.map(function(n){return a.stringify(n,t,e)}).join("");var l={type:e.type,content:a.stringify(e.content,t,r),tag:"span",classes:["token",e.type],attributes:{},language:t,parent:r};if("comment"==l.type&&(l.attributes.spellcheck="true"),e.alias){var i="Array"===n.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}n.hooks.run("wrap",l);var o="";for(var s in l.attributes)o+=(o?" ":"")+s+'="'+(l.attributes[s]||"")+'"';return"<"+l.tag+' class="'+l.classes.join(" ")+'" '+o+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var t=JSON.parse(e.data),a=t.language,r=t.code,l=t.immediateClose;_self.postMessage(n.highlight(r,n.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var r=document.currentScript||[].slice.call(document.getElementsByTagName("script")).pop();return r&&(n.filename=r.src,document.addEventListener&&!r.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",n.highlightAll)),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+</script>
+
+<script type="text/javascript">
+Prism.languages.markup={comment:/<!--[\w\W]*?-->/,prolog:/<\?[\w\W]+?\?>/,doctype:/<!DOCTYPE[\w\W]+?>/,cdata:/<!\[CDATA\[[\w\W]*?]]>/i,tag:{pattern:/<\/?(?!\d)[^\s>\/=.$<]+(?:\s+[^\s>\/=]+(?:=(?:("|')(?:\\\1|\\?(?!\1)[\w\W])*\1|[^\s'">=]+))?)*\s*\/?>/i,inside:{tag:{pattern:/^<\/?[^\s>\/]+/i,inside:{punctuation:/^<\/?/,namespace:/^[^\s>\/:]+:/}},"attr-value":{pattern:/=(?:('|")[\w\W]*?(\1)|[^\s>]+)/i,inside:{punctuation:/[=>"']/}},punctuation:/\/?>/,"attr-name":{pattern:/[^\s>\/]+/,inside:{namespace:/^[^\s>\/:]+:/}}}},entity:/&#?[\da-z]{1,8};/i},Prism.hooks.add("wrap",function(a){"entity"===a.type&&(a.attributes.title=a.content.replace(/&amp;/,"&"))}),Prism.languages.xml=Prism.languages.markup,Prism.languages.html=Prism.languages.markup,Prism.languages.mathml=Prism.languages.markup,Prism.languages.svg=Prism.languages.markup;
+</script>
+
+<script type="text/javascript">
+Prism.languages.css={comment:/\/\*[\w\W]*?\*\//,atrule:{pattern:/@[\w-]+?.*?(;|(?=\s*\{))/i,inside:{rule:/@[\w-]+/}},url:/url\((?:(["'])(\\(?:\r\n|[\w\W])|(?!\1)[^\\\r\n])*\1|.*?)\)/i,selector:/[^\{\}\s][^\{\};]*?(?=\s*\{)/,string:/("|')(\\(?:\r\n|[\w\W])|(?!\1)[^\\\r\n])*\1/,property:/(\b|\B)[\w-]+(?=\s*:)/i,important:/\B!important\b/i,"function":/[-a-z0-9]+(?=\()/i,punctuation:/[(){};:]/},Prism.languages.css.atrule.inside.rest=Prism.util.clone(Prism.languages.css),Prism.languages.markup&&(Prism.languages.insertBefore("markup","tag",{style:{pattern:/(<style[\w\W]*?>)[\w\W]*?(?=<\/style>)/i,lookbehind:!0,inside:Prism.languages.css,alias:"language-css"}}),Prism.languages.insertBefore("inside","attr-value",{"style-attr":{pattern:/\s*style=("|').*?\1/i,inside:{"attr-name":{pattern:/^\s*style/i,inside:Prism.languages.markup.tag.inside},punctuation:/^\s*=\s*['"]|['"]\s*$/,"attr-value":{pattern:/.+/i,inside:Prism.languages.css}},alias:"language-css"}},Prism.languages.markup.tag));
+</script>
+
+<script type="text/javascript">
+Prism.languages.css.selector={pattern:/[^\{\}\s][^\{\}]*(?=\s*\{)/,inside:{"pseudo-element":/:(?:after|before|first-letter|first-line|selection)|::[-\w]+/,"pseudo-class":/:[-\w]+(?:\(.*\))?/,"class":/\.[-:\.\w]+/,id:/#[-:\.\w]+/}},Prism.languages.insertBefore("css","function",{hexcode:/#[\da-f]{3,6}/i,entity:/\\[\da-f]{1,8}/i,number:/[\d%\.]+/});
+</script>
+
+<script type="text/javascript">
+!function(){"undefined"!=typeof self&&self.Prism&&self.document&&Prism.hooks.add("complete",function(e){if(e.code){var t=e.element.parentNode,s=/\s*\bline-numbers\b\s*/;if(t&&/pre/i.test(t.nodeName)&&(s.test(t.className)||s.test(e.element.className))&&!e.element.querySelector(".line-numbers-rows")){s.test(e.element.className)&&(e.element.className=e.element.className.replace(s,"")),s.test(t.className)||(t.className+=" line-numbers");var n,a=e.code.match(/\n(?!$)/g),l=a?a.length+1:1,m=new Array(l+1);m=m.join("<span></span>"),n=document.createElement("span"),n.className="line-numbers-rows",n.innerHTML=m,t.hasAttribute("data-start")&&(t.style.counterReset="linenumber "+(parseInt(t.getAttribute("data-start"),10)-1)),e.element.appendChild(n)}}})}();
+</script>
+
+
+
+
+
+</body></html>

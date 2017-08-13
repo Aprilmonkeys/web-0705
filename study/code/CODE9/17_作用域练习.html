@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作用域练习</title>
+    <script>
+
+        var a = 'a';
+
+        function a(a){
+            var a = 'b';// 局部变量
+            a = a + 'c';
+            return a;// bc
+        }
+        var a = a(a);// bc
+
+        console.log(a);// bc
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

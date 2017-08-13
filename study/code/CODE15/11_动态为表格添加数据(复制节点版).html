@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>动态为表格添加数据(复制节点版)</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			body {
+				padding: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="add" class="btn btn-primary">添加</button>
+		<table id="data" class="table table-striped table-hover ">
+			<thead>
+				<tr>
+					<th>Column heading</th>
+					<th>Column heading</th>
+					<th>Column heading</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td>Column content</td>
+				</tr>
+				<tr>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td>Column content</td>
+				</tr>
+				<tr>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td>Column content</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+	<script>
+		var btn = document.getElementById('add');
+		btn.onclick = function(){
+			var data = document.getElementById('data');
+			var tbody = data.getElementsByTagName('tbody')[0];
+			var tr = tbody.getElementsByTagName('tr')[0];
+			
+			var newTr = tr.cloneNode(true);
+			
+			tbody.appendChild(newTr)
+		}
+	</script>
+</html>

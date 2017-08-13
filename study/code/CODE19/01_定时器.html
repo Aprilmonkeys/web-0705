@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定时器</title>
+</head>
+<body>
+    <button id="start" class="btn btn-primary">开始</button>
+    <button id="stop" class="btn btn-primary">结束</button>
+    <input class="form-control" type="text" id="show">
+    <script>
+        // TODO 会在浏览器加载HTML页面完毕后，马上执行
+        //console.log('this is html.');
+
+        /*setTimeout(function(){
+            // TODO 浏览器加载HTML页面完毕后，等待 10 秒再执行
+            console.log('this is html.');
+        },10000);*/
+
+        var num = 0;// TODO 用于计数
+        var show = document.getElementById('show');
+        var t;
+        var start = document.getElementById('start');
+        // TODO 绑定事件，处理函数是另一个函数时 - 只写函数名称，而没有小括号
+        start.onclick = startNum;
+
+        function startNum(){
+            num++;
+            show.value = num;
+            // TODO 设定时间 - 一秒后，重新执行当前的函数
+            t = setTimeout(startNum,1000);
+
+            start.setAttribute('disabled','disabled');
+        }
+
+        var stop = document.getElementById('stop');
+        stop.onclick = function(){
+            clearTimeout(t);
+            start.removeAttribute('disabled');
+        }
+
+    </script>
+</body>
+</html>

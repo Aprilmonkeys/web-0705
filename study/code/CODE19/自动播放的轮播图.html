@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图效果</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <style>
+        body {
+            padding: 100px;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 0;
+            color: #ff4400;
+        }
+    </style>
+</head>
+<body>
+<div id="carousel-example-generic" class="carousel slide" style="width: 492px;">
+    <div class="carousel-inner">
+        <div class="item active">.
+            <p id="p">一共<span id="totalImg"></span>张图片, 当前是第<span id="indexImg"></span>张</p>
+            <img src="" alt="...">
+        </div>
+    </div>
+
+    <a id="prev" class="left carousel-control" href="#">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a id="next" class="right carousel-control" href="#">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+
+</div>
+</body>
+<script>
+    /*
+     TODO 思路的分析
+     TODO * 先选择图片轮播是累加(向右)还是累减(向左)
+     TODO   * 选择的结果没有多少区别
+     TODO   * 如果选择向右自动轮播 - 修改向右轮播的逻辑代码
+     TODO * 当点击向右或向左按钮时 - 自动轮播要停止
+     */
+    var prev = document.getElementById('prev');
+    var next = document.getElementById('next');
+//    var p = document.getElementById('p');
+    var totalImg = document.getElementById('totalImg');
+    var indexImg = document.getElementById('indexImg');
+    var img = document.getElementsByTagName('img')[0];
+    //console.log(img.src);//http://localhost:63342/code/CODE19/img/1.jpg
+    var imgArr = ['img/1.jpg', 'img/2.jpg', 'img/3.jpg', 'img/4.jpg', 'img/5.jpg'];
+    //var index =0;
+//    p.innerHTML = '一共5张图片';
+    totalImg.innerHTML = imgArr.length;
+    var indexPage = 1;
+    img.src = imgArr[0];
+    indexImg.innerHTML = indexPage;
+
+    prev.onclick = function () {
+        clearInterval(t);
+        prevImg();
+    };
+    function prevImg() {
+        var src = img.src;//http://localhost:63342/code/CODE19/img/1.jpg
+        //alert(src.search('i'));//35
+        var str = src.substr(src.search('i'));
+        //alert(str);//可以得到img/1.jpg
+        var index = imgArr.indexOf(str);
+        if (index === 0) {
+            img.src = imgArr[4];
+        } else {
+            img.src = imgArr[index - 1];
+        }
+    }
+    next.onclick = function () {
+        clearInterval(t);
+        nextImg();
+    };
+    function nextImg() {
+
+        var src = img.src;
+        var str = src.substr(src.search('i'));
+        var index = imgArr.indexOf(str);
+
+        if (index === 4) {
+            index = 0;
+        } else {
+            index += 1 ;
+        }
+        img.src = imgArr[index];
+        indexImg.innerHTML = indexPage + index;
+
+    }
+    var t = setInterval(nextImg, 500)
+</script>
+</html>

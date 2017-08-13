@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Boolean类型</title>
+    <script>
+        /*
+            TODO boolean(原始值) + Boolean(引用类型)
+         */
+        var boo1 = true;
+        var boo2 = new Boolean(false);
+
+        /*console.log(boo1);
+        console.log(boo2);*/
+
+        console.log(typeof boo1);// boolean
+        console.log(typeof boo2);// object
+
+        console.log(boo2 instanceof Boolean);// true
+
+        /*
+            TODO 非布尔值转换为布尔类型
+            TODO * true - 真
+            TODO   * Number - 非零的值
+            TODO   * String - 非空字符串
+            TODO * false - 假
+            TODO   * Number - 零
+            TODO   * String - 空字符串
+         */
+    </script>
+</head>
+<body>
+
+</body>
+</html>

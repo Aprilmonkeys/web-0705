@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>行内元素</title>
+    <style>
+        body {
+            padding-top: 100px;
+        }
+        span {
+            /*
+                TODO 行内元素设置 width 和 height 时 - 无效的
+                TODO * 行内元素显示的宽度和高度取决于文本内容
+             */
+            /*width: 200px;
+            height: 200px;*/
+            background-color: lightslategrey;
+            /* TODO 行内元素设置边框 - 有效 */
+            border: 10px orange solid;
+            /* TODO 行内元素设置内边距 - 有效 */
+            padding: 20px;
+            /* TODO 行内元素设置外边距 - 左右外边距有效，上下外边距无效 */
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+<span>这是span元素.</span>
+</body>
+</html>

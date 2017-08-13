@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简单页面布局</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        #header,#container,#foot {
+            width: 80%;
+            margin: 0 auto;
+        }
+        #header {
+            background-color: lightcoral;
+            height: 50px;
+            margin-bottom: 5px;
+        }
+        #container {
+            background-color: orange;
+            height: 500px;
+            margin-bottom: 5px;
+        }
+        #foot {
+            background: lightgreen;
+            height: 30px;
+        }
+        #adv {
+            width: 150px;
+            height: 100%;
+            background-color: lightpink;
+            float: left;
+        }
+        #content {
+            width: 100%;
+            height: 100%;
+            background-color: lightslategrey;
+        }
+    </style>
+</head>
+<body>
+<div id="header"></div>
+<div id="container">
+    <div id="adv"></div>
+    <div id="content"></div>
+</div>
+<div id="foot"></div>
+</body>
+</html>

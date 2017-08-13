@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示表格布局效果</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        /* TODO 模拟 <table> 元素 */
+        .container {
+            width: 600px;
+            /*height: 100px;*/
+            background-color: lightgray;
+            /* TODO 水平居中显示 */
+            margin: 10px auto;
+        }
+        /* TODO 模拟 <tr> 元素 */
+        .row {
+            height: 50px;
+            border: 0.5px lightslategrey solid;
+        }
+        /* TODO 模拟 <td> 元素 */
+        .col {
+            width: 25%;
+            height: 100%;
+            float: left;
+            border: 0.5px lightcoral solid;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<!--
+    TODO 模拟表格元素的效果
+    TODO <table>
+    TODO   <tr>
+    TODO       <td></td>
+    TODO   </tr>
+    TODO </table>
+-->
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+    </div>
+    <div class="row"></div>
+    <div class="row"></div>
+</div>
+</body>
+</html>

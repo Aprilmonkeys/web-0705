@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>调用对象的属性或方法错误</title>
+    <script>
+
+        var hero = {
+            name : 'zhangwuji',
+            age : 18,
+            sayMe : function(){
+                console.log('this is zhangwuji.');
+            }
+        }
+        // TODO 调用了对象不存在的属性 - undefined
+        console.log(hero.job);
+        // TODO 调用了对象不存在的方法 - 报错: is not a function
+        hero.sayObj();
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

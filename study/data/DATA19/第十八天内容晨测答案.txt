@@ -1,0 +1,29 @@
+﻿1.事件周期有哪些，分别是什么
+  捕获阶段
+  触发阶段
+  冒泡阶段
+
+2.addEventListener()方法的第三个参数的作用是什么
+  eventName - 事件名称
+  functionName - 事件的处理函数
+  boolean - true为捕获阶段，false为冒泡阶段
+
+3.请写出所有的键盘事件
+  keydown,keyup,keypress
+
+4.请写出以下代码的输出结果
+  var a = 'a';
+  function fn(){
+      console.log(window.a);
+      console.log(this.a);
+  }
+  fn();
+  console.log(a);
+  console.log(window.a);
+  console.log(this.a);
+
+  全部输出a
+
+5.Navigator对象的userAgent属性的两个作用是什么
+  1.可以获取用户当前使用浏览器产品
+  2.可以获取用户当前操作系统

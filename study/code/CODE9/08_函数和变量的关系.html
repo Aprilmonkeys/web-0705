@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数和变量的关系</title>
+    <script>
+        /*// TODO 定义一个变量，并初始化
+        var fn = 100;
+        console.log(fn);// 100
+        // TODO 定义一个函数 - 函数声明方式
+        function fn(){
+            console.log('this is function');
+        }
+        /!*
+            TODO 输入的结果是什么？100
+            TODO * 通过函数声明方式定义的函数与变量同名时 - 没有影响
+            TODO   * 当作变量调用时 - 直接输出变量的值
+            TODO   * 当作函数调用时 - 报错
+            TODO     报错信息 - fn is not a function
+         *!/
+        console.log(fn);
+        fn();*/
+
+        // TODO 定义一个变量，并初始化
+        var fn = 100;
+        console.log(fn);// 100
+        // TODO 定义一个函数 - 字面量方式
+        var fn = function(){
+            console.log('this is function');
+        }
+        /*
+            TODO 调用 fn
+            TODO * 作为变量进行输出 - 输出的函数定义的内容
+            TODO * 作为函数进行输出 - 输出函数体的内容
+         */
+        console.log(fn);
+        fn();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全局变量</title>
+    <script>
+        // TODO 定义全局变量
+        var a = 'a';
+
+        console.log(a);// a
+
+        function fn(){
+            // TODO 定义全局变量 - 没有 var 关键字 - 并不推荐
+            b = 'b';
+
+            console.log(a);// a
+        }
+        fn();
+
+        console.log(b);// b
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

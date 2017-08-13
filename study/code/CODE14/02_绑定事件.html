@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>绑定事件</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			body {
+				padding-top: 50px;
+				padding-left: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn" class="btn btn-primary">点我点我点我</button>
+		<script>
+            // TODO 利用 JavaScript 将 HTML 页面的按钮获取
+            var btn = document.getElementById('btn');
+            // TODO 为按钮绑定点击事件
+            btn.onclick = function(){
+                // TODO 为当前事件编写处理函数
+                console.log('按钮终于被点了...');
+            }
+		</script>
+	</body>
+</html>

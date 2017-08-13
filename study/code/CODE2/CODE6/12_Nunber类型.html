@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number类型</title>
+    <script>
+        /*
+            TODO 原始值 number + 引用类型 Number
+            TODO * number - 直接定义数字
+            TODO   * typeof 运算符 - 判断当前的原始值是什么
+            TODO     * 不能判断当前的引用类型是什么
+            TODO * Number - new Number(数字)
+            TODO   * instanceof 运算符 - 判断当前变量的引用类型是什么
+            TODO     变量名 instanceof 引用类型
+            TODO     * true - 表示当前变量是指定的引用类型
+            TODO     * false - 表示当前变量不是指定的引用类型
+         */
+        // TODO 字面(直接)量定义方式
+        var num1 = 100;// number 原始值
+        var num2 = new Number(200);// Number 引用类型
+
+        /*console.log(num1);
+        console.log(num2);*/
+
+        console.log(typeof num1);// 打印当前变量的原始类型是什么
+
+        console.log(typeof num2);// object
+
+        console.log(num2 instanceof Number);// true
+
+        // TODO JavaScript中的小数计算时 - 可能结果会出现误差
+        var result = 0.3 - 0.2;
+        console.log(result);
+        /*
+            TODO JavaScript定义小数时
+            TODO * 如果整数部分为 0 的话，允许省略
+            TODO   0.1 -> .1
+            TODO * 在实际开发中，并不建议这种写法
+         */
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

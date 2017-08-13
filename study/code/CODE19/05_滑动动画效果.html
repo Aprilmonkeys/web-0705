@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>滑动动画效果</title>
+    <style>
+        div {
+            width: 200px;
+            background-color: lightskyblue;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">按钮</button>
+<div id="d" style="height: 200px"></div>
+<script>
+    /*var btn = document.getElementById('btn');
+    var d = document.getElementById('d');
+    //var height = parseInt(d.style.height);
+    var left = parseInt(d.style.left);
+    if(isNaN(left)){
+        left = 0;
+    }
+    btn.onclick = changHeight;
+    function changHeight(){
+        var t;
+        //console.log(left);
+        left++;
+        d.style.left = left + 'px';
+        // TODO 判断 height 是否等于 400
+        if(left >= 400){
+            clearTimeout(t);
+        }else{
+            // TODO 设置定时器
+            t = setTimeout(changHeight,10);
+        }
+    }*/
+
+    var btn = document.getElementById('btn');
+    var d = document.getElementById('d');
+    var height = parseInt(d.style.height);
+    var flag = false;
+    btn.onclick = function(){
+        if(!flag){
+            slideUp();
+        }else{
+            slideDown();
+        }
+    };
+    function slideUp(){
+        height--;
+        d.style.height = height + 'px';
+        if(height <= 0){
+            clearTimeout(t);
+            flag = true;
+        }else{
+            var t = setTimeout(slideUp, 10);
+        }
+    }
+    function slideDown(){
+        height++;
+        d.style.height = height + 'px';
+        if(height >= 200){
+            clearTimeout(t);
+            flag = false;
+        }else{
+            var t = setTimeout(slideDown, 10);
+        }
+    }

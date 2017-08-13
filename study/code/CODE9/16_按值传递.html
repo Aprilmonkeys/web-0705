@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>按值传递</title>
+    <script>
+        // TODO 按值传递
+        var a = 10;
+        /*
+            TODO 将全局变量作为函数的实参传递给函数内部
+            TODO * 函数的内部只是得到全局变量的值 - 不是全局变量
+            TODO * 函数的内部操作形参的值时 - 不会影响全局变量
+          */
+        function fn(num){
+            num--;
+            // TODO 就近原则
+            console.log(num);// 9
+        }
+        fn(a);
+
+        console.log(a);// 10
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

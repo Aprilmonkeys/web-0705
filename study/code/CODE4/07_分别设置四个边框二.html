@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分别设置四个边框</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            background-color: lightgreen;
+            /*
+                TODO 设置边框的宽度 - border-width
+                TODO * 只设置一个值时 - 同时设置四个边框的宽度
+                TODO * 设置了两个值时 - 第一个值表示上下边框，第二个值表示左右边框
+                TODO * 设置了三个值时 - 第一个值表示上边框，第二个值表示左右边框，第三个值表示下边框
+                TODO * 设置了四个值时 - (顺时针方向)上边框，右边框，下边框，左边框
+
+                TODO 显示的实际宽度和高度
+                TODO * 实际宽度 = width + border-left-width + border-right-width
+                TODO * 实际高度 = height + border-top-width + border-bottom-width
+             */
+            border-width: 20px 10px 5px 1px;
+            border-color: lightslategrey;
+            border-style: solid;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

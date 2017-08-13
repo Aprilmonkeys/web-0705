@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>滚动浏览器窗口</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<button id="btn1" class="btn btn-primary">按钮</button>
+<p>这是顶部</p>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<p>这是底部</p>
+<button id="btn2" class="btn btn-primary">按钮</button>
+<script>
+    var btn1 = document.getElementById('btn1');
+    btn1.onclick = function(){
+        window.scrollTo(0,100);
+    }
+    var btn2 = document.getElementById('btn2');
+    btn2.onclick = function(){
+        window.scrollBy(0,-300);
+    }
+</script>
+</body>
+</html>

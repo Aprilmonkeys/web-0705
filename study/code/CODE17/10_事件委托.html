@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件委托</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <button id="btn" class="btn btn-primary">添加</button>
+    <ul id="parent" class="list-group">
+        <li class="list-group-item"><a href="#">链接</a></li>
+        <li class="list-group-item"><a href="#">链接</a></li>
+        <li class="list-group-item"><a href="#">链接</a></li>
+    </ul>
+</div>
+<script>
+    var btn = document.getElementById('btn');
+    btn.onclick = function () {
+        var ul = document.getElementById('parent');
+        var li = document.createElement('li');
+        //设置属性要先创建属性节点 ,属性值 实际开发一般不用这个,都是直接创建
+        //用li.setAttrubute(属性名,属性值)
+//        var attr = document.createAttribute('class');
+//        attr.nodeValue = 'list';
+//        li.setAttributeNode(attr);
+        li.setAttribute('class','list');
+        li.innerHTML='<a href="#">链接</a>';
+        ul.appendChild(li);
+
+    }
+</script>
+</body>
+</html>

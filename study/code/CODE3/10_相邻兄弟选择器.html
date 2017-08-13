@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相邻兄弟素选择器</title>
+    <style>
+        #d1 {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+        }
+        #d11+div {
+            width: 100px;
+            height: 50px;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+<div id="d1">
+    <div id="d11">
+        <div id="d111"></div>
+    </div>
+    <div id="d12"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类</title>
+    <style>
+        a {
+            /* TODO 去掉链接中自带的下划线 */
+            text-decoration: none;
+        }
+        /* TODO 设置链接未访问的样式 */
+        a:link {
+            color: lightslategrey;
+        }
+        /* TODO 设置链接被访问后的样式 */
+        a:visited {
+            color: lightgray;
+        }
+        /* TODO 设置鼠标悬停在链接元素上时的样式 */
+        a:hover {
+            color: lightskyblue;
+        }
+        /* TODO 设置鼠标选中链接元素时的样式 */
+        a:active {
+            color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+<!--
+    TODO <a href="#"> 表示伪链接
+    TODO * 浏览器对<a>的几种状态提供了默认样式
+    TODO   * 未做任何操作时 - 字体是蓝色，下划线
+    TODO   * 当鼠标点中链接文本时 - 字体是红色
+    TODO   * 当访问过链接后 - 字体变化
+ -->
+<a href="#">这是一个链接</a>
+</body>
+</html>

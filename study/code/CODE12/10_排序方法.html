@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>排序方法</title>
+    <script>
+
+        /*var arr1 = [1,3,5,4,6,2];
+        // TODO 反转数组元素的顺序
+        arr1.reverse();
+        console.log(arr1);
+
+        arr1.sort();
+        console.log(arr1);
+
+        var arr2 = ['string','number','boolean','nedu'];
+        arr2.reverse();
+        console.log(arr2);
+
+        arr2.sort();
+        console.log(arr2);*/
+
+        var arr = [0,10,2,30,4,15];
+        // TODO sort() 方法默认并不是从小到大的排序
+        /*arr.sort();
+        console.log(arr);*/
+
+        arr.sort(function(a,b){
+            /*
+                TODO 参数的比较结果
+                TODO * a < b - 由大到小
+                TODO * a > b - 由小到大
+             */
+            return a == b;
+        });
+        console.log(arr);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

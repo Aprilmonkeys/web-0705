@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子的怪异模型</title>
+    <style>
+        /*
+            TODO 默认的盒子模型
+            TODO box-sizing: content-box;
+            TODO * 实际的宽度 = width + border + padding
+            TODO * 这种盒子模型的内容区是不会变化的
+            TODO box-sizing: border-box; - 盒子的怪异模型
+            TODO * 实际的宽度 - width
+            TODO * 实际的高度 - height
+         */
+        #d1 {
+            box-sizing: border-box;
+
+            width: 200px;
+            height: 200px;
+            background-color: lightslategrey;
+            border: 50px black solid;
+            padding: 50px;
+        }
+        #d2 {
+            width: 200px;
+            height: 200px;
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+<div id="d1">
+    <div id="d2"></div>
+</div>
+</body>
+</html>

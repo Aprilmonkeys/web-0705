@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格元素</title>
+</head>
+<body>
+<!--
+    TODO 表格元素 - <table></table>
+    TODO * 默认样式，没有边框的
+    TODO * 属性
+    TODO   * border - 设置表格边框的宽度。默认值为 0，表示没有边框。
+    TODO     * 在实际开发中并不常用，通过 CSS 样式实现
+    TODO   * width - 设置当前表格的总宽度
+    TODO     * 单元格的宽度是自动分配的
+    TODO     * 当前设置的单位是 像素值(px)
+    TODO * 默认的宽度 - 每个单元格中文本内容多少的宽度
+ -->
+<table width="800" border="1">
+    <!-- TODO 表格中的行 - <tr></tr> -->
+    <tr>
+        <!--
+            TODO 表格中的单元格 - <td></td>
+            TODO * width - 设置当前单元格的宽度
+         -->
+        <td width="200">姓名</td>
+        <td width="300">性别</td>
+        <td width="300">年龄</td>
+    </tr>
+    <!-- TODO 表格中的行 - <tr></tr> -->
+    <tr>
+        <!-- TODO 表格中的单元格 - <td></td> -->
+        <td>张无忌</td>
+        <td>男</td>
+        <td>18</td>
+    </tr>
+    <!-- TODO 表格中的行 - <tr></tr> -->
+    <tr>
+        <!-- TODO 表格中的单元格 - <td></td> -->
+        <td>周芷若</td>
+        <td>女</td>
+        <td>18</td>
+    </tr>
+</table>
+<h3>带表头的表格</h3>
+<table width="800" border="1">
+    <tr>
+        <!--
+            TODO <th> 表示表格中的表头
+            TODO * 样式 - 文字加粗、居中显示
+        -->
+        <th width="200">姓名</th>
+        <th width="300">性别</th>
+        <th width="300">年龄</th>
+    </tr>
+    <tr>
+        <td>张无忌</td>
+        <td>男</td>
+        <td>18</td>
+    </tr>
+    <tr>
+        <td>周芷若</td>
+        <td>女</td>
+        <td>18</td>
+    </tr>
+</table>
+<h3>复杂的表格</h3>
+<table border="1">
+    <!-- TODO <thead> 表示表格的表头 -->
+    <thead>
+        <tr>
+            <th width="200">商品</th>
+            <th width="300">价格</th>
+            <th width="300">数量</th>
+        </tr>
+    </thead>
+    <!-- TODO <tbody> 表格表格中的数据内容 -->
+    <tbody>
+        <tr>
+            <td>iPhone 7</td>
+            <td>5888</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>iPhone 8</td>
+            <td>8888</td>
+            <td>18</td>
+        </tr>
+    </tbody>
+    <!-- TODO <tfoot> 表示表格中的表尾 -->
+    <tfoot>
+        <tr>
+            <td>总计</td>
+            <td>18888</td>
+            <td>20</td>
+        </tr>
+    </tfoot>
+</table>
+<h3>带标题的表格</h3>
+<table border="1">
+    <!-- TODO <caption> 定义表格的标题-->
+    <caption>商品价格表</caption>
+    <!-- TODO <thead> 表示表格的表头 -->
+    <thead>
+    <tr>
+        <th width="200">商品</th>
+        <th width="300">价格</th>
+        <th width="300">数量</th>
+    </tr>
+    </thead>
+    <!-- TODO <tbody> 表格表格中的数据内容 -->
+    <tbody>
+    <tr>
+        <td>iPhone 7</td>
+        <td>5888</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>iPhone 8</td>
+        <td>8888</td>
+        <td>18</td>
+    </tr>
+    </tbody>
+    <!-- TODO <tfoot> 表示表格中的表尾 -->
+    <tfoot>
+    <tr>
+        <td>总计</td>
+        <td>18888</td>
+        <td>20</td>
+    </tr>
+    </tfoot>
+</table>
+<h3>跨行或跨列的表格</h3>
+<table border="1">
+    <!-- TODO <thead> 表示表格的表头 -->
+    <thead>
+    <tr>
+        <th width="200">商品</th>
+        <th width="300">价格</th>
+        <th width="300">数量</th>
+    </tr>
+    </thead>
+    <!-- TODO <tbody> 表格表格中的数据内容 -->
+    <tbody>
+    <tr>
+        <!-- TODO rowspan 表示跨几行 -->
+        <td rowspan="2">iPhone 7</td>
+        <td>5888</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <!-- TODO colspan 表示跨几列 -->
+        <td colspan="2">8888</td>
+    </tr>
+    </tbody>
+    <!-- TODO <tfoot> 表示表格中的表尾 -->
+    <tfoot>
+    <tr>
+        <td>总计</td>
+        <td>18888</td>
+        <td>20</td>
+    </tr>
+    </tfoot>
+</table>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量</title>
+    <script>
+        /*
+            TODO 定义变量
+            TODO * 使用 var 关键字
+            TODO * 格式
+            TODO   var 变量名 = 数据内容;
+            TODO 调用变量
+         */
+        var test = 100;
+        console.log(test);
+        /*
+            TODO 定义多个变量
+            TODO * 每一行定义一个变量
+            TODO * 所有变量的定义编写在一行中
+            TODO   * 中间需要使用逗号分隔
+         */
+        /*var test1 = 100;
+        var test2 = 200;*/
+
+        /*var test1 = 100, test2 = 200;*/
+
+        /*
+            TODO 关于 var 关键字
+            TODO * JavaScript语法中对 var 编写要求 - 可有可无
+            TODO   * 定义变量的情况与 var 关键字可能也有差异
+            TODO * JavaScript的"严格模式" - 定义变量没有 var 关键字 - 报错
+         */
+        test1 = 200;
+        console.log(test1);
+        /*
+            TODO 先定义变量，再调用变量
+            TODO * 浏览器加载执行JavaScript代码时 - 从上到下
+            TODO * 当调用某个变量时，该变量已经存在了
+            TODO 先调用变量，再定义变量
+            TODO   console.log(test2);
+            TODO   var test2 = 300;
+            TODO 等价于以下代码
+            TODO   var test2; - 定义变量(但没有赋值)
+            TODO   * 默认值为 undefined
+            TODO   console.log(test2);
+            TODO   test2 = 300; - 为变量进行赋值
+         */
+        console.log(test2);
+        // TODO 定义变量，并初始化值
+        var test2 = 300;
+
+        /*var test2;//定义变量
+        console.log(test2);// 输出变量时 - 变量存在，但没值
+        test2 = 300;//变量赋值*/
+    </script>
+</head>
+<body>
+
+</body>
+</html>

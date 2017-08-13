@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>遍历对象的属性或方法</title>
+    <script>
+
+        var hero = {
+            name : 'zhangwuji',
+            age : 18,
+            sayMe : function(){
+                console.log('this is zhangwuji.');
+            }
+        }
+        // TODO 只知道对象名，但不清楚属性和方法名
+
+        console.log(typeof hero.sayMe);
+
+        /*
+            TODO for..in循环
+            TODO * 语法结构
+            TODO   for (var name in 对象名) {
+            TODO     * name - 代表了对象的属性名和方法名
+            TODO   }
+            TODO * 得到指定对象的所有属性或方法名时
+         */
+        /*for (var name in hero) {
+            /!*
+                TODO 得到对象的属性名或方法名
+                TODO * 区分属性和方法 - typeof 运算符
+             *!/
+            if (typeof hero[name] == 'function'){
+                // TODO 一定是对象的方法
+                hero[name]();
+            } else {
+                // TODO 一定是对象的属性
+                console.log(hero[name]);
+            }
+        }*/
+
+        /*
+            TODO Object.keys(obj)方法
+            TODO * obj - 表示遍历的当前对象
+            TODO * 返回值 - 一个包含当前对象所有属性名和方法名的数组
+         */
+        var a = Object.keys(hero);
+        console.log(a);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

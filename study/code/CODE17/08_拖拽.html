@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖拽</title>
+    <style>
+        body {
+            padding: 50px;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+        #d1 {
+            background-color: lightskyblue;
+        }
+        #d2 {
+            left: 300px;
+            top: 200px;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+<p>我是一段文本内容.</p>
+<div id="d1"></div>
+<div id="d2"></div>
+<script>
+    var flag = false;// TODO 开关变量，默认是关
+    var d1 = document.getElementById('d1');
+    var x,y;
+
+    /*
+        TODO 1.将事件的绑定 -> document对象
+        TODO   * mousedown、mousemove和mouseup事件在页面中的任意位置都可以被触发 - 事件绑定到页面
+        TODO   * document对象 -> 作为 DOM 解析页面的唯一入口（就代表当前页面）
+     */
+    d1.addEventListener('mousedown',function(event){
+       /*
+            TODO 鼠标是否选中指定的元素 - 表示开始拖动指定的元素
+            TODO * 定义一个开关变量 - 开，表示开始拖动；关，表示结束拖动
+            TODO   * 使用 boolean 类型的值进行定义 - true表示开，false表示关
+         */
+       flag = true;
+
+       x = event.offsetX;
+       y = event.offsetY;
+       console.log(x,y);
+    });
+    document.addEventListener('mousemove',function(event){
+        // TODO 根据鼠标的坐标值改变指定的元素的坐标值
+        if(flag){
+            // TODO 获取鼠标的坐标值
+            var pageX = event.pageX - x;
+            var pageY = event.pageY - y;
+            console.log(pageX,pageY)
+
+            d1.style.top = pageY + 'px';
+            d1.style.left = pageX + 'px';
+        }
+    });
+    document.addEventListener('mouseup',function(event){
+        // TODO 表示鼠标拖动指定元素结束
+        flag = false;
+    });
+</script>
+</body>
+</html>

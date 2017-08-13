@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>引用类型</title>
+    <script>
+        /*
+            TODO 引用类型
+            TODO * Object、Function、String等 - 构造函数
+            TODO * new Object() - 通过构造函数创建对象
+         */
+        /*var obj = new Object();
+        var str = new String();
+        var fun = new Function();
+
+        var str1 = new String();*/
+
+        /*
+            TODO 编写一个构造函数
+            TODO 1. 为对象创建属性和方法 - 定义在构造函数中
+            TODO    this.属性名 = 属性值;
+            TODO    this.方法名 = function(){}
+            TODO 2. this的含义 -> 指的是创建的对象
+         */
+        function Hero(){
+            this.name = 'zhangwuji';
+            this.sayMe = function(){
+                console.log('this is zhangwuji.');
+            }
+        }
+        var hero = new Hero();
+        var hero1 = new Hero();
+
+        //console.log(typeof hero);//object
+        console.log(hero1);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

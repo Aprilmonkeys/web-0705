@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>位置规则</title>
+    <script>
+
+        // TODO 1. 定义一个用于验证的字符串 - 从页面输入框中获取
+        var str = 'abc12345';
+
+        /*
+         TODO 2. 定义正则表达式的规则
+         TODO * ^ - 表示字符的开始位置
+         TODO * $ - 表示字符的结束位置
+
+         TODO /^[0-9]{5,8}$/ - 当前字符串以数字开始，以数字结束，数字出现 5 到 8 次
+         TODO /[0-9]{5,8}/ - 表示数字要连续出现 5 - 8 次
+         TODO /^[0-9]{5,8}/ - 是以数字开始，并且数字要连续出现 5 - 8 次
+         TODO /[0-9]{5,8}$/ - 是以数字结束，并且数字要连续出现 5 - 8 次
+         */
+        var reg = /^[0-9]{5,8}$/;
+
+        // TODO 3. 验证字符串是否符合正则表达式的规则
+        var result = reg.test(str);
+
+        console.log(result);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>事件监听器</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<!--<script src="01.js"></script>
+		<script src="02.js"></script>-->
+		<style type="text/css">
+			body {
+				padding: 100px;
+			}
+		</style>
+		<script>
+			/*window.onload = function(){
+			    var btn = document.getElementById('btn');
+			    console.log('这是第一次获取button');
+			}
+            window.onload = function(){
+                var btn = document.getElementById('btn');
+                console.log('这是第二次获取button');
+            }*/
+            /*window.addEventListener('load',function(){
+                var btn = document.getElementById('btn');
+                console.log('这是第一次获取button');
+			})
+            window.addEventListener('load',function(){
+                var btn = document.getElementById('btn');
+                console.log('这是第二次获取button');
+            })*/
+		</script>
+	</head>
+	<body>
+		<button id="btn" class="btn btn-primary">事件监听器</button>
+		<script type="text/javascript">
+			var btn = document.getElementById('btn');
+
+			/*
+				TODO 重复绑定事件，只有最后一次的绑定是有效的
+				TODO * 结果 - 之前所有的绑定逻辑都是无效的
+				TODO * 原因 - 赋值语句，重复赋值的过程
+		     */
+			/*btn.onclick = function(){
+			    console.log('this is button1111');
+			}
+            btn.onclick = function(){
+                console.log('this is button2222');
+            }*/
+
+			/*
+				TODO addEventListener(eventName,function,boolean)
+				TODO * eventName - 表示事件名称，没有"on"
+				TODO * function - 表示处理函数
+
+				TODO 允许重复绑定事件 - 没有覆盖现象
+				TODO IE8及以下版本浏览器不支持
+			 */
+			/*btn.addEventListener('click',function(){
+			   console.log('this is button111');
+			});
+            btn.addEventListener('click',function(){
+                console.log('this is button222');
+            });*/
+
+			/*
+				TODO attachEvent(eventName,function)
+				TODO * IE8及以下版本浏览器支持的
+				TODO * 参数
+				TODO   * eventName - 表示事件名称，例如"onclick"
+				TODO   * function - 表示处理函数
+			 */
+			/*btn.attachEvent('onclick',function(){
+                console.log('this is button');
+			})*/
+
+			if(btn.addEventListener){
+			    btn.addEventListener('click',function(){
+                    console.log('this is button');
+				});
+			}else{
+			    btn.attachEvent('onclick',function(){
+                    console.log('this is button');
+				});
+			}
+
+			/*
+				TODO 定义事件监听器的浏览器兼容解决方式
+				TODO * elem - 表示当前需要绑定事件的标签
+				TODO * eventName - 表示事件名称
+				TODO   * 注意 - 例如"click"
+				TODO * function - 表示事件的处理函数
+			 */
+			function bind(elem, eventName, functionName){
+                if(elem.addEventListener){
+                    elem.addEventListener(eventName, functionName);
+                }else{
+                    elem.attachEvent('on' + eventName, functionName);
+                }
+			}
+		</script>
+	</body>
+</html>

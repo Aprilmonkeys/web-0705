@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>滑动动画效果</title>
+    <style>
+        div {
+            width: 200px;
+            background-color: lightskyblue;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">按钮</button>
+<div id="d" style="height: 200px"></div>
+<script>
+    var btn = document.getElementById('btn');
+    var d = document.getElementById('d');
+    var dheight =parseInt(d.style.height);
+
+    //默认关闭
+  var flag =false;
+  btn.onclick=function(){
+      if(!flag){
+          toUp();
+      }else{
+          toDown();
+      }
+  };
+  function toUp() {
+      dheight--;
+      d.style.height=dheight+'px';
+      if(dheight<=0){
+          clearTimeout(t);
+          flag=true;
+      }else{
+          var t= setTimeout(toUp,10);
+      }
+  }
+    function toDown(){
+        dheight++;
+        d.style.height = dheight + 'px';
+        if(dheight >= 200){
+            clearTimeout(t);
+            flag = false;
+        }else{
+            var t = setTimeout(toDown, 10);
+        }
+    }
+</script>
+</body>
+</html>

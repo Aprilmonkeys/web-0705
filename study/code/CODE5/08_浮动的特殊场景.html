@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动的特殊场景</title>
+    <style>
+        #d1 {
+            width: 500px;
+            height: 200px;
+            background-color: lightgray;
+        }
+        #d11 {
+            width: 50px;
+            height: 50px;
+            background-color: lightcoral;
+            float: right;
+        }
+        #d2 {
+            width: 500px;
+            height: 200px;
+            background-color: lightskyblue;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<!--
+    TODO 定义父级和子级元素，并且设置子元素为浮动
+    TODO * 效果 - 子元素只能在父元素的显示区域中进行浮动
+    TODO          子元素是无法超出父元素的显示区域
+ -->
+<div id="d1">
+    <div id="d11"></div>
+</div>
+<!--
+    TODO 兄弟关系的元素都设置为浮动
+    TODO * 这些元素会自动排列（水平方向排列）
+    TODO * 这些元素的宽度的总和大于页面的宽度时，自动换行
+-->
+<!--
+    TODO 兄弟关系的元素
+    TODO 前一个元素不设置浮动，后一个元素设置浮动
+    TODO * 效果 - 设置浮动的后一个元素是无法超出或覆盖前一个兄弟元素的
+-->
+<div id="d2"></div>
+</body>
+</html>

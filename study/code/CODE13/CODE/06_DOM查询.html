@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>DOM查询</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			body {
+				padding-top: 50px;
+				padding-left: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="col-md-4">
+				<p><button id="btn1" class="btn btn-primary btn-block">getElementById</button></p>
+				<p><button id="btn2" class="btn btn-primary btn-block">getElementsByName</button></p>
+				<p><button id="btn3" class="btn btn-primary btn-block">getElementsByTagName</button></p>
+				<p><button id="btn4" class="btn btn-primary btn-block">getElementsByClassName</button></p>
+				<p><button id="btn5" class="btn btn-primary btn-block">querySelector</button></p>
+				<p><button id="btn6" class="btn btn-primary btn-block">querySelectorAll</button></p>
+			</div>
+			<div class="col-md-8">
+				<ul class="list-group">
+					<li id="one" class="list-group-item">这是一个 id 为 one 的选项</li>
+					<li id="two" name="list" class="list-group-item">这是一个 id 为 two 的选项</li>
+					<li id="three" class="list-group-item">这是一个 id 为 three 的选项</li>
+					<li id="four" name="list" class="list-group-item">这是一个 id 为 four 的选项</li>
+					<li id="five" class="list-group-item">这是一个 id 为 five 的选项</li>
+				</ul>
+			</div>
+		</div>
+		<script>
+			var btn1 = document.getElementById('btn1');
+			btn1.onclick = function(){
+			    /*
+			    	TODO getElementById()方法 - 通过元素的id属性值获取指定元素
+			    	TODO * 元素的id属性值必须是唯一的
+			    	TODO * 注意 - 通过该方法获取的元素只能是唯一的
+			     */
+			    var one = document.getElementById('one');
+			    // TODO 方便测试 - 修改对应元素的背景颜色
+				one.style.backgroundColor = 'lightblue';
+			}
+			var btn2 = document.getElementById('btn2');
+			btn2.onclick = function(){
+			    /*
+			    	TODO getElementsByName()方法 - 通过元素的name属性值获取元素
+			    	TODO * 元素的name属性不是唯一的，可能多个元素相同name属性
+			    	TODO * 注意 - 通过该方法获取的元素可能是一个，也可能是多个
+			     */
+			    var list = document.getElementsByName('list');
+			    /*
+			    	TODO getElementsByName()方法 - 结果
+			    	TODO * 非常类似于数组的结构，但并不是一个数组
+			    	TODO * 得到的结果的类型 -> NodeList(节点集合)
+			    	TODO * 类似于数组结构的对象 -> 类数组对象
+			     */
+			    console.log(list);
+				for(var i=0;i<list.length;i++){
+				    var li = list[i];
+				    li.style.backgroundColor = 'lightblue';
+				}
+
+			    /*var arr = [];
+			    console.log(arr);*/
+			}
+			var btn3 = document.getElementById('btn3');
+			btn3.onclick = function(){
+			    /*
+			    	TODO getElementsByTagName()方法 - 通过元素的标签名获取
+			     */
+			    var lis = document.getElementsByTagName('li');
+			    console.log(lis);
+			}
+			var btn4 = document.getElementById('btn4');
+			btn4.onclick = function(){
+			    /*
+			    	TODO getElementsByClassName()方法 - 通过元素的class属性值获取
+			    	TODO * 该方法是一个新增方法
+			    	TODO * IE 8 及之前版本的浏览器 - 不支持“getElementsByClassName”属性或方法
+			     */
+			    var list = document.getElementsByClassName('list-group-item');
+			    console.log(list.length);
+			}
+			// TODO 自定义函数 - 解决getElementsByClassName()方法的兼容性
+			function getElementsByClassName(element,className){
+			    // TODO 通过属性方式判断当前的方式是否存在 -> 属性不存在undefined
+			    if(document.getElementsByClassName){
+			        // TODO getElementsByClassName()方法存在
+				}else{
+			        // TODO 自定义解决方法
+				}
+			}
+			var btn5 = document.getElementById('btn5');
+			btn5.onclick = function(){
+			    /*
+			    	TODO querySelector(selector)方法
+			    	TODO * selector - 表示 CSS 的选择器
+			    	TODO * 作用 - 返回与css选择器匹配的第一个元素
+			     */
+			    /*var one  = document.querySelector('#one');
+			    one.style.backgroundColor = 'orange';*/
+
+                var li  = document.querySelector('.list-group-item');
+                console.log(li);
+			}
+			var btn6 = document.getElementById('btn6');
+			btn6.onclick = function(){
+			    /*
+			    	TODO querySelectorAll(selector)方法
+			    	TODO * selector - 表示 CSS 的选择器
+			    	TODO * 作用 - 返回与css选择器匹配的所有元素
+			     */
+			    var lis = document.querySelectorAll('#one');
+			    console.log(lis);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>事件的目标元素</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style type="text/css">
+			body {
+				padding: 100px;
+			}
+			.list-group {
+				padding: 30px;
+				background-color: lightblue;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="ul" class="list-group">
+			<li class="list-group-item"><a href="#">链接</a></li>
+		</ul>
+		<script type="text/javascript">
+			var ul = document.getElementById('ul');
+			/*ul.addEventListener('click',function(event){
+			    /!*
+			    	TODO 获取目标元素 - 与当前事件相关的元素
+			    	TODO * event.target属性 - 获取的是触发当前事件的元素
+			    	TODO * this - 获取的是绑定当前事件的元素
+			     *!/
+			    console.log(event.target);
+			});*/
+			ul.attachEvent('onclick',function(event){
+                /*
+                	TODO IE8及以下版本浏览器不支持 target 属性
+                	TODO IE8及以下版本浏览器提供 srcElement 属性
+                 */
+			    console.log(event.srcElement);
+			})
+		</script>
+	</body>
+</html>

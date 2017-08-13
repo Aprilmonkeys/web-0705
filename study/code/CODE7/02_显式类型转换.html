@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显式类型转换</title>
+    <script>
+        // TODO 构造函数方式
+        /*
+            TODO Number() - 转换为数字
+            TODO * string类型
+            TODO * boolean类型
+         */
+        /*var str1 = '100';
+        var str2 = 'string';
+        var boo = true;
+
+        var result1 = Number(str1);
+        var result2 = Number(str2);
+        var result3 = Number(boo);
+
+        console.log(typeof result1);// 100
+        console.log(typeof result2);// NaN
+        console.log(typeof result3);// 1*/
+
+        // TODO String()
+        /*var num = 100;
+        var boo = false;
+
+        var result1 = String(num);
+        var result2 = String(boo);
+
+        console.log(typeof result1);// '100'
+        console.log(typeof result2);// 'true'*/
+
+        // TODO Boolean()
+        /*var num = 0;
+        var str = '';
+
+        var result1 = Boolean(num);
+        var result2 = Boolean(str);
+
+        console.log(typeof result1);// false
+        console.log(typeof result2);// false*/
+
+        // TODO toString()方法
+        /*var num = 100;
+        var boo = true;
+
+        var result1 = num.toString();
+        var result2 = boo.toString();
+
+        console.log(typeof result1);
+        console.log(typeof result2);*/
+
+        // TODO parseInt()方法 - 转换为数字的整数
+        /*var str1 = '100';
+        var str2 = '10.32';
+        var str3 = 'string';
+        var boo = true;
+
+        var result1 = parseInt(str1);
+        var result2 = parseInt(str2);
+        var result3 = parseInt(str3);
+        var result4 = parseInt(boo);
+
+        console.log(result1);// 100
+        console.log(result2);// 10 - 转换为number类型，而且取整
+        console.log(result3);// NaN
+        console.log(result4);// NaN*/
+
+        // TODO parseFloat() - 转换为数字的小数
+        /*var str1 = '100';
+        var str2 = '10.32';
+        var str3 = 'string';
+        var boo = true;
+
+        var result1 = parseFloat(str1);
+        var result2 = parseFloat(str2);
+        var result3 = parseFloat(str3);
+        var result4 = parseFloat(boo);
+
+        console.log(result1);// 100
+        console.log(result2);// 10.32
+        console.log(result3);// NaN
+        console.log(result4);// NaN*/
+
+        /*
+            TODO parseInt()或者parseFloat()方法
+            TODO * 转换字符串 - 该字符串中包含数字和字符
+            TODO   * 将字符串中的字符内容去掉 - 只保留数字部分
+            TODO   * 再将数字部分的字符串，转换为number类型
+         */
+        var str = '10str';
+
+        var result1 = parseInt(str);
+        var result2 = parseFloat(str);
+
+        console.log(result1);
+        console.log(result2);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

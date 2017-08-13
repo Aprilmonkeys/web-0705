@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单元素</title>
+</head>
+<body>
+<!--
+    TODO <form>元素 - 表单元素
+    TODO * 默认情况下，没有任何的显示效果的
+    TODO * 作用 - 将表单内的数据，提交给服务器端
+    TODO * 属性
+    TODO   * action - 设置当前表单提交的地址(服务器端)
+    TODO   * method - 设置当前表单提交的方式
+    TODO     * get
+    TODO     * post
+    TODO * 实现文件上传的功能
+    TODO   * enctype="application/x-www-form-urlencoded"
+    TODO     * 是当前表单元素的默认值
+    TODO   * enctype="multipart/form-data"
+    TODO     * 是当前表单实现文件上传必要设置的属性
+    TODO   * enctype="text/plain"
+    TODO     * 指的就是普通的文本内容，最少使用
+-->
+<form enctype="multipart/form-data" action="" method="">
+    <!--
+        TODO <input>元素 - 输入框
+        TODO * type属性 - 设置当前输入框的类型
+        TODO   * text - 表示文本输入框
+        TODO   * password - 表示密码输入框
+        TODO     * 默认显示的效果就是实心的点
+    -->
+    文本输入框:<input type="text" readonly><br>
+    密码输入框:<input type="password"><br>
+    <!-- TODO email等类型是 HTML5 新增类型 -->
+    email输入框:<input type="email"><br>
+    <hr>
+    <!--
+        TODO 单选框 - <input type="radio">
+        TODO * 表示一组内多个单选框只能被选中一个
+        TODO   * 通过 name 属性定义相同的值
+        TODO * checked属性 - 设置当前选项被选中
+     -->
+    <input type="radio" name="like" checked="checked">HTML
+    <input type="radio" name="like">CSS
+    <input type="radio" name="like">JAVASCRIPT
+    <br>
+    <!--
+        TODO 多选框 - <input type="checkbox">
+        TODO * 通过设置相同的 name 属性值，设置为一组
+    -->
+    <input type="checkbox" name="like2">HTML
+    <input type="checkbox" name="like2" checked>CSS
+    <input type="checkbox" name="like2">JAVASCRIPT
+    <br>
+    <hr>
+    <!--
+        TODO <input type="button"> - 表示普通按钮
+        TODO * value属性 - 设置当前按钮的名称
+    -->
+    <input type="button" value="登录">
+    <!-- TODO <button> 和 <input type="button"> 的作用一样 -->
+    <button>按钮</button>
+    <input type="reset" value="重置">
+    <input type="submit" value="提交">
+    <br>
+    <hr>
+    <!--
+        TODO 文件域
+        TODO * 作用 - 选择本地文件
+        TODO * 在实际开发中 - 文件上传
+        TODO 注意
+        TODO * 默认情况下，每次只能选择一个文件
+        TODO * 设置当前的文件域同时选择多个文件
+        TODO   <input type="file" multiple="multiple">
+        TODO 实现文件上传功能
+        TODO <form enctype="multipart/form-data">
+     -->
+    <input type="file" multiple="multiple">
+    <!-- 
+        TODO 隐藏域 - 不会显示在浏览器页面中
+        TODO * id属性 - 设置当前元素的标识(唯一的)
+        TODO * value属性 - 设置当前元素的值
+        TODO 作用 - 存储一些不希望被用户看到的内容(数据)
+     -->
+    <input type="hidden" id="username" value="zhangwuji">
+    <!-- TODO 图片元素 -->
+    <!-- TODO <img> 与表单无关的 -->
+    <img src="01.png">
+    <!-- TODO 表单内元素 -->
+    <input type="image" src="01.png">
+    <!-- TODO HTML5新增类型 -->
+</form>
+</body>
+</html>

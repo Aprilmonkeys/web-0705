@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子左右移动的效果</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: #f40;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+<div id="d"></div>
+<script>
+
+    //用JS来操作div,通过控制top和left
+    var div = document.getElementById('d');
+    //用这个方法返回的是一个样式集合的对象
+    var style = window.getComputedStyle(div, null);
+    //这里要想获取到div的top值必须给盒子开启绝对定位
+    //先获取到html
+    var html = document.documentElement;
+    //获取页面的宽度
+    var htmlStyle = window.getComputedStyle(html, null);
+    //console.log(html);
+    var hWidth = parseInt(htmlStyle.width);
+    var hheight = parseInt(htmlStyle.height);
+    // var dTop =parseInt(style.top);
+    var dLeft = parseInt(style.left);
+    var dWidth = parseInt(style.width);
+    var dTop = parseInt(style.top);
+    var dheight = parseInt(style.height);
+
+    //console.log(dTop);得到的值是字符串 需要转化成数字
+    //盒子向右移动
+    //设置开关
+    var flag = true;//默认是开的
+    var t = setInterval(function () {
+        if (flag) {
+            dLeft++;
+        } else {
+            dLeft--;
+        }
+        if (dLeft + dWidth >= hWidth) {
+            flag = false;
+            div.style.backgroundColor = 'green';
+        }
+
+        if (dLeft <= 0) {
+            flag = true;
+            div.style.backgroundColor = 'blue';
+        }
+        /*dLeft++;
+         //单独停止
+         div.style.left = dLeft + 'px';
+         if (dLeft + dWidth > hWidth) {
+         clearInterval(t);
+         }*/
+        div.style.left = dLeft + 'px';
+
+    }, 10);
+
+
+</script>
+</body>
+</html>

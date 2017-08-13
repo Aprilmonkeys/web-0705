@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>特殊函数的练习</title>
+    <script>
+        /*
+            TODO 练习
+            TODO 1. 读代码 -> 写出结果
+            TODO 2. 将下面的代码，用图解的方式画出对应关系
+            TODO 3. 列出下面的代码，使用了哪些特殊函数
+         */
+        var a = function(){
+            return 'a';
+        }
+
+        function fn(a){
+            var b = 'b';
+            return function(){
+                return a() + b;
+            }
+        }
+
+        var fun = fn(a);
+
+        console.log(fun());
+        console.log(typeof fun());
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

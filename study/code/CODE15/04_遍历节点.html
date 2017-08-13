@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>遍历节点</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			body {
+				padding: 100px;
+			}
+			#parentDiv {
+				background: lightblue;
+				padding: 10px;
+			}
+			#childDiv1,#childDiv2,#childDiv3 {
+				height: 260px;
+				background: lightcoral;
+				margin: 10px;
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<button id="btn1" class="btn btn-primary">获取父节点</button>
+			<button id="btn2" class="btn btn-primary">parentElement</button>
+			<button id="btn3" class="btn btn-primary">获取第一个子节点</button>
+			<button id="btn4" class="btn btn-primary">获取最后一个子节点</button>
+			<button id="btn5" class="btn btn-primary">获取所有子节点</button>
+			<button id="btn6" class="btn btn-primary">获取前一个兄弟节点</button>
+			<button id="btn7" class="btn btn-primary">获取后一个兄弟节点</button>
+		</div>
+		<div id="parentDiv" class="container">
+			<div id="childDiv1" class="col-md-4">
+				<h4>这是一个 id 为 childDiv1 的 div 元素</h4>
+			</div>
+			<div id="childDiv2" class="col-md-4">
+				<h4>这是一个 id 为 childDiv2 的 div 元素</h4>
+			</div>
+			<div id="childDiv3" class="col-md-3">
+				<ul id="parentUl" class="list-group">
+					<li id="one" class="list-group-item">这是一个 id 为 one 的选项</li>
+					<li id="two" name="list" class="list-group-item">这是一个 id 为 two 的选项</li>
+					<li id="three" class="list-group-item">这是一个 id 为 three 的选项</li>
+					<li id="four" name="list" class="list-group-item">这是一个 id 为 four 的选项</li>
+					<li id="five" class="list-group-item">这是一个 id 为 five 的选项</li>
+				</ul>
+			</div>
+		</div>
+		<script>
+			// 1. 获取 id 为 childDiv1 的 <div> 标签的父节点，并且改变背景颜色
+			
+			// 3. 获取 id 为 parentDiv 的 <div> 标签的第一个子节点，并且改变背景颜色
+			
+			// 4. 获取 id 为 parentDiv 的 <div> 标签的最后一个子节点，并且改变背景颜色
+			
+			// 5. 获取 id 为 parentDiv 的 <div> 标签的所有子节点，并且改变背景颜色
+			
+			// 6. 获取 id 为 two 的 <li> 标签的前一个兄弟节点，并且改变背景颜色
+			
+			// 7. 获取 id 为 two 的 <li> 标签的后一个兄弟节点，并且改变背景颜色
+			
+		</script>
+	</body>
+</html>

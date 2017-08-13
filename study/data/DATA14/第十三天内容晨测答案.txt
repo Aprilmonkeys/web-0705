@@ -1,0 +1,29 @@
+﻿1.以下哪个的写法是错误的 - D
+  A var a = {}
+  B var b = []
+  C var c = //
+  D var d = ()
+
+2.请写出正则表达式中的 ? + * 的含义
+  ? - 匹配前面一个字符0次或者1次，和{0,1}有相同的效果。
+  + - 匹配前面一个字符1次或者多次，和{1,}有相同的效果。
+  * - 匹配前一个字符0次或者是多次。
+
+3.请将"abcdefg"的顺序颠倒输出
+  var str = 'abcdefg';
+  var arr = str.split('');
+  console.log(arr.reverse().toString());
+
+4.请写出判断"abcdefg"中是否包含"f"的逻辑实现(代码)
+  var str = 'abcdefg';
+  var index = str.indexOf('f');
+  if(index != -1){
+    console.log('存在');
+  }else{
+    console.log('不存在');
+  }
+
+5.请写出"abcdefg"截取"abc"输出(代码实现)
+  var str = 'abcdefg';
+  var result = str.substr(str.indexOf('abc'),'abc'.length);
+

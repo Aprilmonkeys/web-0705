@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数与对象</title>
+    <script>
+        // TODO 定义了函数
+        function fn(){
+            // TODO 定义了局部变量
+            var name = 'zhangwuji';
+            /*
+                TODO 返回了一个对象
+                TODO * 开放了向全局作用域操作局部变量的权限
+                TODO   * get - 获取的权限
+                TODO   * set - 设置的权限
+              */
+            return {
+                getName : function(){
+                    return name;
+                },
+                setName : function(newName){
+                    name = newName;
+                }
+            }
+        }
+        // TODO 调用 fn 函数后，得到一个对象
+        var obj = fn();
+        //console.log(obj);
+
+        obj.setName('zhouzhiruo');
+
+        var name = obj.getName();
+        console.log(name);
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

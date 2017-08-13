@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>滑动动画效果</title>
+    <style>
+        div {
+            width: 200px;
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">按钮</button>
+<div id="d" style="height: 200px"></div>
+<script>
+    // 改变 div 标签的高度，实现动画效果
+    /*var t = setInterval(function () {
+        var d = document.getElementById('d');
+        var height = parseInt(d.style.height);
+        height--;
+        if (height === 0){
+            d.style.display = 'none';
+            clearInterval(t);
+        }else{
+            d.style.height = height + 'px';
+        }
+    },10);*/
+
+    var d = document.getElementById('d');
+
+    var btn = document.getElementById('btn');
+    btn.onclick = function () {
+        if(d.style.display === 'none'){
+            slideDown(d, 1000);
+        }else{
+            slideUp(d, 1000);
+        }
+    }
+
+    function slideUp(elem, time){
+        var h = parseInt(elem.style.height);
+        var t = setInterval(function () {
+            var height = parseInt(elem.style.height);
+            height--;
+            if (height === 0){
+                elem.style.display = 'none';
+                elem.style.height = h + 'px';
+                clearInterval(t);
+            }else{
+                elem.style.height = height + 'px';
+            }
+        }, time/h);
+    }
+    function slideDown(elem, time){
+        var h = parseInt(elem.style.height);
+        var height = 0;
+        var t = setInterval(function () {
+            height++;
+            if (height == 1){
+                elem.style.height = height + 'px';
+                elem.style.display = 'block';
+            }else if (height == h){
+                clearInterval(t);
+            }else{
+                elem.style.height = height + 'px';
+            }
+        }, time/h);
+    }
+</script>
+</body>
+</html>

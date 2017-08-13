@@ -1,0 +1,41 @@
+1.如何将其它数据类型转换为Number（至少四种）
+答：正号(+)、负号(-)
+    parseInt();
+    parseFloat();
+    Number();
+
+2.说说以下代码的执行结果：
+    var result = 123 + true + "456";
+    console.log(result);
+答：'124456'
+
+3.说出如下代码的执行结果
+    var num = 10;
+    var result = num++ + ++num + num;
+    console.log(result);
+答：34
+
+4.写出下列代码的执行结果
+    console.log(1 + "2" + "2");
+    console.log(1 + +"2" + "2");
+    console.log(1 + -"1" + "2");
+    console.log(+"1" + "1" + "2");
+    console.log("A" - "B" + "2");
+    console.log("A" - "B" + 2);
+答：'122';
+    '32';
+    '02';
+    '112';
+    'NaN2';
+    NaN;
+
+5.写出下列代码的执行结果
+   console.log("0 || 1 = " + (0 || 1));
+   console.log("1 || 2 = " + (1 || 2));
+   console.log("0 && 1 = " + (0 && 1));
+   console.log("1 && 2 = " + (1 && 2));
+答：
+   "0 || 1 = 1";
+   "1 || 2 = 1";
+   "0 && 1 = 0";
+   "1 && 2 = 2";

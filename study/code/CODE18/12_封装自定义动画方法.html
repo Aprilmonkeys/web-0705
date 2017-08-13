@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>封装自定义动画方法</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: lightskyblue;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">按钮</button>
+<div id="d"></div>
+</body>
+<script>
+    var d = document.getElementById('d');
+
+    var btn = document.getElementById('btn');
+    btn.onclick = function () {
+        animate(d, {
+            width : 300
+        }, 1000, function (){
+            animate(d, {
+                height : 300
+            }, 1000)
+        });
+    }
+
+    /*
+        封装自定义动画方法
+        * 参数
+          * elem - 执行动画效果的元素
+          * cssObj - 设置 CSS 属性，Object 类型
+          * speed - 动画的时长
+          * callback - 动画执行完毕时的回调函数
+     */
+    function animate(elem, cssObj, speed, callback){
+        var flag,num = 0;
+        var timer = setInterval(function () {
+            num += 1;
+            // 获取 CSS 样式属性名称
+            for (var name in cssObj){
+                var oldValue = parseFloat(getStyle(elem, name));
+                var newValue = cssObj[name];
+                if (num === 1){
+                    flag = (newValue - oldValue)/speed;
+                }
+                // 改变 CSS 样式属性的值
+                oldValue += flag;
+                // 判断动画是否执行完毕
+                if (oldValue <= 0 && num >= speed){
+                    oldValue = 0;
+                    clearInterval(timer);
+                    callback && callback();
+                }
+                if (oldValue >= newValue && num >= speed){
+                    oldValue = newValue;
+                    clearInterval(timer);
+                    callback && callback();
+                }
+                // 设置 CSS 样式属性新的值
+                elem.style[name] = oldValue + 'px';
+            }
+        },1);
+
+        function getStyle(elem, name) {
+            if(window.getComputedStyle) {
+                //正常浏览器的方式，具有getComputedStyle()方法
+                return getComputedStyle(elem, null)[name];
+            } else {
+                //IE8的方式，没有getComputedStyle()方法
+                return elem.currentStyle[name];
+            }
+        }
+    }
+</script>
+</html>

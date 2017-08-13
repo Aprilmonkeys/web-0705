@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>轮播图效果</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			body {
+				padding: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="carousel-example-generic" class="carousel slide" style="width: 492px;">
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="img/1.jpg" alt="...">
+				</div>
+			</div>
+		
+			<a id="prev" class="left carousel-control" href="#">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a id="next" class="right carousel-control" href="#">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+		</div>
+	</body>
+	<script>
+		var t = setInterval(moveNext, 1000);
+
+		var prev = document.getElementById('prev');
+		var next = document.getElementById('next');
+		var show = document.getElementsByTagName('img')[0];
+		
+		var imgArr = ["img/1.jpg" , "img/2.jpg" , "img/3.jpg" , "img/4.jpg" ,"img/5.jpg"];
+		
+		var index = 0;
+		
+		prev.onclick = function(){
+			t = clearInterval(t);
+
+		    index--;
+					
+			if(index < 0){
+				index = imgArr.length - 1;
+			}
+					
+			show.src = imgArr[index];
+
+			return false;
+		}
+		next.onclick = function (){
+		    t = clearInterval(t);
+		    moveNext();
+		    return false;
+		};
+
+		function moveNext(){
+			index++;
+					
+			if(index > imgArr.length - 1){
+				index = 0;
+			}
+					
+			show.src = imgArr[index];
+		}
+	</script>
+</html>

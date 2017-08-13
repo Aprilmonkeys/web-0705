@@ -1,0 +1,33 @@
+﻿1.DOM 的组成部分分别都是什么
+  DOM CORE
+  DOM HTML
+  DOM CSS
+  DOM XML
+
+2.DOM 树结构中常见节点分别都有什么
+  文档节点、元素节点、属性节点和文本节点
+
+3.请为以下元素绑定 click 事件，并输出这是"点击事件"
+  <input type="button" id="btn" value="按钮">
+
+  var btn = document.getElementById('btn');
+  btn.onclick = function(){
+    console.log('这是点击事件');
+  }
+
+4.请写出 window.onload 事件的作用
+  window.onload事件的作用是当页面加载完毕后，再执行指定代码
+
+5.请写出 DOM 查询的所有方法，并说出它们的区别
+  * 第一组
+    getElementById()
+    getElementsByName()
+    getElementsByTagName()
+    getElementsByClassName()
+    * 优点 - 性能好，速度快
+    * 缺点 - 使用较麻烦
+  * 第二组
+    querySelector()
+    querySelectorAll()
+    * 优点 - 简单方便
+    * 缺点 - 性能差

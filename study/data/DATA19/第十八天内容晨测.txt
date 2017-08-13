@@ -1,0 +1,19 @@
+﻿1.事件周期有哪些，分别是什么
+
+2.addEventListener()方法的第三个参数的作用是什么
+
+3.请写出所有的键盘事件
+
+4.请写出以下代码的输出结果
+  var a = 'a';
+  function fn(){
+      console.log(window.a);
+      console.log(this.a);
+  }
+  fn();
+  console.log(a);
+  console.log(window.a);
+  console.log(this.a);
+
+5.Navigator对象的userAgent属性的两个作用是什么
+

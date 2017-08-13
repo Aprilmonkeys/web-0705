@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本的规则</title>
+    <script>
+
+        // TODO 1. 定义一个用于验证的字符串 - 从页面输入框中获取
+        var str = 'xyz123abc45678defg';
+
+        /*
+            TODO 2. 定义正则表达式的规则
+            TODO * 定义一串字符串时 - 完全相同返回 true
+            TODO   * 必要是匹配和位置无关 - 开始、中间和结束的位置
+          */
+        var reg = /123abc/;
+
+        // TODO 3. 验证字符串是否符合正则表达式的规则
+        var result = reg.test(str);
+
+        console.log(result);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>外边距为负值</title>
+    <style>
+        #d1 {
+            width: 200px;
+            height: 100px;
+            background-color: lightslategrey;
+        }
+        #d2 {
+            width: 200px;
+            height: 100px;
+            background-color: lightcoral;
+            /* TODO 外边距为负值时，可能出现元素覆盖效果 */
+            /*margin-top: -50px;*/
+            /* TODO 外边距为负值时，可能移出页面 */
+            margin-left: -50px;
+        }
+    </style>
+</head>
+<body>
+<div id="d1"></div>
+<div id="d2"></div>
+</body>
+</html>

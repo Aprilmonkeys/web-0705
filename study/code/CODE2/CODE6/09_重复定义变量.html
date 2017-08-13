@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>重复定义变量</title>
+    <script>
+
+        var test = 100;
+        console.log(test);// 100
+        /*
+            TODO 当重复定义变量时 - 并不建议
+            TODO * 新定义的变量会将之前定义的变量覆盖
+         */
+        var test = 200;
+        console.log(test);// 200
+        // TODO 重复赋值
+        test = 300;
+        console.log(test);// 300
+        // TODO 报错 - test1 is not defined test1未定义
+        console.log(test1);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

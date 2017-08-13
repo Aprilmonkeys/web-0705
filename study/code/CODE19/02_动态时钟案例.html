@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态时钟案例</title>
+</head>
+<body>
+    <button id="stop">停止</button>
+    <h3 id="show"></h3>
+    <script>
+        // TODO 页面载入完毕，在<h3>中显示当前的时间
+        var show = document.getElementById('show');
+
+        function time(){
+            var date = new Date();
+            show.innerHTML = date;
+        }
+        time();
+
+        /*
+             TODO setInterval()方法设定周期
+             TODO * 当HTML页面加载完毕后，并没有马上执行 function 中的代码
+             TODO * 在HTML页面加载完毕后，再根据设定的时间，这个时间后才执行第一次
+         */
+        var t = setInterval(time,1000);
+
+        var stop = document.getElementById('stop');
+        stop.onclick = function(){
+            clearInterval(t);
+        }
+    </script>
+</body>
+</html>

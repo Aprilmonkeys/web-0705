@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态时钟案例</title>
+</head>
+<body>
+
+<input type="text" id="show">
+<button id="stop">停止</button>
+</body>
+<script>
+    //    var show = document.getElementById('show');
+    //    var t = setInterval(function () {
+    //        var date = new Date().toLocaleTimeString();
+    //        show.value = date;
+    //    },1000);
+    //    var stop = document.getElementById('stop');
+    //    stop.onclick = function () {
+    //        t = clearInterval(t);
+    //    }
+    //实现效果把动态时钟的效果显示在输入框中 使用定时器interval()
+    //先获取时钟的时间
+    var t;
+    var show = document.getElementById('show');
+    //Wed Aug 02 2017 11:54:06 GMT+0800 (CST)
+    t = setInterval(function () {
+        var date = new Date().toLocaleTimeString();
+        show.value = date;
+    }, 100);
+
+    var btn = document.getElementById('stop')
+    btn.onclick = function () {
+        clearInterval(t);
+    }
+
+</script>
+</html>

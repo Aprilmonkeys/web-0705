@@ -1,0 +1,18 @@
+﻿1.以下哪个方法不是 Element 对象的
+  A setAttribute()
+  B getAttribute()
+  C replaceNode()
+  D removeAttribute()
+
+2.以下哪些属性不是 Element 对象的
+  A firstElementChild
+  B nextSibling
+  C lastElementChild
+  D childNodes
+
+3.请写出 clientHeight 的值等于哪几个属性值的相加结果
+
+4.请写出 style 属性与 getComputedStyle() 方法的区别
+
+5.innerHTML属性的作用是什么，以及应用中会遇到什么问题
+

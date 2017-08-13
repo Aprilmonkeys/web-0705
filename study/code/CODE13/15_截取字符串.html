@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>截取字符串</title>
+    <script>
+
+        var str = 'abcdefg';
+        /*
+            TODO slice(start,end)
+            TODO * start - 开始截取的位置(被包含)
+            TODO * end - 结束截取的位置(不被包含)
+         */
+        var result1 = str.slice(0,7);
+        console.log(result1);
+        /*
+            TODO 参数start和end
+            TODO * 无论是正数还是负数，start的位置一定要在end的左边
+            TODO * 不同
+            TODO   * 正数 - 从左向右排列(从 0 开始)
+            TODO   * 负数 - 从右向左排列(从 -1 开始)
+         */
+        var result2 = str.slice(-3,-1);
+        console.log(result2);
+        /*
+            TODO substr(start,length)
+            TODO * start - 开始截取的位置
+            TODO * length - 截取的字符个数
+            TODO   * 可选项 - 默认，表示截取到最后
+         */
+        var result3 = str.substr(0);
+        console.log(result3);
+        /*
+            TODO substring(start,end)
+            TODO * start - 开始截取的位置(被包含)
+            TODO * end - 结束截取的位置(不被包含)
+         */
+        var result4 = str.substring(0,1);
+        console.log(result4);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

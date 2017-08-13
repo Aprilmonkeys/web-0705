@@ -1,0 +1,20 @@
+﻿1.函数的参数分几种，分别在哪里使用
+
+2.函数的默认 return 值是什么
+
+3.变量的作用域分几种，分别进行描述其特点
+
+4.请写出以下代码输出的结果
+  console.log(a);
+  var a = 'a';
+  console.log(a);
+  function fn(){
+      console.log(a);
+      var a = 'b';
+      console.log(a);
+  }
+  fn();
+  console.log(a);
+
+5.请写出函数定义的两种方式
+

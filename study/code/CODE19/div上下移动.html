@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>div上下移动</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 400px;
+            /*这里因为可以直接用style获取内联样式所以把height写在了内联样式里*/
+            /*height: 400px;*/
+            background-color: #f40;
+            position: absolute;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">按钮</button>
+<div id="div" style="height:400px"></div>
+<script>
+
+    var btn = document.getElementById('btn');
+    var div = document.getElementById('div');
+    var height = parseInt(div.style.height);
+    //console.log(height);//400
+    /*
+     * 点击按钮要让一个盒子以一定的速度来回的上下来回变换高度
+     * 那么假设盒子先往上变小,到高度是0的时候就要往下变大,但是当盒子的高度到
+     * 400的时候就要盒子再往上变大
+     *   */
+    //设向上走是true
+    btn.onclick = function () {
+        forward(true,4);
+    };
+    function forward(flag,count) {
+        if (flag) {
+            var num=0;
+            var t = setInterval(function () {
+                div.style.height = height + 'px';
+                if (flag) {
+                    height-=10;
+                    if (height === 0) {
+                        flag = false;
+                        num++;
+                    }
+                } else {
+                    height+=10;
+                    if (height === 400) {
+                        flag = true;
+                        num++;
+                    }
+                }
+                if(count===num){
+                    clearInterval(t);
+                }
+            }, 10)
+        }
+    }
+
+
+</script>
+</body>
+</html>

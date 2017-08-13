@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建对象</title>
+    <script>
+        /*
+            TODO 创建了一个 hero1 对象
+            TODO * 属性 - name,age
+            TODO * 方法 - sayMe()
+         */
+        var hero1 = {
+            name : 'zhangwuji',
+            age : 18,
+            sayMe : function(){
+                console.log('this is zhangwuji.');
+            }
+        }
+        /*
+            TODO 创建了一个 hero2 对象
+            TODO * 属性 - name
+            TODO * 方法 - sayMe()
+         */
+        var hero2 = new Object();
+        hero2.name = 'zhouzhiruo';
+        hero2.sayMe = function(){
+            console.log('this is zhouzhiruo.');
+        }
+        /*
+            TODO Object.create(obj)方法
+            TODO * 通过这种方式创建新的对象时，必须先具有一个对象
+            TODO * 创建的新对象具有与传递已存在的对象相同的属性和方法
+         */
+        var hero3 = Object.create(hero1);
+        // TODO 表示创建了一个空对象
+        var hero4 = Object.create(null);
+        hero4.name = 'zhaomin';
+        hero4.sayMe = function(){
+            console.log('this is zhaomin');
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

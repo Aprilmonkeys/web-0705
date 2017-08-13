@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符类规则</title>
+    <script>
+
+        // TODO 1. 定义一个用于验证的字符串 - 从页面输入框中获取
+        var str = '12345678abcdefg';
+
+        /*
+         TODO 2. 定义正则表达式的规则
+         TODO * [] - 定义字符集合，匹配当前集合中的任意字符
+         TODO   * 只要其中任意一个匹配 - true
+         TODO * 常规用法
+         TODO   * 包含数字 - [0-9]
+         TODO   * 包含字母 - [a-zA-Z]
+         */
+        var reg = /[0123456789]/;
+
+        // TODO 3. 验证字符串是否符合正则表达式的规则
+        var result = reg.test(str);
+
+        console.log(result);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

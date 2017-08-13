@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分隔字符串</title>
+    <script>
+        // TODO 每个字符之间，使用了逗号
+        var str1 = 'a,b,c,d,e,f,g';
+        /*
+            TODO split()方法
+            TODO * 作用 - 将一个使用分隔符分隔的字符串转换为一个数组
+            TODO * 参数 - 分隔符
+            TODO * 返回值 - 数组
+         */
+        var arr1 = str1.split(',');
+        console.log(arr1);
+
+        var str2 = 'a;b;c;d;e;f;g';
+        var arr2 = str2.split(';');
+        console.log(arr2);
+
+        var str3 = 'a b c d e f g';
+        var arr3 = str3.split(' ');
+        console.log(arr3);
+
+        // TODO 将以下字符串的字符顺序反转
+        var str4 = 'abcdefg';
+        var arr4 = str4.split('');
+        console.log(arr4.reverse().toString());
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

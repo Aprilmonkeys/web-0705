@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>判断节点类型</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			body {
+				padding-top: 50px;
+				padding-left: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container" class="container">
+			<div class="col-md-6">
+				<h3>判断文档节点</h3>
+				<button id="dname" class="btn btn-primary">nodeName</button>
+				<button id="dtype" class="btn btn-primary">nodeType</button>
+				<button id="dvalue" class="btn btn-primary">nodeValue</button>
+				<h3>判断元素节点</h3>
+				<button id="ename" class="btn btn-primary">nodeName</button>
+				<button id="etype" class="btn btn-primary">nodeType</button>
+				<button id="evalue" class="btn btn-primary">nodeValue</button>
+				<h3>判断属性节点</h3>
+				<button id="aname" class="btn btn-primary">nodeName</button>
+				<button id="atype" class="btn btn-primary">nodeType</button>
+				<button id="avalue" class="btn btn-primary">nodeValue</button>
+				<h3>判断文本节点</h3>
+				<button id="tname" class="btn btn-primary">nodeName</button>
+				<button id="ttype" class="btn btn-primary">nodeType</button>
+				<button id="tvalue" class="btn btn-primary">nodeValue</button>
+			</div>
+			<div id="show" class="col-md-6" style="padding-top: 50px;"></div>
+		</div>
+		<script>
+			var show = document.getElementById('show');
+			var content = '';
+			
+			var dname = document.getElementById('dname');
+			dname.onclick = function(){
+				content += '<h5>文档节点的nodeName: ' + document.nodeName + '</h5>';
+				show.innerHTML = content;
+			}
+			var dtype = document.getElementById('dtype');
+			dtype.onclick = function(){
+				content += '<h5>文档节点的nodeType: ' + document.nodeType + '</h5>';
+				show.innerHTML = content;
+			}
+			var dvalue = document.getElementById('dvalue');
+			dvalue.onclick = function(){
+				content += '<h5>文档节点的nodeValue: ' + document.nodeValue + '</h5><br>';
+				show.innerHTML = content;
+			}
+			
+			var ename = document.getElementById('ename');
+			ename.onclick = function(){
+				content += '<h5>元素节点的nodeName: ' + ename.nodeName + '</h5>';
+				show.innerHTML = content;
+			}
+			var etype = document.getElementById('etype');
+			etype.onclick = function(){
+				content += '<h5>元素节点的nodeType: ' + etype.nodeType + '</h5>';
+				show.innerHTML = content;
+			}
+			var evalue = document.getElementById('evalue');
+			evalue.onclick = function(){
+				content += '<h5>元素节点的nodeValue: ' + evalue.nodeValue + '</h5><br>';
+				show.innerHTML = content;
+			}
+			
+			var aname = document.getElementById('aname');
+			aname.onclick = function(){
+				var attrNode = aname.getAttributeNode('id');
+				content += '<h5>属性节点的nodeName: ' + attrNode.nodeName + '</h5>';
+				show.innerHTML = content;
+			}
+			var atype = document.getElementById('atype');
+			atype.onclick = function(){
+				var attrNode = atype.getAttributeNode('id');
+				content += '<h5>属性节点的nodeType: ' + attrNode.nodeType + '</h5>';
+				show.innerHTML = content;
+			}
+			var avalue = document.getElementById('avalue');
+			avalue.onclick = function(){
+				var attrNode = avalue.getAttributeNode('id');
+				content += '<h5>属性节点的nodeValue: ' + attrNode.nodeValue + '</h5><br>';
+				show.innerHTML = content;
+			}
+			
+			var tname = document.getElementById('tname');
+			tname.onclick = function(){
+				var textNode = tname.firstChild;
+				content += '<h5>文本节点的nodeName: ' + textNode.nodeName + '</h5>';
+				show.innerHTML = content;
+			}
+			var ttype = document.getElementById('ttype');
+			ttype.onclick = function(){
+				var textNode = ttype.firstChild;
+				content += '<h5>文本节点的nodeType: ' + textNode.nodeType + '</h5>';
+				show.innerHTML = content;
+			}
+			var tvalue = document.getElementById('tvalue');
+			tvalue.onclick = function(){
+				var textNode = tvalue.firstChild;
+				content += '<h5>文本节点的nodeValue: ' + textNode.nodeValue + '</h5>';
+				show.innerHTML = content;
+			}
+		</script>
+	</body>
+</html>

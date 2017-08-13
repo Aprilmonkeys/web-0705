@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画效果</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 50px;
+        }
+        #d {
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="d"></div>
+    <script>
+        // TODO 通过 JS 代码改变 div 的位置
+        var div = document.getElementById('d');
+        // TODO 获取默认的top和left的值
+        var style = window.getComputedStyle(div,null);
+        var divTop = parseInt(style.top);
+        var divLeft = parseInt(style.left);
+        var width = parseInt(style.width);
+
+        // TODO 获取当前页面的宽度
+        var html = document.documentElement;
+        //var body = document.body;
+        var htmlStyle = window.getComputedStyle(html,null);
+        //var bodyStyle = window.getComputedStyle(body,null);
+        var htmlWidth = parseInt(htmlStyle.width);
+
+        // TODO 决定向左移动还是向右移动的开关
+        var flag = true;// 默认向右
+
+        var speed = 0.1;// 表示速度
+
+        var t = setInterval(function(){
+            if(flag){// 表示向右移动
+                divLeft += speed;
+            }else{// 表示向左移动
+                divLeft -= speed;
+            }
+            // TODO 加速
+            speed += 0.01;
+
+            // TODO 表示 div 移动到页面的最右边
+            if(divLeft+width >= htmlWidth){
+                //clearInterval(t);
+                flag = false;
+            }
+            // TODO 表示 div 移动到页面的最左边
+            if(divLeft <= 0){
+                flag = true;
+            }
+
+            //divTop++;
+            //divLeft++;
+
+            //div.style.top = divTop + 'px';
+            div.style.left = divLeft + 'px';
+        },5);
+    </script>
+</body>
+</html>

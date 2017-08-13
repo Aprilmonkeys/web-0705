@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>隐式类型转换</title>
+    <script>
+        // TODO 转换成字符串
+        /*var num = 100;
+        var boo = true;
+
+        var result1 = num + '';// '100'
+        var result2 = boo + '';// 'true'
+
+        console.log(typeof result1);
+        console.log(typeof result2);*/
+
+        /*
+            TODO 转换成数字
+            TODO * 布尔类型 - true->1;false->0
+            TODO * 字符串类型
+            TODO   * 如果字符串中的内容是数字内容 -> 转换为具体的数字值
+            TODO   * 如果字符串中的内容是普通文本(包含字符) -> 转换为 NaN
+          */
+        /*var str1 = '100';
+        var str2 = 'number';
+        var boo = true;
+
+        var result1 = +str1;// 100
+        var result2 = +str2;// NaN
+        var result3 = +boo;// 1
+
+        console.log(typeof result1);// number
+        console.log(typeof result2);// number
+        console.log(typeof result3);// number*/
+
+        /*
+            TODO 转换成布尔
+            TODO * number类型 - 0->false;非0->true
+            TODO * string类型 - 空字符串->false;非空字符串->true
+          */
+        var num = 100;
+        var str = 'string';// 空字符串
+
+        var result1 = !!num;
+        var result2 = !!str;
+
+        console.log(typeof result1);
+        console.log(typeof result2);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

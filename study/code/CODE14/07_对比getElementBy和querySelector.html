@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>对比getElementBy和querySelector</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<button id="btn1">按钮</button>
+		<button class="btn">按钮</button>
+		<button>按钮</button>
+		<button>按钮</button>
+		<button>按钮</button>
+		<button>按钮</button>
+		<script>
+			/*// TODO 通过标签名获取所有的button按钮
+			var buttons = document.getElementsByTagName('button');
+			console.log(buttons.length);// 6
+
+			// TODO 以下代码目前不用掌握 - 新增一个新的按钮
+			var body = document.body;
+			var button = document.createElement('button');
+			button.innerHTML = '按钮';
+			body.appendChild(button);
+
+			console.log(buttons.length);// 7*/
+
+			/*var buttons = document.querySelectorAll('button');
+			console.log(buttons.length);// 6
+
+            var body = document.body;
+            var button = document.createElement('button');
+            button.innerHTML = '按钮';
+            body.appendChild(button);
+
+            console.log(buttons.length);// 6*/
+
+
+            console.time('querySelector');
+            for (var i = 0; i < 100000; i++) {
+                document.querySelector("#btn1");
+            }
+            console.timeEnd('querySelector');
+            //querySelector: 51.9ms
+
+            console.time('getElementById');
+            for (var i = 0; i < 100000; i++) {
+                document.getElementById("btn1");
+            }
+            console.timeEnd('getElementById');
+            //getElementById: 14.9ms
+
+            console.time('querySelectorAll');
+            for (var i = 0; i < 10000; i++) {
+                document.querySelectorAll(".btn");
+            }
+            console.timeEnd('querySelectorAll');
+            //querySelectorAll: 14.6ms
+
+            console.time('getElementsByClassName');
+            for (var i = 0; i < 10000; i++) {
+                document.getElementsByClassName("btn");
+            }
+            console.timeEnd('getElementsByClassName');
+            //getElementsByClassName: 3.63ms
+		</script>
+	</body>
+</html>

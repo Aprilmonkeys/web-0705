@@ -1,0 +1,7 @@
+{
+  "name" : "zhangwuji",
+  "age" : 18,
+  "test" : true,
+  "object" : {},
+  "array" : [1,2,3,4,5]
+}

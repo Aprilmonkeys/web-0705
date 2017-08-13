@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>阻止默认行为</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style type="text/css">
+			body {
+				padding: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<a class="btn btn-link" id="a" href="#">链接</a>
+		<script type="text/javascript">
+			var a = document.getElementById('a');
+			/*a.addEventListener('click',function(event){
+			    /!*
+			    	TODO 阻止默认行为 - preventDefault()方法
+			    	TODO * 对处理函数中的逻辑代码并不影响
+			     *!/
+			    event.preventDefault();
+                console.log('this is a');
+			});*/
+
+			/*a.onclick = function(event){
+                /!*
+                 	TODO return false也可以实现阻止默认行为
+                 	TODO * 如果编写在逻辑代码之前，还会阻止逻辑代码的执行
+                 	TODO * 只有在 onclick 方式绑定事件有效
+                  *!/
+                return false;
+			    console.log('this is a');
+
+			}*/
+
+			a.attachEvent('onclick',function(event){
+			    console.log('this is a');
+			    /*
+			    	TODO preventDefault()方法 - IE8及以下版本不支持
+			    	TODO * returnValue 属性 - IE8及以下版本支持
+			     */
+			    event.returnValue = false;
+			});
+		</script>
+	</body>
+</html>

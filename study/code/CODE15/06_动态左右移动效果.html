@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>动态左右移动效果</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			body {
+				padding: 100px;
+			}
+			select {
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="col-md-4">
+				<select id="first" size="10" multiple>
+					<option>Argentina</option>
+					<option>Brazil</option>
+					<option>Canada</option>
+					<option>Chile</option>
+					<option>China</option>
+					<option>Cuba</option>
+					<option>Denmark</option>
+					<option>Egypt</option>
+					<option>France</option>
+					<option>Greece</option>
+					<option>Spain</option>
+				</select>
+			</div>
+			<div class="col-md-4">
+				<p><button id="add" class="btn btn-primary btn-block">&gt;</button></p>
+				<p><button id="add_all" class="btn btn-primary btn-block">&gt;&gt;</button></p>
+				<p><button id="remove" class="btn btn-primary btn-block">&lt;</button></p>
+				<p><button id="remove_all" class="btn btn-primary btn-block">&lt;&lt;</button></p>
+			</div>
+			<div class="col-md-4">
+				<select id="second" size="10" multiple></select>
+			</div>
+		</div>
+	</body>
+	<script>
+		var add = document.getElementById('add');
+		add.onclick = function(){
+			var first = document.getElementById('first');
+			var second = document.getElementById('second');
+			var opts = first.getElementsByTagName('option');
+			for(var i=0;i<opts.length;i++){
+				if(opts[i].selected){
+					second.appendChild(opts[i]);
+					break;
+				}
+			}
+		}
+		var add_all = document.getElementById('add_all');
+		add_all.onclick = function(){
+			var first = document.getElementById('first');
+			var second = document.getElementById('second');
+			var opts = first.getElementsByTagName('option');
+			var length = opts.length;
+			for(var i=0;i<length;i++){
+				second.appendChild(opts[0]);
+			}
+		}
+		var remove = document.getElementById('remove');
+		remove.onclick = function(){
+			var first = document.getElementById('first');
+			var second = document.getElementById('second');
+			var opts = second.getElementsByTagName('option');
+			for(var i=0;i<opts.length;i++){
+				if(opts[i].selected){
+					first.appendChild(opts[i]);
+					break;
+				}
+			}
+		}
+		var remove_all = document.getElementById('remove_all');
+		remove_all.onclick = function(){
+			var first = document.getElementById('first');
+			var second = document.getElementById('second');
+			var opts = second.getElementsByTagName('option');
+			var length = opts.length;
+			for(var i=0;i<length;i++){
+				first.appendChild(opts[0]);
+			}
+		}
+	</script>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>动态操作表格</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			body {
+				padding: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="col-md-4">
+				<div class="form-group">
+					<label>name: </label>
+					<input type="text" class="form-control" id="name">
+				</div>
+				<div class="form-group">
+					<label>email: </label>
+					<input type="text" class="form-control" id="email">
+				</div>
+				<div class="form-group">
+					<label>salary: </label>
+					<input type="text" class="form-control" id="salary">
+				</div>
+				<button id="add" class="btn btn-default">Submit</button>
+			</div>
+			<div class="col-md-8">
+				<table id="data" class="table table-striped table-hover ">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Salary</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>King</td>
+							<td>king@qq.com</td>
+							<td>80000</td>
+							<td><button name="delete" class="btn btn-danger btn-xs">删除</button></td>
+						</tr>
+						<tr>
+							<td>Jerry</td>
+							<td>jerry@qq.com</td>
+							<td>8000</td>
+							<td><button name="delete" class="btn btn-danger btn-xs">删除</button></td>
+						</tr>
+						<tr>
+							<td>Tom</td>
+							<td>tom@qq.com</td>
+							<td>10000</td>
+							<td><button name="delete" class="btn btn-danger btn-xs">删除</button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<script>
+            // 1. 向表格动态添加数据
+            var add = document.getElementById('add');
+            add.onclick = function(){
+                // 获取表单元素的值
+                var nameValue = document.getElementById('name').value;
+                var emailValue = document.getElementById('email').value;
+                var salaryValue = document.getElementById('salary').value;
+                // 创建表单新的数据
+                var tr = document.createElement('tr');
+                tr.innerHTML = '<td>' + nameValue + '</td>' +
+                    '<td>' + emailValue + '</td>' +
+                    '<td>' + salaryValue + '</td>' +
+                    '<td><button name="delete" class="btn btn-danger btn-xs">删除</button></td>';
+                var data = document.getElementById('data');
+                var tbody = data.getElementsByTagName('tbody')[0];
+                tbody.appendChild(tr);
+                // 为新数据的删除按钮绑定事件
+                var del = tr.getElementsByTagName('button')[0];
+                del.onclick = deleteData;
+            }
+            // 2. 从表格动态删除数据
+            var dels = document.getElementsByName('delete');
+            for (var i=0;i<dels.length;i++) {
+                dels[i].onclick = deleteData;
+            }
+            function deleteData(){
+                var tr = this.parentElement.parentElement;
+                tr.parentElement.removeChild(tr);
+            }
+		</script>
+	</body>
+</html>

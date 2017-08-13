@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>DOM修改样式案例</title>
+		<style type="text/css">
+			body {
+				padding: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn">按钮</button>
+		<script type="text/javascript">
+			var btn = document.getElementById('btn');
+			button(btn);
+			
+			function button(elem){
+				elem.style.padding = '10px';
+				elem.style.fontSize = '15px';
+				elem.style.color = '#ffffff';
+				elem.style.borderColor = 'transparent';
+				elem.style.backgroundColor = '#2780e3';
+			}
+		</script>
+	</body>
+</html>

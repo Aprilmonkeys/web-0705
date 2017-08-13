@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数与Function对象</title>
+    <script>
+
+        /*
+            TODO 构造函数方式创建对象
+            TODO * var 对象名 = new Object();
+
+            TODO * var str = new String();
+            TODO * var num = new Number();
+            TODO * var boo = new Boolean();
+
+            TODO * var fun = new Function();
+          */
+        //var obj1 = new Object();
+
+        /*
+            TODO var fun = new Function();
+            TODO * 创建了一个 Function 类型的对象
+            TODO * 该对象实际是一个函数
+         */
+        var fun = new Function();
+        //console.log(fun);
+
+        /*
+            TODO new Function()
+            TODO * 最后一个参数 - 识别为 函数体
+            TODO * 除最后的参数以外 - 都是 形参
+         */
+        var fn = new Function('a','b','return a+b;');
+        console.log(fn);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>事件监听器的兼容方案</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style type="text/css">
+			body {
+				padding: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn" class="btn btn-primary">事件监听器</button>
+		<script type="text/javascript">
+			var btn = document.getElementById('btn');
+			/*btn.addEventListener('click',function(){
+			    /!*
+			    	TODO 在事件绑定的处理函数中
+			    	TODO * 一般情况下，比较少的使用 元素 变量
+			    	TODO * 更多使用 this 替代元素变量
+			     *!/
+			    console.log(btn, this);
+			});*/
+
+			/*
+				TODO attachEvent()方法
+				TODO * this - 并不是代表 btn 按钮，而是代表了 window 对象
+			 */
+			/*btn.attachEvent('onclick',function(){
+			    console.log(btn);
+			    console.log(this);
+			})*/
+
+            bind(btn,'click',function(){
+                /*
+                	TODO IE8及以下版本的浏览器 - window 对象
+                	TODO 除了IE8及以下版本的浏览器 - 绑定当前事件的标签
+
+                	TODO 浏览器兼容解决方案 - this的含义是一致的
+                 */
+                console.log(this);
+			});
+
+			function bind(elem, eventName, functionName){
+                if(elem.addEventListener){
+                    elem.addEventListener(eventName, functionName);
+                }else{
+                    elem.attachEvent('on' + eventName, function(){
+                        // TODO 代码都是自定义的
+
+                        /*
+                         	TODO 实现与原本的逻辑保持一致的
+                         	TODO * functionName() - 处理函数的调用
+                         	TODO * functionName是一个回调函数，一定是 Function 对象
+                         	TODO   * 一定具有 call(this) 方法
+                         	TODO   * 传递的实参是什么，this就指代什么
+                          */
+                        functionName.call(elem);
+					});
+                }
+            }
+
+            function fn(){
+
+			}
+
+            btn.attachEvent('onclick',fn);
+
+            function attachEvent(eventName, functionName){
+                functionName();
+			}
+
+		</script>
+	</body>
+</html>

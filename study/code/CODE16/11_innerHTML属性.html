@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>innerHTML属性</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            border: 1px black solid;
+        }
+
+    </style>
+</head>
+<body>
+<input type="text" id="data" >
+<input id="btn" type="button" value="提交">
+<div id="show"></div>
+<script>
+    var btn = document.getElementById('btn');
+    btn.onclick = function(){
+        var data = document.getElementById('data');
+        var show = document.getElementById('show');
+        show.innerHTML = data.value;
+    }
+</script>
+</body>
+</html>

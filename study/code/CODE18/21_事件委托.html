@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件委托</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <button id="btn" class="btn btn-primary">添加</button>
+    <ul id="parent" class="list-group">
+        <li class="list-group-item"><a href="#">链接</a></li>
+        <li class="list-group-item"><a href="#">链接</a></li>
+        <li class="list-group-item"><a href="#">链接</a></li>
+    </ul>
+</div>
+<script>
+    var btn = document.getElementById('btn');
+    btn.onclick = function(){
+        var li = document.createElement('li');
+        li.setAttribute('class','list-group-item');
+        li.innerHTML = '<a href="#">链接</a>';
+
+        var parent = document.getElementById('parent');
+        parent.appendChild(li);
+    }
+
+    // TODO 原本给所有<a>标签绑定事件 -> 给<ul>标签绑定事件
+    /*var aElems = document.getElementsByTagName('a');
+    for(var i=0;i<aElems.length;i++){
+        var aElem = aElems[i];
+        aElem.onclick = function(){
+            console.log('这是一个链接元素')
+        }
+    }*/
+    var ul = document.getElementById('parent');
+    ul.onclick = function(event){
+        var elemName = event.target;
+        if(elemName.nodeName == 'A'){
+            console.log('这是一个ul元素')
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>周四练习</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 400px;
+            height: 400px;
+            background-color: #f40;
+            /*操作盒子要使用偏移量值操作top,left*/
+            position: absolute;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">按钮</button>
+<div id="div"></div>
+<script>
+    var btn = document.getElementById('btn');
+    var div=document.getElementById('div');
+    //div height 获取当前div的有效样式
+    var divstyle = window.getComputedStyle(div);
+    var divheight = parseInt(divstyle.height);//400
+    //1.这个是点击按钮盒子匀速变小的方法
+    //    btn.onclick=function() {
+    //        setInterval(function () {
+    //            div.style.height=divheight+'px';
+    //            divheight--;
+    //        }, 100);
+    //    };
+    /*btn.onclick=function(){
+       setInterval(function(){
+           div.style.height=divheight+'px';
+           divheight--;
+           if(divheight<=0){
+               setInterval(function(){
+                   div.style.height=divheight+'px';
+                   divheight++;
+                   if(divheight>=400){
+                       setInterval(function(){
+                           div.style.height=divheight+'px';
+                           divheight--;},10)
+                   }
+                   },10)
+           }
+       },10)*/
+    btn.onclick=function(){
+        upDown(true, 4);
+    };
+
+    function upDown (flag, count) {
+        if(flag){
+            var exCount = 0;
+            var t = setInterval(function(){
+                div.style.height=divheight+'px';
+                if(flag){
+                    divheight -= 10;
+                    if(divheight === 0) {
+                        flag =false;
+                        exCount ++;
+                    }
+                } else {
+                    divheight += 10;
+                    if(divheight === 400) {
+                        flag =true;
+                        exCount ++;
+                    }
+                }
+                if(count === exCount){
+                    clearInterval(t);
+                }
+
+            },10);
+        }
+    }
+
+
+
+</script>
+
+</body>
+</html>

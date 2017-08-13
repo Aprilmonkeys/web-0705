@@ -1,0 +1,28 @@
+﻿1.创建元素节点、文本节点及属性节点的方法分别是什么
+  创建元素节点：createElement()
+  创建属性节点：createAttribute()
+  创建文本节点：creaateTextNode()
+
+2.请写出创建 <li class="group-item">这是一个新的li标签</li> 标签
+  添加到 id 为 "mylist" 的 <ul> 标签中（代码实现）
+
+  var li = document.createElement('li');
+  var text = document.createTextNode('这是一个新的li标签');
+  li.appendChild(text);
+  var attr = document.createAttribute('class');
+  attr.nodeValue = 'group-item';
+  li.setAttributeNode(attr);
+
+  var mylist = document.getElementById('mylist);
+  mylist.appendChild(li);
+
+3.使用 Node 对象的属性遍历节点时，空白节点是由什么产生的
+  空白节点由HTML页面源代码中的换行符产生
+
+4.请写出 parentNode 与 parentElement 的区别
+  parentNode：表示父节点，包含元素节点和文档节点
+  parentElement：表示父元素节点，只能是元素节点
+
+5.请写出 Node 对象中可以实现插入节点的方法
+  a. appendChild()
+  b. insertBefore()

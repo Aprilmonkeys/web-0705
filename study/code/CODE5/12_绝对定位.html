@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绝对定位</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        div {
+            width: 200px;
+            height: 100px;
+            background-color: lightcoral;
+        }
+
+        #d1 {
+            /*
+                TODO 开启绝对定位
+                TODO * 默认开启定位 - 不会改变当前元素显示的位置
+             */
+            position: absolute;
+            /*
+                TODO 在开启定位的基础上
+                TODO * top - 设置距离上边的值
+                TODO * right - 设置距离右边的值
+                TODO * bottom - 设置距离下边的值
+                TODO * left - 设置距离左边的值
+             */
+            left: 100px;
+            top: 100px;
+        }
+        #d2 {
+            position: absolute;
+            right: 100px;
+            bottom: 100px;
+        }
+    </style>
+</head>
+<body>
+<div id="d1"></div>
+<div id="d2"></div>
+</body>
+</html>

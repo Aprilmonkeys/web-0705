@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绝对定位三</title>
+    <style>
+        /*
+            TODO 定义父级与子级元素
+            TODO 1. 只为子级元素设置绝对定位的话 - 相对于HTML页面的
+            TODO 2. 同时为父级和子级元素设置绝对定位的话
+            TODO    * 父级元素相对于HTML页面的
+            TODO    * 子级元素相对于父级元素的
+         */
+        #d1 {
+            width: 300px;
+            height: 300px;
+            background-color: lightskyblue;
+
+            position: absolute;
+            left: 100px;
+            top: 100px;
+        }
+        #d11 {
+            width: 200px;
+            height: 100px;
+            background-color: lightcoral;
+
+            position: absolute;
+            left: 50px;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+<div id="d1">
+    <div id="d11"></div>
+</div>
+</body>
+</html>

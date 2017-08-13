@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>导航条</title>
+		<style type="text/css">
+
+			/*清除默认样式*/
+			*{
+				margin: 0;
+				padding: 0;
+			}
+
+			/*设置ul*/
+			ul{
+				/*去掉项目符号*/
+				list-style: none;
+				/*设置背景颜色*/
+				background-color: #6495ED;
+				/*设置宽度*/
+				width: 1000px;
+				/*设置居中*/
+				margin: 50px auto;
+				/*处理高度塌陷*/
+				overflow: hidden;
+			}
+
+			/*设置li*/
+			li{
+				/*向左浮动*/
+				float: left;
+				/*设置一个宽度*/
+				/*width: 250px;*/
+				width: 25%;
+			}
+
+			/*设置超链接*/
+			a{
+				/*将超链接设置为块元素*/
+				display: block;
+				/*设置颜色*/
+				color: #fff;
+				/*去除下划线
+				 	text-decoration: none; 用来去除超链接的下划线
+				 * */
+				text-decoration: none;
+				/*设置文字居中
+				 	text-align: center; 设置文字水平居中
+				 * */
+				text-align: center;
+				/*设置一个padding*/
+				padding: 6px 0px;
+			}
+
+			/*设置鼠标移入的样式*/
+			a:hover{
+				background-color: #CC0000;
+			}
+
+		</style>
+	</head>
+	<body>
+
+		<!--创建一个无序列表-->
+		<ul>
+			<li><a href="#">首页</a></li>
+			<li><a href="#">新闻</a></li>
+			<li><a href="#">联系</a></li>
+			<li><a href="#">关于</a></li>
+		</ul>
+
+	</body>
+</html>

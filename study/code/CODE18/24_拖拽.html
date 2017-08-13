@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖拽</title>
+    <style>
+        body {
+            padding: 50px;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+        #d1 {
+            background-color: lightskyblue;
+        }
+        #d2 {
+            left: 300px;
+            top: 200px;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+<p>我是一段文本内容.</p>
+<div id="d1"></div>
+<div id="d2"></div>
+<script>
+    /*
+        TODO 实现拖拽的页面中，可能包含文本内容
+        TODO * 如果选中一些文本内容的话，将这些文本内容拖拽到浏览器窗口的地址栏中
+        TODO   * 自动使用搜索引擎，搜索相关的文本内容
+     */
+
+    var flag = false;// TODO 开关变量，默认是关
+    var d1 = document.getElementById('d1');
+    var x,y;
+
+    /*
+        TODO 由于 document 对象绑定 mousedown 事件
+        TODO * 鼠标在页面中任意一个位置，鼠标的 mousedown 事件都会被触发 - 开关设置为 true
+        TODO   * 当鼠标在页面的任意位置 mousedown 时，div都会跟随鼠标移动
+        TODO * 鼠标必须在div范围内 mousedown 时，div才能跟随鼠标移动
+        TODO   * 将绑定 mousedown 事件的 document 对象改为 div 元素
+     */
+    d1.addEventListener('mousedown',function(event){
+       flag = true;
+
+       x = event.offsetX;
+       y = event.offsetY;
+       console.log(x,y);
+       // TODO 页面第一次加载完毕后，div元素处在最顶层 - 无论选中谁，最终选中的都是div元素
+       d1.setCapture(true);
+    });
+    d1.addEventListener('mousemove',function(event){
+        console.log('this is mousemove')
+        if(flag){
+            var pageX = event.pageX - x;
+            var pageY = event.pageY - y;
+            console.log(pageX,pageY)
+
+            d1.style.top = pageY + 'px';
+            d1.style.left = pageX + 'px';
+        }
+    });
+    d1.addEventListener('mouseup',function(event){
+        flag = false;
+
+        d1.releaseCapture();
+    });
+</script>
+</body>
+</html>

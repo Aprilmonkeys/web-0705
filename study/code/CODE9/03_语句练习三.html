@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>语句练习三</title>
+    <script>
+        /*
+            TODO 假设投资的年利率为5%，问投资多少年可以将1000元变成5000元
+            TODO * 第一年 -> 1000,赚50 -> 1050
+            TODO * 第二年 -> 1050,赚5% ->
+         */
+        /*for (var num=1000; num<=5000; ) {
+        }*/
+        // TODO 表示最初的投资额,而且总的回报
+        var num = 1000;
+        // TODO 表示投资多少年
+        var i = 0;
+        while (num <= 5000) {
+            num = num + num * 0.05;
+            i++;
+        }
+        console.log(i);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

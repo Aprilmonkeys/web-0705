@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">按钮</button>
+<script>
+    var btn = document.getElementById('btn');
+    /*
+        TODO IE浏览器中是有效的
+        TODO * setCapture()方法
+        TODO   * 将调用该方法的元素，设置在最顶层 - 只有一次有效
+        TODO * releaseCapture()方法
+        TODO   * 取消 setCapture() 方法的作用
+        TODO * 注意 - 这一组方法是由IE提供的，其他浏览器不一定会支持
+     */
+    btn.setCapture(true);
+    //btn.releaseCapture();
+
+    btn.onclick = function(){
+        alert('这是一个按钮');
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动</title>
+    <style>
+        /*
+            TODO 将页面中所有元素都设置为浮动
+            TODO * 都会脱离文档流 - 垂直方向排列
+            TODO * 变成水平方向排列
+            TODO * 如果元素的宽度相加 大于 页面的宽度时
+            TODO   * 自动换行
+         */
+        div {
+            width: 400px;
+            height: 100px;
+        }
+        #d1 {
+            background-color: lightskyblue;
+            /*
+                TODO 设置左浮动 - float : left
+             */
+            float: left;
+        }
+        #d2 {
+            background-color: lightgray;
+            float: left;
+        }
+        #d3 {
+            background-color: lightcoral;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div id="d1"></div>
+<div id="d2"></div>
+<div id="d3"></div>
+</body>
+</html>

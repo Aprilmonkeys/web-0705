@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修饰符</title>
+    <script>
+        var str = 'ABCDE';
+
+        // TODO 字面量方式
+        var reg1 = /[a-z]{3,5}/i;
+        // TODO 构造函数方式
+        var reg2 = new RegExp('[a-z]{3,5}','i');
+
+        console.log(reg1.test(str));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

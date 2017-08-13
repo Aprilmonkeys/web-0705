@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>创建元素节点</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			body {
+				padding: 100px;
+			}
+			li {
+				height: 43px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="container" class="list-group">
+			<li id="one" class="list-group-item">这是一个 id 为 one 的选项</li>
+			<li id="two" name="list" class="list-group-item">这是一个 id 为 two 的选项</li>
+			<li id="three" class="list-group-item">这是一个 id 为 three 的选项</li>
+			<li id="four" name="list" class="list-group-item">这是一个 id 为 four 的选项</li>
+			<li id="five" class="list-group-item active"></li>
+		</ul>
+		<script>
+            var newLi = document.createElement('li');
+            // TODO 添加一些文本内容
+			var textNode = document.createTextNode('这是一个新的li标签');
+			// TODO 文本节点与元素节点在节点树结构是什么关系? 父与子的关系
+			newLi.appendChild(textNode);
+			//console.log(newLi);
+
+			// TODO 创建属性节点时，只能定义属性名称，而不能定义对应的值
+			var classAttr = document.createAttribute('class');
+			// TODO 为新的属性节点设置对应的值
+			classAttr.nodeValue = 'list-group-item';
+			// TODO 将属性节点添加到元素节点上 - 属性节点并不是子节点
+			newLi.setAttributeNode(classAttr);
+			console.log(newLi)
+
+            var ul = document.getElementById('container');
+            ul.appendChild(newLi);
+		</script>
+	</body>
+</html>

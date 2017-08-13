@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高度塌陷</title>
+    <style>
+        #d1 {
+            /*
+                TODO 默认情况下，没有设置宽度和高度时
+                TODO * 默认的宽度是当前页面的整个宽度
+                TODO * 默认的高度是 0 或子元素的高度的总和
+             */
+            background-color: lightgray;
+            border: 10px orange solid;
+            /*
+                TODO 解决高度塌陷的方案一
+                TODO * 为父级元素设置 height 为所有子元素高度的总和
+                TODO 问题
+                TODO * 人为为父级元素设置 height 属性
+                TODO * 父级元素的 height 属性值，计算得来的
+             */
+            /*height: 100px;*/
+            /*
+                TODO 解决高度塌陷的方案二
+                TODO 将父级和子级元素同时设置为 浮动
+                TODO * 父级元素没有设置宽度和高度
+                TODO * 结果 - 父级的宽度和高度分别所有子元素的宽度和高度的总和
+             */
+            /*float: left;*/
+
+            /*overflow: hidden;*/
+        }
+        #d11 {
+            width: 200px;
+            height: 100px;
+            background-color: lightcoral;
+            /* TODO 为子元素设置浮动 */
+            float: left;
+        }
+        #d12 {
+            /*
+                TODO clear 属性 - 清除浮动
+                TODO * none - 不清除
+                TODO * left - 清除左浮动
+                TODO * right - 清除右浮动
+                TODO * both - 清除两侧的浮动
+             */
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<!--
+    TODO 定义父级与子级元素 - 高度塌陷
+    TODO * 父级元素 - 没有设置高度
+    TODO * 子级元素 - 设置高度，浮动
+    TODO * 结果 - 父级的显示高度为 0
+-->
+<div id="d1">
+    <div id="d11"></div>
+    <!-- TODO 专门的元素解决高度塌陷问题 -->
+    <div id="d12"></div>
+</div>
+</body>
+</html>

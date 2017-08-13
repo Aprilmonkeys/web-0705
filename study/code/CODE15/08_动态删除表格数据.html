@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>动态删除表格数据</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			body {
+				padding: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<table id="data" class="table table-striped table-hover ">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Column heading</th>
+					<th>Column heading</th>
+					<th>Column heading</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td><button onclick="remove(this)" class="btn btn-warning">删除</button></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td><button onclick="remove(this)" class="btn btn-warning">删除</button></td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td><button onclick="remove(this)" class="btn btn-warning">删除</button></td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td><button onclick="remove(this)" class="btn btn-warning">删除</button></td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td><button onclick="remove(this)" class="btn btn-warning">删除</button></td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td><button onclick="remove(this)" class="btn btn-warning">删除</button></td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td><button onclick="remove(this)" class="btn btn-warning">删除</button></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+	<script>
+		function remove(elem){
+			var tr = elem.parentNode.parentNode;
+			var tbody = tr.parentNode;
+			tbody.removeChild(tr);
+		}
+	</script>
+</html>

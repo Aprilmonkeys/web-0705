@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>动态操作表格</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			body {
+				padding: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="col-md-4">
+				<div class="form-group">
+					<label>name: </label>
+					<input type="text" class="form-control" id="name">
+				</div>
+				<div class="form-group">
+					<label>email: </label>
+					<input type="text" class="form-control" id="email">
+				</div>
+				<div class="form-group">
+					<label>salary: </label>
+					<input type="text" class="form-control" id="salary">
+				</div>
+				<button id="add" class="btn btn-default">Submit</button>
+			</div>
+			<div class="col-md-8">
+				<table id="data" class="table table-striped table-hover ">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Salary</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>King</td>
+							<td>king@qq.com</td>
+							<td>80000</td>
+							<td><button name="delete" class="btn btn-danger btn-xs">删除</button></td>
+						</tr>
+						<tr>
+							<td>Jerry</td>
+							<td>jerry@qq.com</td>
+							<td>8000</td>
+							<td><button name="delete" class="btn btn-danger btn-xs">删除</button></td>
+						</tr>
+						<tr>
+							<td>Tom</td>
+							<td>tom@qq.com</td>
+							<td>10000</td>
+							<td><button name="delete" class="btn btn-danger btn-xs">删除</button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<script>
+            // TODO 1. 实现动态向表格添加数据
+			var add = document.getElementById('add');
+			add.onclick = function(){
+			    // TODO 获取到用户输入的内容
+				var name = document.getElementById('name').value;
+				var email = document.getElementById('email').value;
+				var salary = document.getElementById('salary').value;
+				/*
+				 <tr>
+					 <td>Tom</td>
+					 <td>tom@qq.com</td>
+					 <td>10000</td>
+					 <td><button name="delete" class="btn btn-danger btn-xs">删除</button></td>
+				 </tr>
+				 */
+				var tr = document.createElement('tr');
+
+				var td1 = document.createElement('td');
+				var text1 = document.createTextNode(name);
+				td1.appendChild(text1);
+				tr.appendChild(td1);
+
+                var td2 = document.createElement('td');
+                var text2 = document.createTextNode(email);
+                td2.appendChild(text2);
+                tr.appendChild(td2);
+
+                var td3 = document.createElement('td');
+                var text3 = document.createTextNode(salary);
+                td3.appendChild(text3);
+                tr.appendChild(td3);
+
+                var td4 = document.createElement('td');
+                td4.innerHTML = '<button name="delete" class="btn btn-danger btn-xs">删除</button>';
+                tr.appendChild(td4);
+
+                var table = document.getElementById('data');
+                var tbody = table.getElementsByTagName('tbody')[0];
+                tbody.appendChild(tr);
+
+                /*
+                 	TODO 为新增的删除按钮绑定事件 - 处理函数一致
+                 	TODO * 如何准确获取到每次新增的<tr> - 总是作为当前<tr>列表的最后一个
+                 	TODO   tbody.childNodes - 所有子节点，再查找最后一个
+                 	TODO   tbody.lastChild - 直接得到最后一个
+				 */
+                var lastTr = tbody.lastChild;
+                if(lastTr.nodeType == 3){
+                    lastTr = lastTr.previousSibling;
+				}
+                var lastTd = lastTr.lastChild;
+                if(lastTd.nodeType == 3){
+                    lastTd = lastTd.previousSibling;
+                }
+                var btn = lastTd.firstChild;
+                if(btn.nodeType == 3){
+                    btn = btn.previousSibling;
+                }
+                btn.onclick = function(){
+                    var tr = this.parentNode.parentNode;
+                    var parent = tr.parentNode;
+                    parent.removeChild(tr);
+				}
+			}
+			// TODO 动态删除表格中的数据
+			var deletes = document.getElementsByName('delete');
+			for(var i=0;i<deletes.length;i++){
+			    var del = deletes[i];
+			    del.onclick = function(){
+			        /*
+			        	TODO del - 始终得到的都是表格中最后一行的数据
+			        	TODO this - 得到对应当前点击的按钮
+			         */
+			        var tr = this.parentNode.parentNode;
+			        var parent = tr.parentNode;
+			        parent.removeChild(tr);
+				}
+			}
+		</script>
+	</body>
+</html>

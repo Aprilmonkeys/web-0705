@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组合选择器一</title>
+    <style>
+        /* TODO 为所有<p>元素设置统一的样式 */
+        p {
+            color: lightblue;
+        }
+        /*
+            TODO <p class="myclass">
+            TODO * 在所有<p>元素中，专门为 class="myclass" 的<p>元素
+
+            TODO 组合选择器 - 第一种
+            TODO 元素选择器 类选择器
+            TODO * 结果 -> 两种选择器的交集
+         */
+        p.myclass {
+            color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+<p>这是一个段落内容.</p>
+<p class="myclass">这是另一个段落内容.</p>
+</body>
+</html>

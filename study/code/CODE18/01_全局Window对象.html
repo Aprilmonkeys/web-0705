@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全局Window对象</title>
+</head>
+<body>
+<h1>这是第一个页面</h1>
+<script>
+    //console.log(window);
+
+    // TODO 全局变量
+    var str = 'string';
+    console.log(str);
+    // TODO 定义全局变量 -> 向window对象添加属性
+    console.log(window.str);
+
+    function fn(){
+        console.log('this is function');
+    }
+    fn();
+    // TODO 定义全局函数 -> 向window对象添加方法
+    window.fn();
+
+    /*
+        TODO window对象提供了self属性
+        TODO * self属性等价于window对象
+
+        TODO window对象 - 允许向window对象添加属性和方法
+        TODO self属性 - 只读。得到window对象，只有调用的权限，没有修改和新增的权限
+        TODO * 有效的保护window对象原本的内容
+     */
+    /*console.log(window.self);
+    //window = window.self;
+
+    window.alert('提示框');
+
+    var result1 = window.confirm('标准提示框');
+    console.log(result1);
+    var result2 = window.prompt('标准输入框');
+    console.log(result2);*/
+
+    //window.open();
+</script>
+</body>
+</html>

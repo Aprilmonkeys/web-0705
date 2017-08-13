@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>外边距重叠</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            background-color: lightslategrey;
+        }
+        /*
+            TODO 两个 div 元素，垂直方向排列
+            TODO * 为上一个 div 元素设置下外边距
+            TODO * 为下一个 div 元素设置上外边距
+            TODO 结果 - 在两个外边距中取最大值
+            TODO * 并不是两个外边距相加的结果
+            TODO 解决 - 只设置其中一个外边距即可
+         */
+        #d1 {
+            /*margin-bottom: 150px;*/
+        }
+        #d2 {
+            margin-top: 150px;
+        }
+    </style>
+</head>
+<body>
+<div id="d1"></div>
+<div id="d2"></div>
+</body>
+</html>

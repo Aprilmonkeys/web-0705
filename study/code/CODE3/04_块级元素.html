@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>块级元素</title>
+    <style>
+        /*
+            TODO 浏览器默认情况下
+            TODO * 为 <body> 元素设置 CSS 的外边距为 8px
+            TODO * 问题 - 块级元素无法占满页面的整个宽度
+            TODO * 解决 - 人为地为 <body> 设置 CSS 的外边距为 0
+         */
+        body {
+            margin: 0;
+        }
+        h1 {
+            background-color: lightgreen;
+        }
+        p {
+            background-color: lightskyblue;
+        }
+        div {
+            height: 30px;
+            background-color: lightslategrey;
+        }
+    </style>
+</head>
+<body>
+<h1>这是标题</h1>
+<p>这是一个段落内容.</p>
+<!--
+    TODO <div>元素
+    TODO * 默认情况下，<div>元素的高度为 0 - 没有任何显示
+    TODO * 显示效果 - 为 <div> 元素设置高度为非 0 的值
+    TODO   * 通过 CSS 样式方式设置高度
+-->
+<div></div>
+</body>
+</html>

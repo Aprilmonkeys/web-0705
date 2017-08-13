@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://192.168.10.165/day07/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>第一天笔记</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+<style type="text/css">
+/**
+ * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ * @author Rose Pritchard
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #ccc;
+	background: none;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #2d2d2d;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #999;
+}
+
+.token.punctuation {
+	color: #ccc;
+}
+
+.token.tag,
+.token.attr-name,
+.token.namespace,
+.token.deleted {
+	color: #e2777a;
+}
+
+.token.function-name {
+	color: #6196cc;
+}
+
+.token.boolean,
+.token.number,
+.token.function {
+	color: #f08d49;
+}
+
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+	color: #f8c555;
+}
+
+.token.selector,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+	color: #cc99cd;
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable {
+	color: #7ec699;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+	color: #67cdcc;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.token.inserted {
+	color: green;
+}
+</style>
+
+<style type="text/css">
+pre.line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
+}
+
+pre.line-numbers > code {
+	position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 3em; /* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	border-right: 1px solid #999;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+	.line-numbers-rows > span {
+		pointer-events: none;
+		display: block;
+		counter-increment: linenumber;
+	}
+
+		.line-numbers-rows > span:before {
+			content: counter(linenumber);
+			color: #999;
+			display: block;
+			padding-right: 0.8em;
+			text-align: right;
+		}
+</style>
+
+
+</head>
+
+<body>
+
+<h2 id="toc_0">JavaScript 介绍</h2>
+
+<h3 id="toc_1">什么是 JavaScript</h3>
+
+<p>JavaScript 是一种由 Netscape 的 LiveScript 发展而来的原型化继承的基于对象的动态类型的区分大小写的客户端脚本语言，主要目的是为了解决服务器端语言，比如 Perl，遗留的速度问题，为客户提供更流畅的浏览效果。</p>
+
+<p>当时服务端需要对数据进行验证，由于网络速度相当缓慢，只有 28.8kbps，验证步骤浪费的时间太多。于是 Netscape 的浏览器 Navigator 加入了 JavaScript，提供了数据验证的基本功能。</p>
+
+<p>JavaScript，一种直译式脚本语言，是一种动态类型、弱类型、基于原型的语言，内置支持类型。它的解释器被称为 JavaScript 引擎，为浏览器的一部分，广泛用于客户端的脚本语言，最早是在 HTML 网页上使用，用来给HTML网页增加动态功能。然而现在 JavaScript 也可被用于网络服务器，如 Node.js。</p>
+
+<h3 id="toc_2">JavaScript发展历史</h3>
+
+<ul>
+<li>在 1995 年由 Netscape (网景)公司推出 LiveScript。在此之前，没有所谓的前端技术。所有的处理都需要由服务器端进行操作。当时的目的是同时在客户端和服务器端使用。</li>
+<li>由 Netscape(网景)公司联合 SUN 公司完善 LiveScrip。此时， Netscape(网景)公司将 LiveScript 更名为 JavaScript。目的是利用 Java 语言的流行。</li>
+<li>微软在推出 IE3.0 时，使用了 JavaScript 的克隆版本，Jscript。</li>
+<li>在 1997 年，JavaScript 1.1 由欧洲计算机制造商协会定义。此举，只为 JavaScript 语言定制统一的语言版本。该全新版本的推出，更名为 ECMAScript。该版本由 Netscape、Sun、微软等共同定义。</li>
+</ul>
+
+<h3 id="toc_3">JavaScript 组成部分</h3>
+
+<ul>
+<li>ECMAScript
+
+<ul>
+<li>ECMAScript是一种脚本语言的标准，ECMA-262标准。</li>
+<li>该标准不仅限于JavaScript语言使用，例如ActionScript语言中的标准也为ECMA-262标准。</li>
+<li>ECMAScript 描述了以下内容：语法、类型、语句、关键字、保留字、运算符和对象等。</li>
+</ul></li>
+<li>BOM：全称： Browser Object Model，译为浏览器对象模型。</li>
+<li>DOM：全称： Document Object Model，译为文档对象模型。</li>
+</ul>
+
+<h2 id="toc_4">ECMAScript 介绍</h2>
+
+<h3 id="toc_5">什么是 ECMAScript</h3>
+
+<p>ECMAScript 是一种由 Ecma 国际（前身为欧洲计算机制造商协会）通过 ECMA-262 标准化的脚本程序设计语言。这种语言在万维网上应用广泛，它往往被称为 JavaScript 或 JScript，但实际上后两者是 ECMA-262 标准的实现和扩展。</p>
+
+<h3 id="toc_6">ECMAScript 发展历史</h3>
+
+<ul>
+<li>1995 年 12 月 SUN 公司与 Netscape 公司一起引入了 JavaScript。</li>
+<li>1996 年 03 月网景通讯公司发表了支持 JavaScript 的网景导航者2.0。</li>
+<li>1996 年 08 月由于 JavaScript 作为网页的客户面脚本语言非常成功，微软将之引入了Internet Explorer 3.0，取名 JScript。</li>
+<li>1996 年 11 月网景通讯公司将 JavaScript 提交给欧洲计算机制造商协会进行标准化。</li>
+<li>1997 年 06 月 ECMA-262 的第一个版本被欧洲计算机制造商协会采纳。并将 ECMA-262 标准取名为 ECMAScript。</li>
+</ul>
+
+<h2 id="toc_7">如何使用 JavaScript</h2>
+
+<p>可以在HTML页面中的任何位置，使用 <code>&lt;script&gt;&lt;/script&gt;</code> 标签来插入 JavaScript。</p>
+
+<blockquote>
+<p><strong>值得注意的是:</strong> 在 HTML 页面中的不同位置，插入 JavaScript。执行地效果各不相同（执行顺序是自上而下）。</p>
+</blockquote>
+
+<p><code>&lt;script&gt;</code> 标签的属性说明:</p>
+
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>type</td>
+<td>text/javascript，指定使用的脚本语言。</td>
+</tr>
+<tr>
+<td>language</td>
+<td>JavaScript，也是指定使用的脚本语言。弃用！</td>
+</tr>
+<tr>
+<td>src</td>
+<td>载入外部JavaScript脚本代码（路径可以是绝对路径和相对路径）。</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p><strong>值得注意的是:</strong> 如果编写 DOM 代码时，JavaScript 插入在 HTML 页面的位置是有区别的。</p>
+</blockquote>
+
+<h2 id="toc_8">基础语法</h2>
+
+<h3 id="toc_9">区分大小写</h3>
+
+<p>JavaScript 是一种区分大小写的语言。这意味着 JavaScript 的关键字、变量名、函数名、以及任何其他的标识符必须使用一致的大小写形式。比如 atguigu、Atguigu 或 ATGUIGU 是不同的变量名。</p>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> atguigu <span class="token operator">=</span> <span class="token string">"atguigu"</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 定义atguigu变量</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>atguigu<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 打印atguigu变量</span>
+<span class="token keyword">var</span> Atguigu <span class="token operator">=</span> <span class="token string">"Atguigu"</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 定义Atguigu变量</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Atguigu<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 打印Atguigu变量</span>
+<span class="token keyword">var</span> ATGUIGU <span class="token operator">=</span> <span class="token string">"ATGUIGU"</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 定义ATGUIGU变量</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ATGUIGU<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 打印ATGUIGU变量</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<blockquote>
+<p><strong>值得注意的是:</strong> 在 JavaScript 中定义变量名和函数名时应该特别注意。</p>
+</blockquote>
+
+<h3 id="toc_10">空格和换行</h3>
+
+<p>JavaScript 会忽略出现在代码中的空格、制表符和换行符。</p>
+
+<p>由于可以自由地在代码中使用空格、制表符和换行符，所以采用整齐、一致的缩进来形成统一的编码风格，从而提高代码的可读性显得尤为重要。</p>
+
+<p>JavaScript 还可以识别水平制表符、垂直制表符、换页符等，JavaScript 将以下字符识别为行结束符：换行符、回车符、行分隔符、段分隔符等。回车符加换行符在一起被解析为一个单行结束符。</p>
+
+<h3 id="toc_11">可选的分号</h3>
+
+<p>JavaScript 的语句一般是以一个分号作为结尾。当然，JavaScript 也允许忽略这个分号。如果省略分号，则由解释器确定语句的结尾，如下述代码：</p>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> sum <span class="token operator">=</span> a <span class="token operator">+</span> b<span class="token comment" spellcheck="true">// 即使没有分号也是有效的语句 —— 不推荐</span>
+<span class="token keyword">var</span> diff <span class="token operator">=</span> a <span class="token operator">-</span> b<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 有效的语句 —— 推荐</span><span class="line-numbers-rows"><span></span><span></span></span></code></pre></div>
+
+<blockquote>
+<p><strong>值得注意的是:</strong> 在 JavaScript 中，虽然语句结尾的分号不是必需的，但还是建议任何时候都不要省略。使用分号是一个非常好的编程习惯。</p>
+</blockquote>
+
+<h3 id="toc_12">注释</h3>
+
+<p>在编写 JavaScript 代码时，经常利用注释为代码添加说明。注释的内容会被 JavaScript 解释器/引擎忽略，JavaScript 支持两种格式的注释:</p>
+
+<ul>
+<li>单行注释</li>
+</ul>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// 这里是单行注释</span><span class="line-numbers-rows"><span></span></span></code></pre></div>
+
+<ul>
+<li>多行注释</li>
+</ul>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">/*
+ * 这里是多行注释
+ */</span><span class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></div>
+
+<blockquote>
+<p><strong>值得注意的是:</strong> 上述注释的第二行是以星号开始，但这并不是必需的。</p>
+</blockquote>
+
+<h3 id="toc_13">语句</h3>
+
+<p>JavaScript代码将多行组合成一个代码块，每个代码块一般是以左花括号（{）开始，以右花括号（}）结束。例如下述代码:</p>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token keyword">if</span><span class="token punctuation">(</span>test<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    test <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span>test<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<blockquote>
+<p><strong>值得注意的是:</strong> 一般在执行多行代码时才需要语句块，但最好是始终都使用花括号将代码块进行包裹。</p>
+</blockquote>
+
+<h3 id="toc_14">关键字</h3>
+
+<p>JavaScript 定义了一组具有特定用途的关键字，这些关键字可用于表示语句的开始或结束、或者执行特定操作等。也就是说，定义变量名或、函数名或对象名时不能使用这些名称。</p>
+
+<p><img src="./第七天笔记_files/01.png" alt=""></p>
+
+<h3 id="toc_15">保留字</h3>
+
+<p>JavaScript 除了定义了一组关键字，还定义了一组同样不能作为变量名、函数名或对象名的保留字。保留字可能在将来被作为新的关键字出现的。</p>
+
+<p><img src="./第七天笔记_files/02.png" alt=""></p>
+
+<h2 id="toc_16">变量</h2>
+
+<h3 id="toc_17">什么是变量</h3>
+
+<p>变量是存储数据信息的容器。</p>
+
+<p>变量被认为是有名字的容器。在代码中，使用变量名为值命名，需要遵守一定的规则。</p>
+
+<blockquote>
+<p><strong>值得注意的是:</strong> </p>
+
+<ul>
+<li>在 JavaScript 代码中，必须先声明一个变量，这个变量才能被使用。</li>
+<li>JavaScript 中的变量是弱类型的，也称之为松散类型的。所谓弱类型/松散类型就是可以用来保存任何类型的数据。</li>
+</ul>
+</blockquote>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> v <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+v <span class="token operator">=</span> <span class="token string">"string"</span><span class="token punctuation">;</span><span class="line-numbers-rows"><span></span><span></span></span></code></pre></div>
+
+<h3 id="toc_18">变量的声明</h3>
+
+<p>在 JavaScript 代码中，使用变量前应当先声明。变量是使用关键字 <code>var</code> 声明的。</p>
+
+<h4 id="toc_19">只声明未初始化，变量的值自动取值为 undefined</h4>
+
+<ul>
+<li>一行代码只声明一个变量:</li>
+</ul>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> sum<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 值为undefined</span>
+<span class="token keyword">var</span> msg<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 值为undefined</span><span class="line-numbers-rows"><span></span><span></span></span></code></pre></div>
+
+<ul>
+<li>一行代码声明多个变量</li>
+</ul>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> z<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 值为undefined</span><span class="line-numbers-rows"><span></span></span></code></pre></div>
+
+<h3 id="toc_20">将变量的声明和初始化合写在一起</h3>
+
+<ul>
+<li>一行代码只声明一个变量并赋值:</li>
+</ul>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> sum <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 值为 100</span>
+<span class="token keyword">var</span> msg <span class="token operator">=</span> <span class="token string">"this is message"</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 值为 this is message</span><span class="line-numbers-rows"><span></span><span></span></span></code></pre></div>
+
+<ul>
+<li>一行代码声明多个变量并赋值:</li>
+</ul>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> y <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> z <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span><span class="line-numbers-rows"><span></span></span></code></pre></div>
+
+<blockquote>
+<p><strong>值得注意的是:</strong> 等号（=）是赋值运算符。</p>
+</blockquote>
+
+<h3 id="toc_21">命名规则</h3>
+
+<p>变量的命名需要遵守一定的规则的，具体规则如下:</p>
+
+<ul>
+<li>必须以字母、下划线（_）、美元符号（$）开始。</li>
+<li>不能以数字开头。</li>
+<li>不能使用关键字和保留字作为名称。</li>
+<li>由于 JavaScript 是区分大小写的，大写字母与小写字母并不冲突。</li>
+<li>名称最好有明确的含义。</li>
+<li>可以采用“下划线命名法”、“小驼峰命名法”或“大驼峰命名法” 之一，在开发团队内进行协调统一。</li>
+</ul>
+
+<h3 id="toc_22">声明的问题</h3>
+
+<h4 id="toc_23">重复的声明</h4>
+
+<p>使用 <code>var</code> 语句重复声明变量是合法且无害的。但是如果重复声明并初始化的，这就表示重复声明并初始化。由于 JavaScript 变量只能存储一个数据，之前存储的数据会被覆盖。</p>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> msg <span class="token operator">=</span> <span class="token string">"this is message"</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 值为 this is message</span>
+<span class="token keyword">var</span> msg <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 值为 100</span><span class="line-numbers-rows"><span></span><span></span></span></code></pre></div>
+
+<h4 id="toc_24">遗漏的声明</h4>
+
+<ul>
+<li>直接读取一个没有声明的变量的值，JavaScript会报错。</li>
+<li>为一个没有声明的变量初始化，是合法的，但并不推荐这样使用。</li>
+</ul>
+
+<h3 id="toc_25">变量的使用</h3>
+
+<p>对声明的变量既可以读取操作，也可以赋值操作。</p>
+
+<ul>
+<li>读取操作</li>
+</ul>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> message<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 只声明未初始化</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 输出 undefined</span>
+<span class="token keyword">var</span> msg <span class="token operator">=</span> “<span class="token keyword">this</span> is message”<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 声明并初始化</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>msg<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 输出 this is message</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<ul>
+<li>赋值操作</li>
+</ul>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> message<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 只声明未初始化</span>
+message <span class="token operator">=</span> <span class="token string">"this is message"</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 初始化操作</span>
+<span class="token keyword">var</span> msg <span class="token operator">=</span> <span class="token string">"this is message"</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 值会被覆盖</span>
+msg <span class="token operator">=</span> <span class="token string">"this is another message"</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 重新赋值</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<h2 id="toc_26">常量</h2>
+
+<h3 id="toc_27">什么是常量</h3>
+
+<p>常量就是一个只读（read-only）的变量。</p>
+
+<p>常量与变量类似，同样用于存储数据信息。只是常量的数据一旦被定义，便不能被修改。</p>
+
+<blockquote>
+<p><strong>值得注意的是:</strong> </p>
+
+<ul>
+<li>常量名习惯使用全大写形式。</li>
+<li>ECMAScript 5新增了声明常量使用的关键字 const。</li>
+<li>如果省略const关键字，JavaScript会认为是一个变量。</li>
+</ul>
+</blockquote>
+
+<h3 id="toc_28">常量的声明</h3>
+
+<ul>
+<li>在 ECMAScript 5 版本前，没有定义常量的语法。使用 <code>var</code> 关键字定义变量，人为规定值不改变，也可以是不严格的常量。</li>
+</ul>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> MY_CONST <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span><span class="line-numbers-rows"><span></span></span></code></pre></div>
+
+<ul>
+<li>在 ECMAScript 5 版本后，提供了关键字 <code>const</code> 定义常量。</li>
+</ul>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token keyword">const</span> MY_FAV <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span><span class="line-numbers-rows"><span></span></span></code></pre></div>
+
+<blockquote>
+<p><strong>值得注意的是:</strong> 常量的声明，必须进行初始化操作，否则会报错误。</p>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token keyword">const</span> FOO<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// SyntaxError: missing = in const declaration</span><span class="line-numbers-rows"><span></span></span></code></pre></div>
+</blockquote>
+
+<h3 id="toc_29">常量的使用</h3>
+
+<p>常量一旦被声明并初始化，值并不能被改变。常量的使用只能进行读取操作:</p>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// 定义常量MY_FAV并赋值7</span>
+<span class="token keyword">const</span> MY_FAV <span class="token operator">=</span> <span class="token number">7</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 在 Firefox 和 Chrome 这会失败但不会报错(在 Safari这个赋值会成功)</span>
+MY_FAV <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>MY_FAV<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 输出 7</span>
+<span class="token keyword">const</span> MY_FAV <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 尝试重新声明会报错 </span>
+<span class="token keyword">var</span> MY_FAV <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// MY_FAV 保留给上面的常量，这个操作会失败</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>MY_FAV<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// MY_FAV 依旧为7</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<h2 id="toc_30">数据类型</h2>
+
+<p>在 JavaScript 代码中，能够表示并操作值的类型称之为<strong>数据类型</strong>。</p>
+
+<p>数据类型可分为可变类型和不可变类型。可变类型的值是可修改的，对象和数据就属于可变类型；不可变类型的值是不可修改的，数字、布尔值、null 和 undefined 都属于不可变类型。</p>
+
+<p>字符串可以看成由字符组成的数组，可能被误认为是可变的。但在 JavaScript 中，字符串的值是不可变的。</p>
+
+<p><img src="./第七天笔记_files/03.png" alt=""></p>
+
+<h3 id="toc_31">原始类型</h3>
+
+<p>原始类型，又称为原始值，是直接代表 JavaScript 语言实现的最底层的数据。</p>
+
+<p>原始类型分别为 boolean 类型、number 类型和 string 类型三种。当然，有些资料将undefined 和 null 也归为原始类型（这里表示为特殊类型）。</p>
+
+<p>声明变量并初始化值为原始类型，一般称之为字面量方式定义变量，也可以称之为直接量方式定义变量。</p>
+
+<h3 id="toc_32">boolean 类型</h3>
+
+<p>布尔（boolean）类型是指真或假、开或关、是或否。这个类型只有两个值：true 和 false。</p>
+
+<blockquote>
+<p><strong>值得注意的是:</strong></p>
+
+<ul>
+<li>由于 JavaScript 是区分大小写的，布尔类型的 true 和 false 全部是小写。</li>
+<li>JavaScript 也可以将其他类型的数据，自动转换为布尔类型。</li>
+</ul>
+</blockquote>
+
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>转换为 true 的值</th>
+<th>转换为 false 的值</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>boolean类型</td>
+<td>true</td>
+<td>false</td>
+</tr>
+<tr>
+<td>string类型</td>
+<td>任何非空字符串</td>
+<td>“”（空字符串）</td>
+</tr>
+<tr>
+<td>number类型</td>
+<td>任何非零数字值（包括无穷大）</td>
+<td>0和NaN</td>
+</tr>
+<tr>
+<td>object类型</td>
+<td>任何对象</td>
+<td>null</td>
+</tr>
+<tr>
+<td>undefined</td>
+<td></td>
+<td>undefined</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_33">number 类型</h3>
+
+<p>number 类型是指数字，JavaScript 不区分整数类型和浮点类型。</p>
+
+<ul>
+<li>整数类型: 包括负整数、0和正整数等。</li>
+<li>浮点类型: 表示小数，JavaScript 中的所有数字均用浮点类型表示。</li>
+</ul>
+
+<blockquote>
+<p><strong>值得注意的是:</strong> 八进制或十六进制的数值最终会被转换成十进制数值。</p>
+</blockquote>
+
+<h3 id="toc_34">浮点类型</h3>
+
+<p>浮点类型，就是指该数值包含整数部分、小数点和小数部分。</p>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> floatNum1 <span class="token operator">=</span> <span class="token number">0.1</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> floatNum2 <span class="token operator">=</span> <span class="token punctuation">.</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 有效，但不推荐</span><span class="line-numbers-rows"><span></span><span></span></span></code></pre></div>
+
+<blockquote>
+<p><strong>值得注意的是:</strong></p>
+
+<ul>
+<li>JavaScript允许小数点前可以没有整数，但不推荐这种写法。</li>
+<li>保存浮点类型需要的空间是保存整数类型的两倍。</li>
+<li>如果小数点后面没有任何数字，那这个数值作为整数类型保存。</li>
+</ul>
+</blockquote>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> floatNum3 <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 小数点后面没有数字 —— 解析为 1</span>
+<span class="token keyword">var</span> floatNum4 <span class="token operator">=</span> <span class="token number">10.0</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 整数 —— 解析为 10</span><span class="line-numbers-rows"><span></span><span></span></span></code></pre></div>
+
+<h4 id="toc_35">四舍五入误差</h4>
+
+<p>整数有无数个，但JavaScript通过浮点类型只能表示有限的个数（确切地说是 18 437 736 874 454 810 627个）。也就是说，当在JavaScript中使用浮点类型时，常常只是真实值的一个近似表示。如下述代码:</p>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token punctuation">.</span><span class="token number">3</span> <span class="token operator">-</span> <span class="token punctuation">.</span><span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> y <span class="token operator">=</span> <span class="token punctuation">.</span><span class="token number">2</span> <span class="token operator">-</span> <span class="token punctuation">.</span><span class="token number">1</span><span class="token punctuation">;</span>
+x <span class="token operator">==</span> y<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 值为false，表示两值不相等</span>
+x <span class="token operator">==</span> <span class="token punctuation">.</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 值为false，.3-.2 不等于 .1</span>
+y <span class="token operator">=</span> <span class="token punctuation">.</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 值为true，.2-.1 等于 .1</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<blockquote>
+<p><strong>值得注意的是:</strong> 建议使用大整数表示金额。例如使用分作为单位，而不是使用元作为单位。</p>
+</blockquote>
+
+<h4 id="toc_36">NaN</h4>
+
+<p>NaN（Not a Number），即非数值，是一个特殊的数值。</p>
+
+<p>特点:</p>
+
+<ul>
+<li>任何涉及NaN的操作都会返回NaN。</li>
+<li>NaN与任何值都不相等，包括NaN本身。</li>
+</ul>
+
+<blockquote>
+<p><strong>值得注意的是:</strong> 针对上述特点，JavaScript提供了isNaN( )函数。该函数用于判断计算结果是否为数值。</p>
+</blockquote>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">isNaN</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 输出false（10是一个数值）</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">isNaN</span><span class="token punctuation">(</span><span class="token string">"10"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 输出false（可以被转换成数值 10）</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">isNaN</span><span class="token punctuation">(</span><span class="token string">"blue"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 输出true（不能转换成数值）</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">isNaN</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 输出false（可以被转换成数值 1）</span><span class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></div>
+
+<h3 id="toc_37">string 类型</h3>
+
+<p>string 类型用于表示由零或多个 16 位 Unicode 字符组成的字符序列，被称之为字符串。字符串可以由双引号（"）或单引号（'）表示。</p>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> firstString <span class="token operator">=</span> <span class="token string">"Nicholas"</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> secondString <span class="token operator">=</span> <span class="token string">'Zakas'</span><span class="token punctuation">;</span><span class="line-numbers-rows"><span></span><span></span></span></code></pre></div>
+
+<p>string类型包含一些特殊的转义字符，用于表示非打印字符。</p>
+
+<table>
+<thead>
+<tr>
+<th>转义字符</th>
+<th>含义</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>\n</td>
+<td>换行符</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>制表符</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>退格符</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>回车符</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>换页符</td>
+</tr>
+<tr>
+<td>\</td>
+<td>斜杠</td>
+</tr>
+<tr>
+<td>\'</td>
+<td>单引号（'），在用单引号表示的字符串中使用。</td>
+</tr>
+<tr>
+<td>"</td>
+<td>双引号（"），在用双引号表示的字符串中使用。</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_38">typeof 运算符</h3>
+
+<p>由于 JavaScript 是弱类型/松散类型的，因此需要有一种手段来检测给定变量的数据类型。typeof 运算符就是负责提供这方面信息，如下述代码:</p>
+
+<div><pre class="line-numbers language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> message <span class="token operator">=</span> <span class="token string">"this is message"</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 输出 string</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 输出 string</span><span class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></div>
+
+<blockquote>
+<p><strong>值得注意的是:</strong> typeof 运算符加上圆括号，会像是函数，而不是运算符，并不建议这种写法。</p>
+</blockquote>
+
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>类型</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>true或false</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>任意数字或NaN</td>
+<td>number</td>
+</tr>
+<tr>
+<td>任意字符串</td>
+<td>string</td>
+</tr>
+<tr>
+<td>null</td>
+<td>object</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2 id="toc_39">版权说明</h2>
+
+<p>本笔记的内容免费开源，任何人都可以免费学习、分享，甚至可以进行修改。但需要注明作者及来源，并且不能用于商业。</p>
+
+<p>本笔记采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可。</p>
+
+<h2 id="toc_40">联系方式</h2>
+
+<p><img src="./第七天笔记_files/connection.png" alt=""></p>
+
+
+
+<script type="text/javascript">
+var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(\w+)\b/i,t=0,n=_self.Prism={util:{encode:function(e){return e instanceof a?new a(e.type,n.util.encode(e.content),e.alias):"Array"===n.util.type(e)?e.map(n.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function(e){var t=n.util.type(e);switch(t){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=n.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return n.util.clone(e)})}return e}},languages:{extend:function(e,t){var a=n.util.clone(n.languages[e]);for(var r in t)a[r]=t[r];return a},insertBefore:function(e,t,a,r){r=r||n.languages;var l=r[e];if(2==arguments.length){a=arguments[1];for(var i in a)a.hasOwnProperty(i)&&(l[i]=a[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==t)for(var i in a)a.hasOwnProperty(i)&&(o[i]=a[i]);o[s]=l[s]}return n.languages.DFS(n.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,t,a,r){r=r||{};for(var l in e)e.hasOwnProperty(l)&&(t.call(e,l,e[l],a||l),"Object"!==n.util.type(e[l])||r[n.util.objId(e[l])]?"Array"!==n.util.type(e[l])||r[n.util.objId(e[l])]||(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,l,r)):(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,null,r)))}},plugins:{},highlightAll:function(e,t){var a={callback:t,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};n.hooks.run("before-highlightall",a);for(var r,l=a.elements||document.querySelectorAll(a.selector),i=0;r=l[i++];)n.highlightElement(r,e===!0,a.callback)},highlightElement:function(t,a,r){for(var l,i,o=t;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1],i=n.languages[l]),t.className=t.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=t.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var s=t.textContent,u={element:t,language:l,grammar:i,code:s};if(!s||!i)return n.hooks.run("complete",u),void 0;if(n.hooks.run("before-highlight",u),a&&_self.Worker){var c=new Worker(n.filename);c.onmessage=function(e){u.highlightedCode=e.data,n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},c.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=n.highlight(u.code,u.grammar,u.language),n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(t),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},highlight:function(e,t,r){var l=n.tokenize(e,t);return a.stringify(n.util.encode(l),r)},tokenize:function(e,t){var a=n.Token,r=[e],l=t.rest;if(l){for(var i in l)t[i]=l[i];delete t.rest}e:for(var i in t)if(t.hasOwnProperty(i)&&t[i]){var o=t[i];o="Array"===n.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],c=u.inside,g=!!u.lookbehind,h=!!u.greedy,f=0,d=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var m=r[p];if(r.length>e.length)break e;if(!(m instanceof a)){u.lastIndex=0;var y=u.exec(m),v=1;if(!y&&h&&p!=r.length-1){var b=r[p+1].matchedStr||r[p+1],k=m+b;if(p<r.length-2&&(k+=r[p+2].matchedStr||r[p+2]),u.lastIndex=0,y=u.exec(k),!y)continue;var w=y.index+(g?y[1].length:0);if(w>=m.length)continue;var _=y.index+y[0].length,P=m.length+b.length;if(v=3,P>=_){if(r[p+1].greedy)continue;v=2,k=k.slice(0,P)}m=k}if(y){g&&(f=y[1].length);var w=y.index+f,y=y[0].slice(f),_=w+y.length,S=m.slice(0,w),O=m.slice(_),j=[p,v];S&&j.push(S);var A=new a(i,c?n.tokenize(y,c):y,d,y,h);j.push(A),O&&j.push(O),Array.prototype.splice.apply(r,j)}}}}}return r},hooks:{all:{},add:function(e,t){var a=n.hooks.all;a[e]=a[e]||[],a[e].push(t)},run:function(e,t){var a=n.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(t)}}},a=n.Token=function(e,t,n,a,r){this.type=e,this.content=t,this.alias=n,this.matchedStr=a||null,this.greedy=!!r};if(a.stringify=function(e,t,r){if("string"==typeof e)return e;if("Array"===n.util.type(e))return e.map(function(n){return a.stringify(n,t,e)}).join("");var l={type:e.type,content:a.stringify(e.content,t,r),tag:"span",classes:["token",e.type],attributes:{},language:t,parent:r};if("comment"==l.type&&(l.attributes.spellcheck="true"),e.alias){var i="Array"===n.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}n.hooks.run("wrap",l);var o="";for(var s in l.attributes)o+=(o?" ":"")+s+'="'+(l.attributes[s]||"")+'"';return"<"+l.tag+' class="'+l.classes.join(" ")+'" '+o+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var t=JSON.parse(e.data),a=t.language,r=t.code,l=t.immediateClose;_self.postMessage(n.highlight(r,n.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var r=document.currentScript||[].slice.call(document.getElementsByTagName("script")).pop();return r&&(n.filename=r.src,document.addEventListener&&!r.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",n.highlightAll)),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+</script>
+
+<script type="text/javascript">
+Prism.languages.clike={comment:[{pattern:/(^|[^\\])\/\*[\w\W]*?\*\//,lookbehind:!0},{pattern:/(^|[^\\:])\/\/.*/,lookbehind:!0}],string:{pattern:/(["'])(\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,greedy:!0},"class-name":{pattern:/((?:\b(?:class|interface|extends|implements|trait|instanceof|new)\s+)|(?:catch\s+\())[a-z0-9_\.\\]+/i,lookbehind:!0,inside:{punctuation:/(\.|\\)/}},keyword:/\b(if|else|while|do|for|return|in|instanceof|function|new|try|throw|catch|finally|null|break|continue)\b/,"boolean":/\b(true|false)\b/,"function":/[a-z0-9_]+(?=\()/i,number:/\b-?(?:0x[\da-f]+|\d*\.?\d+(?:e[+-]?\d+)?)\b/i,operator:/--?|\+\+?|!=?=?|<=?|>=?|==?=?|&&?|\|\|?|\?|\*|\/|~|\^|%/,punctuation:/[{}[\];(),.:]/};
+</script>
+
+<script type="text/javascript">
+Prism.languages.javascript=Prism.languages.extend("clike",{keyword:/\b(as|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|finally|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|var|void|while|with|yield)\b/,number:/\b-?(0x[\dA-Fa-f]+|0b[01]+|0o[0-7]+|\d*\.?\d+([Ee][+-]?\d+)?|NaN|Infinity)\b/,"function":/[_$a-zA-Z\xA0-\uFFFF][_$a-zA-Z0-9\xA0-\uFFFF]*(?=\()/i}),Prism.languages.insertBefore("javascript","keyword",{regex:{pattern:/(^|[^\/])\/(?!\/)(\[.+?]|\\.|[^\/\\\r\n])+\/[gimyu]{0,5}(?=\s*($|[\r\n,.;})]))/,lookbehind:!0,greedy:!0}}),Prism.languages.insertBefore("javascript","class-name",{"template-string":{pattern:/`(?:\\\\|\\?[^\\])*?`/,greedy:!0,inside:{interpolation:{pattern:/\$\{[^}]+\}/,inside:{"interpolation-punctuation":{pattern:/^\$\{|\}$/,alias:"punctuation"},rest:Prism.languages.javascript}},string:/[\s\S]+/}}}),Prism.languages.markup&&Prism.languages.insertBefore("markup","tag",{script:{pattern:/(<script[\w\W]*?>)[\w\W]*?(?=<\/script>)/i,lookbehind:!0,inside:Prism.languages.javascript,alias:"language-javascript"}}),Prism.languages.js=Prism.languages.javascript;
+</script>
+
+<script type="text/javascript">
+!function(){"undefined"!=typeof self&&self.Prism&&self.document&&Prism.hooks.add("complete",function(e){if(e.code){var t=e.element.parentNode,s=/\s*\bline-numbers\b\s*/;if(t&&/pre/i.test(t.nodeName)&&(s.test(t.className)||s.test(e.element.className))&&!e.element.querySelector(".line-numbers-rows")){s.test(e.element.className)&&(e.element.className=e.element.className.replace(s,"")),s.test(t.className)||(t.className+=" line-numbers");var n,a=e.code.match(/\n(?!$)/g),l=a?a.length+1:1,m=new Array(l+1);m=m.join("<span></span>"),n=document.createElement("span"),n.className="line-numbers-rows",n.innerHTML=m,t.hasAttribute("data-start")&&(t.style.counterReset="linenumber "+(parseInt(t.getAttribute("data-start"),10)-1)),e.element.appendChild(n)}}})}();
+</script>
+
+
+
+
+
+</body></html>

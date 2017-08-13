@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定时器</title>
+</head>
+<body>
+<button id="start" class="btn btn-primary">开始</button>
+<button id="stop" class="btn btn-primary">结束</button>
+<input class="form-control" type="text" id="show">
+</body>
+<script>
+    //要实现的效果用setTime()实现定时累加的效果
+    var btn1 = document.getElementById('start');
+    var show = document.getElementById('show');
+    var num = 0;
+    var t;
+    //这里是给函数设置函数名方便多次调用,这里的点击函数调用三次
+    btn1.onclick = fun;
+    function fun() {
+        //点击按钮实现数字累加,要先设置一个变量表示数字的变化
+        num++;
+        //要在输入框中实现效果,输入框的内容就是变量
+        show.value = num;
+        t = setTimeout(fun, 100)
+        //优化下,设置开始按钮只可以点击1次,否则会破坏计时器的逻辑
+        //点击一次之后就给按钮设置一个禁用属性
+        btn1.setAttribute('disabled', 'disabled');
+
+    }
+    //点击结束的时候停止计时
+    btn2 = document.getElementById('stop');
+    btn2.onclick = function () {
+        clearTimeout(t);
+        //优化,点击结束之后可以重新点击,取消之前设置的禁用属性
+        btn1.removeAttribute('disabled');
+
+    }
+
+</script>
+</html>

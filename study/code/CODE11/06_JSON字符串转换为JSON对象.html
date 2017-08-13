@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON字符串转换为JSON对象</title>
+    <script>
+
+        var jsonTxt1 = '{"name" : "zhangwuji","age" : "18"}';
+        var jsonTxt2 = '["string",2,3,4,5]';
+
+        var jsonObject = JSON.parse(jsonTxt1);
+        console.log(jsonObject);
+
+        var jsonArray = JSON.parse(jsonTxt2);
+        console.log(jsonArray);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

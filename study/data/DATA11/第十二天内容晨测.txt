@@ -1,0 +1,20 @@
+﻿1.匿名函数的应用是什么
+
+2.请写出一个回调函数的定义和调用
+
+3.请写出以下代码的输出结果
+  function fn(){
+     var a = 'a';
+     return function(){
+         return a;
+     }
+  }
+  console.log(fn);
+  var fun = fn();
+  console.log(fun);
+  console.log(fun());
+
+4.写出创建对象的几种方式
+
+5.请写出调用对象的属性或方法的两种方式
+

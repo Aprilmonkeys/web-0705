@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>回调函数</title>
+    <script>
+        // TODO 回调函数 - 作为另一个函数的参数的函数，被称为回调函数
+        var one = function(){
+            return 1;
+        }
+        var two = function(){
+            return 2;
+        }
+        // TODO 形参a和b应该都是一个函数
+        function fn(a,b){
+            return a() + b();
+        }
+        /*
+            TODO 传递两个实参 - 分别是一个函数
+            TODO * 将one和two两个函数作为参数传递给fn函数
+            TODO   * 作为参数的one和two只有名，没有"()"
+            TODO     * one -> 赋值运算符对应的值 function(){return 1;}
+            TODO     * two -> 赋值运算符对应的值 function(){return 2;}
+          */
+        //var result = fn(one,two);
+        // 上面的代码与下面的代码是等价的
+        // TODO 匿名回调函数 - 将匿名函数作为另一个函数的参数出现时
+        var result = fn(function(){return 1;},function(){return 2});
+
+        console.log(result);// 3
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

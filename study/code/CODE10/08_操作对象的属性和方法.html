@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作对象的属性和方法</title>
+    <script>
+
+        var hero = {
+            name : 'zhangwuji',
+            age : 18,
+            sayMe : function(){
+                console.log('this is zhangwuji.');
+            }
+        }
+        /*
+            TODO 新增属性或方法
+            TODO * 对象名.新的属性名 = 属性值;
+            TODO * 对象名.新的方法名 = function(){}
+          */
+        hero.job = 'jiaozhu';
+        hero.sayJob = function(){
+            console.log('my job is jiaozhu.');
+        }
+        /*
+            TODO 修改属性或方法
+            TODO * 对象名.原有属性名 = 新的属性值;
+            TODO * 对象名.原有方法名 = function(){}
+         */
+        hero.name = 'zhouzhiruo';
+        hero.sayMe = function(){
+            console.log('this is zhouzhiruo.');
+        }
+        /*
+            TODO 删除操作使用一个 delete 关键字
+            TODO * delete 对象名.属性名
+            TODO * delete 对象名.方法名
+         */
+        delete hero.name;
+        delete hero.sayMe;
+
+        hero['age'] = 88;
+
+        console.log(hero);
+        //hero.sayMe();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

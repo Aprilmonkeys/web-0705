@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML文档的加载</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			body {
+				padding: 100px;
+			}
+		</style>
+		<script>
+            /*
+            	TODO 当浏览器加载到这段JavaScript的时候
+            	TODO * <body>元素中的所有的内容 -> 还没有被加载
+            	TODO 问题 - 第一行代码获取HTML页面中的元素按钮
+            	TODO * 获取HTML页面中的元素 -> 失败
+             */
+			/*var btn = document.getElementById('btn');
+            btn.onclick = function(){
+                console.log('你终于点中了我....');
+            }*/
+            /*
+            	TODO window.onload = function(){}
+            	TODO * window对象 -> BOM中的对象，表示当前浏览器窗口
+            	TODO * onload -> 事件，表示读取事件
+            	TODO * window.onload -> 表示当前HTML页面加载完毕
+            	TODO   * 事件触发，调用对应的函数
+            	TODO * 当页面加载完毕后，执行函数中的函数体
+             */
+            window.onload = function(){
+                var btn = document.getElementById('btn');
+                btn.onclick = function(){
+                    console.log('你终于点中了我....');
+                }
+			}
+		</script>
+	</head>
+	<body>
+		<button id="btn" class="btn btn-primary">按钮</button>
+		<!--<script>
+			var btn = document.getElementById('btn');
+			btn.onclick = function(){
+			    console.log('你终于点中了我....');
+			}
+		</script>-->
+	</body>
+</html>

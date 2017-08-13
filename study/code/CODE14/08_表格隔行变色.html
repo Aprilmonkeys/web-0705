@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表格隔行变色</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			body {
+				padding: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<table id="data" class="table table-striped table-hover ">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Column heading</th>
+					<th>Column heading</th>
+					<th>Column heading</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td>Column content</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td>Column content</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td>Column content</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td>Column content</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td>Column content</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td>Column content</td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td>Column content</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+	<script>
+		// TODO 通过id属性获取指定的表格
+		var table = document.getElementById('data');
+		// TODO 在table表格查找<tbody>标签
+		var tbody = table.getElementsByTagName('tbody')[0];
+		// TODO 在<tbody>标签中查找所有的<tr>标签
+		var trs = tbody.getElementsByTagName('tr');
+		// TODO 如何实现隔行变色
+		for(var i=0;i<trs.length;i++){
+		    if(i%2 == 0){
+		        var tr = trs[i];
+		        tr.style.backgroundColor = 'orange';
+			}
+		}
+	</script>
+</html>
