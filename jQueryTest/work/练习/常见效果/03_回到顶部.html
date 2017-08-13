@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>03_回到顶部</title>
+  <style>
+    #to_top {
+      width: 30px;
+      height: 40px;
+      font: 14px/20px arial;
+      text-align: center;
+      background: #06c;
+      position: fixed;
+      cursor: pointer;
+      color: #fff;
+      left: 1250px;
+      top: 500px;
+    }
+  </style>
+</head>
+<body style="height: 2000px;">
+
+<div id="to_top">返回顶部</div>
+
+<script src="jquery-1.10.1.js"></script>
+<script>
+  $(function(){
+      //这个是滚动条的滚动长度
+      var lang = $('body').scrollTop()+$('html').scrollTop();
+      //设置的需要最多在多少时间内完成
+      var totalTime = 1000;
+      //每次以多少毫秒移动
+      var everTime = 50;
+      //获取页面的的对象
+      var $page=$('html,body');
+      alert($page);
+      var everdistance = lang/(totalTime/everTime)
+      $('#to_top').click(function(){
+         var t= setInterval(function(){
+              lang-=everdistance;
+              if(lang<=0){
+                  lang=0;
+                  clearInterval(t);
+              }
+             $page.scrollTop(lang);
+          },everTime)
+      })
+  })
+  /*$(function () {
+    //回到顶部
+    $('#to_top').click(function () {
+        var $page = $('html,body');
+      //$page.scrollTop(0);
+      //定义scrollTop的总量
+      var distance = $('html').scrollTop()+$('body').scrollTop();
+      var time = 500;
+      //动画每帧执行时间
+      var intervalTime = 50;
+      var itemDistance = distance/(time/intervalTime);
+      var intervalId = setInterval(function () {
+        distance -= itemDistance;
+        if (distance<=0){
+          distance=0;
+          clearInterval(intervalId);
+        }
+        $page.scrollTop(distance);
+      },intervalTime)
+    })
+  });*/
+</script>
+</body>
+
+</html>
